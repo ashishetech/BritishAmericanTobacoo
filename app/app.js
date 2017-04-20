@@ -1,5 +1,5 @@
-var app = angular.module('invisionApp', ['ui.router', 'ngResource','ngStorage']);
-app.config(function($stateProvider, $urlRouterProvider){
+var app = angular.module('batApp', ['ui.router', 'ngResource', 'ngStorage'])
+app.config(function ($stateProvider, $urlRouterProvider) {
 	$urlRouterProvider.otherwise('/login');
 	$stateProvider
 		.state('outlet', {
