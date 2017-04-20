@@ -1,0 +1,41 @@
+<div class="col-md-5 col-md-offset-3">
+    <h3 align="center">Max - Admin Portal</h3>
+    <div class="panel loginbox">
+
+        <h4 class="signin">Sign In</h4>
+
+        <div class="col-md-offset-1 col-md-10">
+            <form name="form" ng-submit="login.submit(user)" novalidate>
+
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <img src="components/images/Envelope.png" style="width:20px;height:24px;">
+                            </i>
+                        </div>
+                        <input type="email" class="form-control" placeholder="Email address" name="email" autocomplete="off" ng-model="user.email" ng-change="change()" ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" required>
+                    </div>
+                    <span ng-show="form.email.$dirty && form.email.$error.required" class="help-block alert-danger">User name is required</span>
+                </div>
+
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <img src="components/images/lock.svg" style="width:20px;height:24px;" alt="">
+                        </div>
+                        <input type="text" class="form-control" placeholder="Password" autocomplete="off" name="password" ng-model="user.password" ng-change="change()" required>
+                    </div>
+                    <span ng-show="form.password.$dirty && form.password.$error.required" class="help-block alert-danger">Password is required</span>
+
+                </div>
+
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="checkbox" id="box" ng-model="user.checkbox" ng-change="change()">Remember Me
+					</label>
+                </div>
+                <button type="submit" ng-disabled="form.$invalid">Login </button>
+            </form>
+        </div>
+    </div>
+</div>

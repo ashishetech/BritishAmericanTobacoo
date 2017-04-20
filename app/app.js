@@ -1,1 +1,15 @@
-var app = angular.module('invisionApp', ['ui.router', 'ngResource']);
+var app = angular.module('invisionApp', ['ui.router', 'ngResource','ngStorage']);
+app.config(function($stateProvider, $urlRouterProvider){
+	$urlRouterProvider.otherwise('/login');
+	$stateProvider
+		.state('outlet', {
+			url: '/outlet',
+			templateUrl: 'components/outlet/outlet.html',
+			// controller: 'registrationController',
+		})
+		.state('login', {
+			url: '/login',
+			templateUrl: 'components/login/login.html',
+			controller: 'loginController as login',
+		});
+})
