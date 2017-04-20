@@ -1,22 +1,28 @@
-<div class="col-sm-8">
-   <center>
-      <h4>View Poll Data</h4>
-      {{OutletCtrl.outletdata}}
-   </center>
-   <div class="container">
-      <table class="table table-condensed">
-         <thead>
-            <tr>
-               <th ng-repeat="data in tableheading">{{data}}</th>
-            </tr>
-         </thead>
-         <tbody>
-            <tr>
-               <td>John</td>
-               <td>Doe</td>
-               <td>john@example.com</td>
-            </tr>
-         </tbody>
-      </table>
+<div class="container margin">
+   <div class="minus"> </div>
+   <div class="minus"></div>
+   <div class="minus"></div>
+   <div class="textstyle">All Outlets</div>
+</div>
+<div class="container">
+   <div class="col-sm-12">
+      <div style="margin-top: 60px;">
+         <div class="color">{{tabledetails.tabletitle}}</div>
+         <table class="table table-condensed">
+            <thead>
+               <tr>
+                  <th class="headingcolor" ng-repeat="data in tabledetails.values">{{data}}</th>
+                  <th><a>{{tabledetails.alink.Text}}
+                     </a>
+                  </th>
+                  <th  ng-if="data.Type=='SUBMIT'" ng-repeat="data in tabledetails.button">
+                     <button type="submit " class="btn btn-primary"> {{data.Type}}
+                  </th>
+                  </th>
+               </tr>
+            </thead>
+         </table>
+      </div>
    </div>
+</div>
 </div>

@@ -1,13 +1,13 @@
-var app = angular.module('invisionApp')
+var app = angular.module('batApp')
 app.directive('mytable', function () {
   return {
     restrict: 'EAC',
     templateUrl: './common/tables.html',
     scope: {
-      parameter: '@'
+      parameter: '='
     },
     controller: function ($scope) {
-      $scope.tableheading = JSON.parse($scope.parameter)
+      $scope.tabledetails = $scope.parameter
     }
   }
 })
