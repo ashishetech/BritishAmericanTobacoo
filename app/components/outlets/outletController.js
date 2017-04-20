@@ -1,6 +1,5 @@
 var app = angular.module('batApp')
 app.controller('viewOutletController', function () {
-  url = '/outlet/get/-1/1'
   this.data = { tabletitle: 'OUTLET',
     values:[ 'ID',
       'BAT ID',

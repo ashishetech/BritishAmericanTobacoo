@@ -1,13 +1,13 @@
 var app = angular.module('batApp')
-app.directive('mytable', function () {
+app.directive('dynamicTable', function () {
   return {
     restrict: 'EAC',
     templateUrl: './common/tables.html',
     scope: {
-      parameter: '='
+      tabledata: '='
     },
     controller: function ($scope) {
-      $scope.tabledetails = $scope.parameter
+      $scope.tabledetails = $scope.tabledata
     }
   }
 })
