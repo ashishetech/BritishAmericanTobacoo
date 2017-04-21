@@ -77,8 +77,7 @@ input[type=checkbox], input[type=radio] {
     margin-top: 1px\9;
     line-height: normal;
 	width: 20px;
-    height: 20px
-	background: transparent;
+	height: 20px;
 }
 
 @media (min-width: 558px) and (max-width: 838px) {
