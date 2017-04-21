@@ -13,8 +13,9 @@ app.controller('viewOutletController', function (getDataFactory) {
     alink: { Type: 'SUBMIT', Text: 'Edit Account' },
     controller:'outletCtrl'
   }
-  getDataFactory.getData(url).query().$promise
+  getDataFactory.getApiData(url).query().$promise
    .then((response) => {
+     console.log('>>>>>>>>>>>>>>>>>.response is', response)
      if (response.error) {
      } else {
        angular.forEach(response, (value, key) => {
