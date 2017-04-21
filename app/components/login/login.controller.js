@@ -1,6 +1,6 @@
 'use strict'
 
-var app = angular.module('batApp')
+var app = angular.module ('batApp')
 app.controller('loginController', function ($localStorage, getDataFactory, $state) {
 	this.submit = function (data) {
 		var url = '/admin/login'

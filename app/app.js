@@ -1,6 +1,6 @@
 'use strict'
 
-var app = angular.module('batApp', ['ui.router', 'ngResource', 'ngStorage'])
+var app = angular.module ('batApp', ['ui.router', 'ngResource', 'ngStorage'])
 app.config(function ($stateProvider, $urlRouterProvider) {
 	$urlRouterProvider.otherwise('/login')
 	$stateProvider
