@@ -1,8 +1,10 @@
-var app = angular.module('batApp');
+'use strict'
+
+var app = angular.module ('batApp')
 app.factory('getDataFactory', function(configuration, $resource) {
-    return {
-        sendData: function(url) {
-            return $resource(configuration.apihost + url)
-        }
-    }
-});
+	return{
+		sendData: function(url) {
+			return $resource(configuration.apihost + url)
+		}
+	}
+})

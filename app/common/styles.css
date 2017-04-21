@@ -28,9 +28,7 @@ h3 {
     outline: none;
 }
 input:focus {
-    /*border-color: #006EE8;*/
-
-    box-shadow: none;
+	box-shadow: none;
     outline: none;
 }
 button {
@@ -58,18 +56,14 @@ form {
     border: 0;
     border-bottom: 1px solid #ccc;
     border-radius: 0;
-    /*width: 23px;*/
-
-    height: 30px;
+	height: 30px;
     padding-bottom: 0;
     padding-top: 0;
 }
 img {
     margin-bottom: -20px;
     margin-top: 10px;
-    /*width:24px;height:24px;*/
-
-    opacity: 0.7;
+	opacity: 0.7;
 }
 .input-group {
     height: 12px;
@@ -79,10 +73,7 @@ img {
 }
 input[type="checkbox"] {
     width: 15px;
-    /*Desired width*/
-
-    height: 15px;
-    /*Desired height*/
+	height: 15px
 }
 @media (min-width: 558px) and (max-width: 838px) {
     .col-md-5 {
