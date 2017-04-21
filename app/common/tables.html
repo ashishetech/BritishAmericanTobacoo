@@ -5,23 +5,33 @@
    <div class="textstyle">All Outlets</div>
 </div>
 <div class="container">
-   <div class="col-sm-12">
-      <div style="margin-top: 60px;">
+   <div class="col-md-12">
+      <div style="margin-top: 40px;">
          <div class="color">{{tabledetails.tabletitle}}</div>
-         <table class="table table-condensed">
+         <table class="table">
             <thead>
                <tr>
                   <th class="headingcolor" ng-repeat="data in tabledetails.values">{{data}}</th>
-                  <th><a>{{tabledetails.alink.Text}}
-                     </a>
-                  </th>
+                  <th></th>
                   <th  ng-if="data.Type=='SUBMIT'" ng-repeat="data in tabledetails.button">
                      <button type="submit" class="btn btn-primary"> {{data.Type}}
-                  </th>
                   </th>
                </tr>
             </thead>
             <tbody>
+
+               <tr ng-if="tabledetails.controller=='outletCtrl'" ng-repeat="viewdata in tablebody">
+                  <td>  {{tablebody[$index].value.id}}</td>
+                  <td>  {{tablebody[$index].value.bat_id}}</td>
+                  <td>  {{tablebody[$index].value.outlet_name}}</td>
+                  <td>  {{tablebody[$index].value.points_value}}</td>
+                  <td>  {{tablebody[$index].value.updatedAt|date}}</td>
+                  <td>  {{tablebody[$index].value.performance}}</td>
+                  <td>  {{tablebody[$index].tme.first_name}}</td>
+                  <td><a>{{tabledetails.alink.Text}}
+                     </a>
+                  </td>
+               </tr>
             </tbody>
          </table>
       </div>

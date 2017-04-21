@@ -1,6 +1,8 @@
 var app = angular.module('batApp')
-app.controller('viewOutletController', function () {
-  this.data = { tabletitle: 'OUTLET',
+app.controller('viewOutletController', function (getDataFactory) {
+  url = '/outlet/get/-1/1'
+  this.outletList = []
+  this.data = { tabletitle: 'OUTLETS',
     values:[ 'ID',
       'BAT ID',
       'Store Name',
@@ -8,6 +10,16 @@ app.controller('viewOutletController', function () {
       'Last Accessed',
       'Performance',
       'Assigned TME'],
-    alink: { Type: 'SUBMIT', Text: 'Edit Account' }
+    alink: { Type: 'SUBMIT', Text: 'Edit Account' },
+    controller:'outletCtrl'
   }
+  getDataFactory.getData(url).query().$promise
+   .then((response) => {
+     if (response.error) {
+     } else {
+       angular.forEach(response, (value, key) => {
+         this.outletList.push({ value:value.data, tme:value.tme })
+       })
+     }
+   })
 })

@@ -4,10 +4,12 @@ app.directive('dynamicTable', function () {
     restrict: 'EAC',
     templateUrl: './common/tables.html',
     scope: {
-      tabledata: '='
+      tabledata: '=',
+      viewtabledata:'='
     },
     controller: function ($scope) {
       $scope.tabledetails = $scope.tabledata
+      $scope.tablebody = $scope.viewtabledata
     }
   }
 })
