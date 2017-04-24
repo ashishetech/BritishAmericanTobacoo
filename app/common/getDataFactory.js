@@ -3,7 +3,7 @@
 angular.module('batApp')
 .factory('getDataFactory', function(configuration, $resource) {
     return {
-        sendData: function(url) {
+        login: function(url) {
             return $resource(configuration.apihost + url)
         }
     }

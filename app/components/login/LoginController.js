@@ -4,7 +4,7 @@ angular.module('batApp')
         var vm = this
         vm.submit = function(data) {
             var url = '/admin/login'
-            getDataFactory.sendData(url).save(data).$promise
+            getDataFactory.login(url).save(data).$promise
                 .then((response) => {
                     if (!response.error) {
                         $localStorage.token = response.token
