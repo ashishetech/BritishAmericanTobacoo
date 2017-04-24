@@ -30,6 +30,9 @@ md-checkbox.md-checked .md-ink-ripple {
 md-content {
     background-color: white;
     overflow: hidden;
+	opacity: 0.7 ;
+
+
 }
 .md-block {
     position: relative;
@@ -49,14 +52,14 @@ md-input-container:not(.md-input-invalid).md-input-focused label {
     border-color: #007AFF !important;
 }
 .md-block label {
-    font-size: 12px;
+    font-size: 10px;
     margin-bottom: 0px;
 }
 .form-icon {
     position: absolute;
     pointer-events: none;
     padding-bottom: 3px !important;
-    opacity: 0.5;
+    opacity: 0.3 ;
 }
 .form-icon:focus {
     background-color: inherit;
