@@ -19,15 +19,9 @@
                </tr>
             </thead>
             <tbody>
-
-               <tr ng-if="tabledetails.controller=='outletCtrl'" ng-repeat="viewdata in tablebody">
-                  <td>  {{tablebody[$index].value.id}}</td>
-                  <td>  {{tablebody[$index].value.bat_id}}</td>
-                  <td>  {{tablebody[$index].value.outlet_name}}</td>
-                  <td>  {{tablebody[$index].value.points_value}}</td>
-                  <td>  {{tablebody[$index].value.updatedAt|date}}</td>
-                  <td>  {{tablebody[$index].value.performance}}</td>
-                  <td>  {{tablebody[$index].tme.first_name}}</td>
+               <tr ng-repeat="viewdata in tablebody">
+                  <td ng-repeat="value in viewdata track by $index">{{value}}</td>
+                  <td></td>
                   <td><a>{{tabledetails.alink.Text}}
                      </a>
                   </td>

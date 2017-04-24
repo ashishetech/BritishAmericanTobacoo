@@ -1,4 +1,3 @@
-var app = angular.module('batApp')
-app.config(function ($httpProvider) {
+angular.module('batApp').config(function ($httpProvider) {
   $httpProvider.interceptors.push('Interceptor')
 })
