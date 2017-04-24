@@ -1,41 +1,31 @@
 <div class="col-md-5 col-md-offset-3">
-    <h3 align="center">Max - Admin Portal</h3>
-    <div class="panel loginbox">
+  <h3 align="center">Max - Admin Portal</h3>
+  <div class="panel loginbox">
 
-        <h4 class="signin">Sign In</h4>
+    <h4 class="signin">Sign In</h4>
 
-        <div class="col-md-offset-1 col-md-10">
-            <form name="form" ng-submit="login.submit(user)" novalidate>
+    <div class="col-md-offset-1 col-md-10">
+      <form name="form" ng-submit="login.submit(user)" novalidate>
+        <md-content>
 
-                <div class="form-group">
-                    <div class="input-group">
-                        <div class="input-group-addon">
-                            <img src="components/images/Envelope.png" style="width:20px;height:24px;">
-                            </i>
-                        </div>
-                        <input type="email" class="form-control" placeholder="Email address" name="email" autocomplete="off" ng-model="user.email" ng-change="change()" ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" required>
-                    </div>
-                    <span ng-show="form.email.$dirty && form.email.$error.required" class="help-block alert-danger">User name is required</span>
-                </div>
+          <md-input-container class="md-block">
+            <md-icon class="form-icon">email</md-icon>
+            <input class="form_input" ng-model="user.email" autocomplete="off" type="email" placeholder="Email">
+          </md-input-container>
 
-                <div class="form-group">
-                    <div class="input-group">
-                        <div class="input-group-addon">
-                            <img src="components/images/lock.png" style="width:24px;height:24px;" alt="">
-                        </div>
-                        <input type="password" class="form-control" placeholder="Password" autocomplete="off" name="password" ng-model="user.password" ng-change="change()" required>
-                    </div>
-                    <span ng-show="form.password.$dirty && form.password.$error.required" class="help-block alert-danger">Password is required</span>
+          <md-input-container class="md-block">
+            <md-icon class="form-icon">lock</md-icon>
+            <input class="form_input" ng-model="user.password" autocomplete="off" type="password" placeholder="Password">
+          </md-input-container>
 
-                </div>
+          <md-checkbox ng-model="isChecked" class="blue" class="checkbox">
+            Remember me
+          </md-checkbox>
 
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox" name="checkbox" id="box" ng-model="user.checkbox" ng-change="change()">Remember Me
-                    </label>
-                </div>
-                <button type="submit" ng-disabled="form.$invalid">Login </button>
-            </form>
-        </div>
+          <md-button class="md-Primary login" type="submit" ng-disabled="form.$invalid">Login</md-button>
+
+        </md-content>
+      </form>
     </div>
+  </div>
 </div>

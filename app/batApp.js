@@ -1,7 +1,7 @@
 'use strict'
 
-var app = angular.module('batApp', ['ui.router', 'ngResource', 'ngStorage'])
-app.config(function ($stateProvider, $urlRouterProvider) {
+angular.module('batApp', ['ui.router', 'ngResource', 'ngStorage', 'ngMaterial'])
+.config(function ($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise('/login')
   $stateProvider
 .state('template', {
@@ -11,6 +11,6 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 .state('login', {
   url: '/login',
   templateUrl: 'components/login/login.html',
-  controller: 'loginController as login'
+  controller: 'LoginController as login'
 })
 })

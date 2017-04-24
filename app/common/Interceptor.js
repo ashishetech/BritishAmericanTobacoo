@@ -1,7 +1,7 @@
 'use strict'
 
-var app = angular.module('batApp')
-app.factory('Interceptor', function () {
+angular.module('batApp')
+.factory('Interceptor', function () {
   return {
     request: function (config) {
       return config
