@@ -10,7 +10,7 @@
 
           <md-input-container class="md-block">
             <md-icon class="form-icon">email</md-icon>
-            <input class="form_input" ng-model="user.email" autocomplete="off" type="email" placeholder="Email">
+            <input class="form_input" ng-model="user.email" ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" autocomplete="off" type="email" placeholder="Email">
           </md-input-container>
 
           <md-input-container class="md-block">
