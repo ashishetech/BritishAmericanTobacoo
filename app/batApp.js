@@ -1,4 +1,5 @@
-angular.module('batApp', ['ui.router', 'ngResource']).config(function ($stateProvider, $urlRouterProvider) {
+angular.module('batApp', ['ui.router', 'ngResource'])
+.config(function ($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise('/outletViewTable')
   $stateProvider
   .state('outletViewTable', {
