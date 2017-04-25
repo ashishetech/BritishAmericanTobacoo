@@ -26,4 +26,5 @@ module.exports = {
         "max-len": [2, 120, 2],
         "object-curly-spacing": [2, "always"]
     },
+      "extends": "plugin:angular/johnpapa"
 };
