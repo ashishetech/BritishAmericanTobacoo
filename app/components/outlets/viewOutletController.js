@@ -1,5 +1,4 @@
 angular.module('batApp').controller('viewOutletController', function (getDataFactory) {
-  var url = '/outlet/get/-1/1'
   var vm = this
   vm.outletList = []
   vm.data = {
@@ -18,7 +17,7 @@ angular.module('batApp').controller('viewOutletController', function (getDataFac
     }
 
   }
-  getDataFactory.getOutletViewData(url).query().$promise
+  getDataFactory.getOutletViewData().query().$promise
         .then((response) => {
           if (response.error) {} else {
             angular.forEach(response, (value, key) => {

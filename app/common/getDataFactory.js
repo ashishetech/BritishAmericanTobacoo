@@ -1,5 +1,5 @@
 angular.module('batApp').factory('getDataFactory', (configuration, $resource) => ({
-  getOutletViewData (url) {
-    return $resource(configuration.apihost + url)
+  getOutletViewData () {
+    return $resource(configuration.apihost + '/outlet/get/-1/1')
   }
 }))
