@@ -16,7 +16,6 @@ angular.module('batApp', ['ui.router', 'ngResource', 'ngStorage', 'ngMaterial'])
             .state('outletViewTable', {
               url: '/outletViewTable',
               templateUrl: 'components/outlets/outletView.html',
-              controller: 'viewOutletController',
-              controllerAs:'batCtrl'
+              controller: 'viewOutletController as batCtrl'
             })
     })

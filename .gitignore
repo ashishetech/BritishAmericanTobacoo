@@ -6,3 +6,7 @@ app/bower_components
 /README.md
 /node_modules
 /.eslintignore
+/LICENSE
+app/.eslintignore.js
+/e2e-tests
+/karma.conf.js
