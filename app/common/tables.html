@@ -13,15 +13,14 @@
                <tr>
                   <th class="headingcolor" ng-repeat="data in tabledetails.values">{{data}}</th>
                   <th></th>
-                  <th  ng-if="data.Type=='SUBMIT'" ng-repeat="data in tabledetails.button">
-                     <button type="submit" class="btn btn-primary"> {{data.Type}}
+                  <th  ng-if="data.Type=='SUBMIT'" ng-repeat="data in tabledetails.button" >
+                     <button type="submit" class="btn btn-primary" ng-click="edit()"> {{data.Type}}
                   </th>
                </tr>
             </thead>
             <tbody>
                <tr ng-repeat="viewdata in tablebody">
                   <td ng-repeat="value in viewdata track by $index">{{value}}</td>
-                  <td></td>
                   <td><a>{{tabledetails.alink.Text}}
                      </a>
                   </td>

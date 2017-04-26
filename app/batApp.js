@@ -18,4 +18,9 @@ angular.module('batApp', ['ui.router', 'ngResource', 'ngStorage', 'ngMaterial'])
               templateUrl: 'components/outlets/outletView.html',
               controller: 'viewOutletController as batCtrl'
             })
+			.state('menuTemplate.editOutlet', {
+              url: '/editOutlet',
+              templateUrl: 'components/outlets/outletEdit/outletEdit.html',
+              controller: 'viewOutletController as batCtrl'
+            })
     })

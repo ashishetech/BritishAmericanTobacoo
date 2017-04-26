@@ -1,7 +1,9 @@
 body {
     font-family: 'Roboto', sans-serif;
-	margin: 0 0 0 0px;
-	padding: 0 0 0 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
 }
 .headingcolor {
     color: #707070;
@@ -16,8 +18,15 @@ body {
     color: rgb(, 94, 94);
     margin-left: 0px;
 }
+.col-md-3,
+.col-md-9,
+.col-md-12{
+	padding-left: 3px !important;
+	padding-right: 0px !important;
+}
 .margin {
     margin-top: 20px;
+
 }
 .textstyle {
     margin-top: -18px;
@@ -33,7 +42,7 @@ body {
 }
 td {
     color: #707070;
-    font-size: 15px;
+    font-size: 12px;
     padding-top: 18px;
     padding-bottom: 18px;
     padding-left: 25px;
@@ -48,5 +57,5 @@ td {
 .table>tfoot>tr>th,
 .table>thead>tr>td,
 .table>thead>tr>th {
-	padding: 15px;
+	padding: 18px;
 }

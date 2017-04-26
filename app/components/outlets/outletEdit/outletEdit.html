@@ -1,0 +1,74 @@
+
+          <div class="col-md-12 margin">
+              <div class="minus"> </div>
+              <div class="minus"></div>
+              <div class="minus"></div>
+              <div class="textstyle">OUTLET:Details</div>
+           </div>
+
+
+          <div class="col-md-12" style="margin-top:40px; margin-left:30px;">
+             <button class="btn btn-primary pull-right" ng-click="addOutletCtrl.save(outlet)">Save</button>
+			 <div class="box">
+
+           <div class="row">
+               <div class="col-md-3">
+                  <div class="form-group">
+                     <h6>BAT ID :</h6>
+                     <input type="text" class="form-control" id="bat_id" value="" ng-model="outlet.bat_id">
+                  </div>
+                  <div class="form-group">
+                     <h6>Membership Number:</h6>
+                     <input type="number" class="form-control" value="" ng-model="outlet.membership_number">
+                  </div>
+                  <div class="form-group">
+                     <h6>Password:</h6>
+                     <div class="form-group"><input type="password" class="form-control" value="" ng-model="outlet.password"></div>
+                  </div>
+                  <div class="row">
+                     <div class="col-md-6">
+                        <div class="form-group">
+                           <h6>First Name</h6>
+                           <input type="text" class="form-control" id="usr" value="" ng-model="outlet.first_name">
+                        </div>
+                     </div>
+                     <div class="col-md-6">
+                        <div class="form-group">
+                           <h6>Last Name</h6>
+                           <input type="text" class="form-control" id="us1r" value="" ng-model="outlet.last_name">
+                        </div>
+                     </div>
+                  </div>
+                  <div class="form-group">
+                     <h6>Email</h6>
+                     <input type="text" class="form-control" id="usr" value="" ng-model="outlet.email">
+                  </div>
+                  <div class="form-group">
+                     <h6>Outlet Name</h6>
+                     <input type="text" class="form-control" id="pwd" value="" ng-model="outlet.outlet_name">
+                  </div>
+                  <div class="form-group">
+                     <h6>Date Of Birth</h6>
+                     <input type="date" class="form-control" id="pwd" value="" style="width: 100%;" ng-model="outlet.birthday">
+                  </div>
+               </div>
+               <div class="col-md-7">
+                  <label>Membership Type</label>
+
+                 <md-radio-group ng-model="outlet.type_name" class="md-primary">
+                     <div class="row">
+                        <div class="col-md-2" ng-repeat="d in addOutletCtrl.radioData">
+
+                          <md-radio-button ng-value="d.value">
+                              {{ d.label }}
+                           </md-radio-button>
+                        </div>
+                     </div>
+                  </md-radio-group>
+               </div>
+               <div class="col-md-2">
+                  <label>Rebate Rate (1 point)</label><input type="text" class="form-control" value="" ng-model="outlet.rebate_rate">
+               </div>
+            </div>
+          </div>
+         </div>
