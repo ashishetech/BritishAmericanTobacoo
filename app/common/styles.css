@@ -1,8 +1,56 @@
 body {
     font-family: 'Roboto', sans-serif;
 }
-/*START login css*/
+.headingcolor {
+    color: #707070;
+    font-size: 16px;
+}
+.color {
+    color: rgb(94, 94, 94);
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 89px;
+    position: relative;
+    color: rgb(, 94, 94);
+    margin-left: 0px;
+}
+.margin {
+    margin-top: 20px;
+}
+.textstyle {
+    margin-top: -18px;
+    color: rgb(74, 74, 74);
+    font-size: 14px;
+    margin-left: 24px;
+}
+.minus {
+    width: 18px;
+    height: 2px;
+    background-color: #007cea;
+    margin: 3px 0;
+}
+td {
+    color: #707070;
+    font-size: 15px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-left: 25px;
+}
+.table>thead>tr>th {
+    border-bottom: 1px solid #007AFF;
+    padding: 15px !important
+}
+.table>tbody>tr>td,
+.table>tbody>tr>th,
+.table>tfoot>tr>td,
+.table>tfoot>tr>th,
+.table>thead>tr>td,
+.table>thead>tr>th {
+    padding: 15px;
 
+}
+
+/*START login css*/
 .col-md-5 {
     width: 42%;
     margin-left: 29%;
@@ -30,9 +78,8 @@ md-checkbox.md-checked .md-ink-ripple {
     color: blue;
 }
 md-content {
-    background-color: white;
-    overflow: hidden;
-    /*opacity: 0.7;*/
+	background-color: white;
+	overflow: hidden;
 }
 .md-block {
     position: relative;
@@ -117,7 +164,6 @@ md-checkbox {
 }
 /*END login css*/
 /*START template css*/
-
 .md-subheader .md-subheader-content {
     display: block;
     color: #667685;

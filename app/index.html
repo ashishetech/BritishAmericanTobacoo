@@ -2,42 +2,44 @@
 <html lang="en" ng-app="batApp">
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>My AngularJS App</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
-  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
-  <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-
-  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <title>My AngularJS App</title>
+   <meta name="description" content="">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+   <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+   <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+   <script href="bower_components/angular-momentjs/angular-momentjs.js"></script>
+   <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 
 <body>
-  <!-- <div class="container"> -->
-    <div ui-view></div>
-  <!-- </div> -->
-  <script src="bower_components/angular/angular.js"></script>
-  <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-  <script src="bower_components/angular-resource/angular-resource.js"></script>
-  <script src="bower_components/ngstorage/ngStorage.min.js"></script>
-  <script src="bower_components/angular-aria/angular-aria.js"></script>
-  <script src="bower_components/angular-animate/angular-animate.js"></script>
-  <script src="bower_components/angular-material/angular-material.js"></script>
-  <script src="batApp.js"></script>
-  <script src="components/login/LoginController.js"></script>
-  <script src="components/template/TemplateController.js"></script>
-  <script type="text/javascript" src="common/getDataFactory.js"></script>
-  <script type="text/javascript" src="index.constant.js"></script>
-  <link rel="stylesheet" type="text/css" href="common/styles.css">
+    <div ui-view>	</div>
 
+      <script src="bower_components/angular/angular.js"></script>
+      <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+      <script src="bower_components/angular-resource/angular-resource.js"></script>
+      <script src="bower_components/ngstorage/ngStorage.min.js"></script>
+      <script src="bower_components/angular-aria/angular-aria.js"></script>
+      <script src="bower_components/angular-animate/angular-animate.js"></script>
+      <script src="bower_components/angular-material/angular-material.js"></script>
+      <script src="batApp.js"></script>
+      <script src="components/login/LoginController.js"></script>
+	  <script src="components/template/TemplateController.js"></script>
+	  <script src="components/outlets/viewOutletController.js"></script>
+	  <script type="text/javascript" src="directives/dynamicTable.js"></script>
+	  <script type="text/javascript" src="common/getDataFactory.js"></script>
+      <script type="text/javascript" src="index.config.js"></script>
+      <script type="text/javascript" src="index.constant.js"></script>
+      <script type="text/javascript" src="common/Interceptor.js"></script>
 
+      <link rel="stylesheet" type="text/css" href="common/styles.css">
 </body>
 
 </html>

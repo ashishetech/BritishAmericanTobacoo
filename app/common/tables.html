@@ -1,0 +1,34 @@
+<div class="container margin">
+   <div class="minus"> </div>
+   <div class="minus"></div>
+   <div class="minus"></div>
+   <div class="textstyle">All Outlets</div>
+</div>
+<div class="container">
+   <div class="col-md-12">
+      <div style="margin-top: 40px;">
+         <div class="color">{{tabledetails.tabletitle}}</div>
+         <table class="table">
+            <thead>
+               <tr>
+                  <th class="headingcolor" ng-repeat="data in tabledetails.values">{{data}}</th>
+                  <th></th>
+                  <th  ng-if="data.Type=='SUBMIT'" ng-repeat="data in tabledetails.button">
+                     <button type="submit" class="btn btn-primary"> {{data.Type}}
+                  </th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr ng-repeat="viewdata in tablebody">
+                  <td ng-repeat="value in viewdata track by $index">{{value}}</td>
+                  <td></td>
+                  <td><a>{{tabledetails.alink.Text}}
+                     </a>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+   </div>
+</div>
+</div>
