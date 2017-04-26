@@ -1,0 +1,48 @@
+.md-subheader .md-subheader-content {
+    display: block;
+    color: #667685;
+    font-size: 26px !important;
+    padding: 40px;
+    padding-top: 30px;
+}
+md-list-item p.Active {
+    color: #1F8AFD;
+}
+md-list-item .child.Active {
+    color: #1F8AFD;
+}
+md-list-item:hover {
+    cursor: pointer;
+    background-color: #e6e6e6;
+}
+md-icon.md-default-theme {
+    color: #1F8AFD !important;
+    opacity: 0.6;
+}
+md-icon.arrow {
+    color: #1F8AFD !important;
+    opacity: 0.6;
+}
+p {
+    color: #667685;
+}
+.child {
+    color: #667685;
+    margin-left: 55px;
+}
+a.logout:hover,
+a.logout:focus {
+    text-decoration: none;
+    color: #667685;
+}
+a.logout {
+    font-size: 14px;
+    color: #667685;
+    text-decoration: none;
+}
+md-list-item .Active {
+    color: black;
+}
+md-progress-circular path {
+    stroke: #1F8AFD !important;
+}

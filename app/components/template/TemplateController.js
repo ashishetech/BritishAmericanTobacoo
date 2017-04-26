@@ -9,7 +9,7 @@ angular.module('batApp').controller('TemplateController', ['$location', function
 
   vm.Open = function (count) {
     switch (count) {
-      case '1':
+      case 'outlet':
         if (vm.OpenOutlet === false) {
           vm.OpenOutlet = true
           vm.arrowOutlet = false
@@ -18,7 +18,7 @@ angular.module('batApp').controller('TemplateController', ['$location', function
           vm.arrowOutlet = true
         }
         break
-      case '2':
+      case 'brand':
         if (vm.OpenBrand === false) {
           vm.OpenBrand = true
           vm.arrowBrand = false
@@ -27,7 +27,7 @@ angular.module('batApp').controller('TemplateController', ['$location', function
           vm.arrowBrand = true
         }
         break
-      case '3':
+      case 'setting':
         if (vm.OpenSetting === false) {
           vm.OpenSetting = true
           vm.arrowSet = false
