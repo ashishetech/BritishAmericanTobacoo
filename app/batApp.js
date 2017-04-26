@@ -4,10 +4,11 @@ angular.module('batApp', ['ui.router', 'ngResource', 'ngStorage', 'ngMaterial'])
     .config(function($stateProvider, $urlRouterProvider) {
         $urlRouterProvider.otherwise('/login')
         $stateProvider
-            .state('template', {
-                url: '/template',
-                templateUrl: 'components/template/template.html'
-            })
+            .state('menuTemplate', {
+                url: '/menuTemplate',
+                templateUrl: 'components/template/menuTemplate.html',
+				controller:'TemplateController as template'
+            })			
             .state('login', {
                 url: '/login',
                 templateUrl: 'components/login/login.html',

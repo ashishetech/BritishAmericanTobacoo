@@ -1,6 +1,8 @@
 body {
     font-family: 'Roboto', sans-serif;
 }
+/*START login css*/
+
 .col-md-5 {
     width: 42%;
     margin-left: 29%;
@@ -30,9 +32,7 @@ md-checkbox.md-checked .md-ink-ripple {
 md-content {
     background-color: white;
     overflow: hidden;
-	opacity: 0.7 ;
-
-
+    /*opacity: 0.7;*/
 }
 .md-block {
     position: relative;
@@ -50,6 +50,7 @@ md-input-container:not(.md-input-invalid).md-input-focused label {
 }
 .md-block input:focus {
     border-color: #007AFF !important;
+    color: black;
 }
 .md-block label {
     font-size: 10px;
@@ -59,15 +60,16 @@ md-input-container:not(.md-input-invalid).md-input-focused label {
     position: absolute;
     pointer-events: none;
     padding-bottom: 3px !important;
-    opacity: 0.3 ;
+    opacity: 0.3;
 }
 .form-icon:focus {
     background-color: inherit;
 }
 .login {
-    background-color: #9B9B9B !important;
+    background-color: #007AFF !important;
     font-size: 18px;
-    color: white;
+    opacity: 0.9;
+    color: white !important;
     border-radius: 0;
     margin-left: 0px !important;
     margin-right: 0px !important;
@@ -76,11 +78,12 @@ md-input-container:not(.md-input-invalid).md-input-focused label {
     height: 70px;
     border-radius: -20px;
     border: 0;
-    background-color: #9B9B9B;
     font-weight: bold;
 }
-.login:hover {
-    background-color: #007AFF !important;
+.md-button.md-default-theme[disabled],
+.md-button[disabled] {
+    background-color: #9B9B9B !important;
+    color: white !important;
 }
 md-input-container.md-icon-left {
     padding-left: 0px !important;
@@ -94,6 +97,7 @@ md-checkbox.md-checked.blue .md-icon {
 }
 md-checkbox {
     margin-left: 5px !important;
+    opacity: 0.7;
 }
 @media (min-width: 558px) and (max-width: 838px) {
     .col-md-5 {
@@ -110,4 +114,55 @@ md-checkbox {
         margin-left: 5%;
         margin-right: 5%;
     }
+}
+/*END login css*/
+/*START template css*/
+
+.md-subheader .md-subheader-content {
+    display: block;
+    color: #667685;
+    font-size: 26px !important;
+    padding: 40px;
+    padding-top: 30px;
+}
+md-list-item p.Active {
+    color: #1F8AFD;
+}
+md-list-item .child.Active {
+    color: #1F8AFD;
+}
+md-list-item:hover {
+    cursor: pointer;
+    background-color: #e6e6e6;
+}
+md-icon.md-default-theme {
+    color: #1F8AFD !important;
+    opacity: 0.6;
+}
+md-icon.arrow {
+    color: #1F8AFD !important;
+    opacity: 0.6;
+}
+p {
+    color: #667685;
+}
+.child {
+    color: #667685;
+    margin-left: 55px;
+}
+a.logout:hover,
+a.logout:focus {
+    text-decoration: none;
+    color: #667685;
+}
+a.logout {
+    font-size: 14px;
+    color: #667685;
+    text-decoration: none;
+}
+md-list-item .Active {
+    color: black;
+}
+md-progress-circular path {
+    stroke: #1F8AFD !important;
 }

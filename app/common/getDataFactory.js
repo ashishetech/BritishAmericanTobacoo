@@ -3,8 +3,8 @@
 angular.module('batApp')
 .factory('getDataFactory', function(configuration, $resource) {
     return {
-        login: function(url) {
-            return $resource(configuration.apihost + url)
+        login: function() {
+            return $resource(configuration.apihost + "/admin/login")
         }
     }
 })

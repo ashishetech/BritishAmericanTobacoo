@@ -1,0 +1,76 @@
+<md-list class="col-md-3">
+    <md-subheader class="header">Max Admin
+        <br>
+        <br> <a class="logout" ui-sref="login">Logout</a>
+    </md-subheader>
+
+    <md-list-item >
+        <md-icon class="md-default-theme material-icons">home</md-icon>
+        <p ng-class="{ Active: template.isActive('/menuTemplate/login')}">Home</p>
+    </md-list-item>
+
+    <md-list-item ng-click="template.Open('1')">
+        <md-icon class="md-default-theme" class="material-icons">insert_drive_file</md-icon>
+        <p ng-class="{ Active: template.isActive('/menuTemplate/viewOutlet')||template.isActive('/menuTemplate/addOutlet')}">Outlets</p>
+        <md-icon class="arrow" ng-show="template.arrowOutlet">keyboard_arrow_right</md-icon>
+        <md-icon class="arrow" ng-hide="template.arrowOutlet">keyboard_arrow_up</md-icon>
+    </md-list-item>
+    <!-- child-->
+    <md-list-item ui-sref="menuTemplate.viewOutlet" ng-show="template.OpenOutlet">
+        <span class="child" ng-class="{ Active: template.isActive('/menuTemplate/viewOutlet')}">View Outlet</span>
+    </md-list-item>
+    <md-list-item ui-sref="menuTemplate.addOutlet" ng-show="template.OpenOutlet">
+        <span class="child" ng-class="{ Active: template.isActive('/menuTemplate/addOutlet')}">Add Outlet</spam>
+			    </md-list-item>
+
+    <md-list-item ui-sref="menuTemplate.rebate">
+        <md-icon class="md-default-theme" class="material-icons">supervisor_account</md-icon>
+		<p ng-class="{ Active: template.isActive('/menuTemplate/rebate')}">Rebate Requests</p>
+    </md-list-item>
+
+    <md-list-item ui-sref="menuTemplate.campaings">
+        <md-icon class="md-default-theme" class="material-icons">account_balance_wallet</md-icon>
+		<p ng-class="{ Active: template.isActive('/menuTemplate/campaigns')}">Campaigns</p>
+	</md-list-item>
+
+
+    <md-list-item ui-sref="menuTemplate.uploadData">
+        <md-icon class="md-default-theme" class="material-icons">face</md-icon>
+		<p ng-class="{ Active: template.isActive('/menuTemplate/uploadData')}">Upload Data </p>
+    </md-list-item>
+
+    <md-list-item ng-click="template.Open('2')">
+        <md-icon class="md-default-theme" class="material-icons">face</md-icon>
+		<p  ng-class="{ Active: template.isActive('/menuTemplate/SKU')||template.isActive('/menuTemplate/brands')||template.isActive('/menuTemplate/promotion')}">Brands</p>
+		<md-icon class="md-secondary arrow" ng-show="template.arrowBrand" style="color:blue">keyboard_arrow_right</md-icon>
+		<md-icon class="md-secondary arrow" ng-hide="template.arrowBrand">keyboard_arrow_up</md-icon>
+	</md-list-item>
+
+	<md-list-item ng-show="template.OpenBrand" ui-sref="menuTemplate.SKU">
+	<span class="child" ng-class="{ Active: template.isActive('/menuTemplate/SKU')}">All SKU</span>
+    </md-list-item>
+    <md-list-item ng-show="template.OpenBrand" ui-sref="menuTemplate.brands">
+        <span class="child" ng-class="{ Active: template.isActive('/menuTemplate/brands')}">All Brands</span>
+    </md-list-item>
+    <md-list-item ng-show="template.OpenBrand" ui-sref="menuTemplate.promotion">
+        <span class="child" ng-class="{ Active: template.isActive('/menuTemplate/promotion')}">All Promotions</span>
+    </md-list-item>
+
+    <md-list-item ng-click="template.Open('3')">
+        <md-icon class="md-default-theme" class="material-icons">face</md-icon>
+        <p ng-class="{ Active: template.isActive('/menuTemplate/TME')||template.isActive('/menuTemplate/membership')}">Accounts & settings </p>
+        <md-icon class="md-secondary arrow" ng-show="template.arrowSet">keyboard_arrow_right</md-icon>
+        <md-icon class="md-secondary arrow" ng-hide="template.arrowSet">keyboard_arrow_up</md-icon>
+    </md-list-item>
+    <md-list-item ng-show="template.OpenSetting" ui-sref="menuTemplate.TME">
+        <span class="child" ng-class="{ Active: template.isActive('/menuTemplate/TME')}">TME Setting</span>
+    </md-list-item>
+    <md-list-item ng-show="template.OpenSetting" ui-sref="menuTemplate.membership">
+        <span class="child" ng-class="{ Active: template.isActive('/menuTemplate/membership')}">Membership Setting</span>
+    </md-list-item>
+</md-list>
+
+
+<div class="col-md-9" ui-view>
+
+</div>

@@ -10,19 +10,23 @@
 
           <md-input-container class="md-block">
             <md-icon class="form-icon">email</md-icon>
-            <input class="form_input" ng-model="user.email" ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" autocomplete="off" type="email" placeholder="Email">
+            <input class="form_input" ng-model="user.email" ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" autocomplete="off" type="email" placeholder="Email" required/>
           </md-input-container>
 
           <md-input-container class="md-block">
             <md-icon class="form-icon">lock</md-icon>
-            <input class="form_input" ng-model="user.password" autocomplete="off" type="password" placeholder="Password">
+            <input class="form_input" ng-model="user.password" autocomplete="off" type="password" placeholder="Password" required/>
           </md-input-container>
 
           <md-checkbox ng-model="isChecked" class="blue" class="checkbox">
             Remember me
           </md-checkbox>
+		  <!-- <center><md-progress-circular md-mode="indeterminate" ng-show="login.isLoading"></md-progress-circular></center> -->
 
-          <md-button class="md-Primary login" type="submit" ng-disabled="form.$invalid">Login</md-button>
+		  <center><md-progress-circular style="margin-top:50px;" md-mode="indeterminate" ng-show="login.isLoading"></md-progress-circular></center>
+          <md-button class="md-primary login" type="submit" ng-show="login.buttonLogin" ng-disabled="form.$invalid">Login
+
+		  </md-button>
 
         </md-content>
       </form>
