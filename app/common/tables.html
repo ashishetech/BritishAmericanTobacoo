@@ -10,9 +10,9 @@
          <table class="table">
             <thead>
                <tr>
-                  <th class="headingcolor" ng-repeat="data in tabledetails.values">{{data }}</th>
+                  <th class="headingcolor" ng-repeat="data in tabledetails.values">{{data}}</th>
                   <th></th>
-                  <th  ng-if="data.Type=='SUBMIT'"  ng-repeat="data in tabledetails.button">
+                  <th  ng-if="data.Type=='SUBMIT'" ng-repeat="data in tabledetails.button">
                      <button type="submit" class="btn btn-primary"> {{data.Type}}
                   </th>
                </tr>
