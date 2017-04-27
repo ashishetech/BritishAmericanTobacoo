@@ -1,11 +1,11 @@
-<div class="col-md-12 margin">
+<div class="col-md-12 margin paddingLeft">
    <div class="minus"> </div>
    <div class="minus"></div>
    <div class="minus"></div>
    <div class="textstyle">All Outlets</div>
 </div>
 <!-- <div class="contain"> -->
-   <div class="col-md-12">
+   <div class="col-md-12 paddingLeft" >
       <div style="margin-top: 40px;">
          <div class="color">{{tabledetails.tabletitle}}</div>
          <table class="table">
@@ -21,7 +21,7 @@
             <tbody>
                <tr ng-repeat="viewdata in tablebody">
                   <td ng-repeat="value in viewdata track by $index">{{value}}</td>
-                  <td><a>{{tabledetails.alink.Text}}
+                  <td><a class="btnLink" ng-click="callback({data:viewdata[0]})">{{tabledetails.alink.Text}}
                      </a>
                   </td>
                </tr>

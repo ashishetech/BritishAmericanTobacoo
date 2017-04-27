@@ -1,0 +1,163 @@
+<div class="col-md-12 editoutlet">
+    <div class="col-md-12 margin">
+        <div class="minus"> </div>
+        <div class="minus"></div>
+        <div class="minus"></div>
+        <div class="textstyle">OUTLET:Details</div>
+    </div>
+    <form name="form" novalidate>
+
+        <div class="col-md-12 editOutletHeader">
+
+            <div class="col-md-4 outletPoint">
+                OUTLET bk_idddsfdvd
+                <p class="points"> Life time earning (Points) :</p>
+
+            </div>
+
+            <div class="col-md-6">
+                <div class="col-md-5 assign">Assigned TME</div>
+                <div class="col-md-7 assignDropdown">
+                    <select class="form-control" name="none">
+
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-2 saveBtn">
+                <button class="btn btn-default pull-right" style="width:100px; background-color:lightgrey;" ng-click="editOutletCtrl.update(outlet)">Save</button>
+            </div>
+        </div>
+
+
+
+
+        <div class="col-md-12 membershipForm">
+
+
+            <div class="row">
+                <div class="col-md-4 formArea">
+                    <div class="form-group">
+                        <h6>BAT ID :</h6>
+                        <input type="text" class="form-control" id="bat_id" value="" ng-model="outlet.bat_id">
+                    </div>
+                    <div class="form-group">
+                        <h6>Membership Number:</h6>
+                        <input type="number" class="form-control" value="" ng-model="outlet.membership_number">
+                    </div>
+                    <div class="form-group">
+                        <h6>Password:</h6>
+                        <div class="form-group">
+                            <div class="col-md-8 passInput">
+                                <input type="password" class="form-control inputForm" value="" ng-model="outlet.password">
+                            </div>
+                            <div class="col-md-4 passBtn">
+                                <input type="button" class="btn btn-default inputBtn" value="change password">
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row name">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <h6>First Name</h6>
+                                <input type="text" class="form-control" id="usr" value="" ng-model="outlet.first_name">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <h6>Last Name</h6>
+                                <input type="text" class="form-control" id="us1r" value="" ng-model="outlet.last_name">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <h6>Email</h6>
+                        <input type="text" class="form-control" id="usr" value="" ng-model="outlet.email">
+                    </div>
+                    <div class="form-group">
+                        <h6>Outlet Name</h6>
+                        <input type="text" class="form-control" id="pwd" value="" ng-model="outlet.outlet_name">
+                    </div>
+                    <div class="form-group">
+                        <h6>Birthday</h6>
+                        <input type="date" class="form-control" id="pwd" value="" style="width: 100%;" ng-model="outlet.birthday">
+                    </div>
+                </div>
+
+                <div class="col-md-8 membership">
+                    <div class="row">
+                        <div class="col-md-8 ">
+
+                            <h5>  Membership Type</h5>
+                            <md-radio-group ng-model="outlet.membership_id" class="md-primary">
+                                <div class="col-md-12 radioBtn">
+                                    <div class="col-md-3" ng-repeat="radiolabel in editOutletCtrl.radioData">
+                                        <md-radio-button ng-value="radiolabel.value">
+                                            {{ radiolabel.label }}
+                                        </md-radio-button>
+                                    </div>
+                                </div>
+                            </md-radio-group>
+                        </div>
+
+                        <div class="col-md-4">
+                            <h5>Rebate Rate (1 point)</h5>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <hr>
+
+                    <div class="row">
+                        <div class="col-md-8 ">
+                            <h5>Monthly Targets (Cartons) :</h5>
+                            <div class="col-md-4">
+                                <p>This month</p>
+                                <p><b>{{outlet.this}}8000 </b></p>
+                                <a href="">Edit</a>
+                            </div>
+                            <div class="col-md-4">
+                                <p>Next month</p>
+                                <p><b>{{outlet.next}}10000</b></p>
+                                <a href="">Edit</a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <h5></h5>
+                            <a href="">Performance History</a>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="col-md-12">
+
+                        <h5>Point Balance :</h5>
+                        <p><b>3000 {{outlet.pointbalance}}</b></p>
+                        <a href="">Amend Points</a>
+                    </div>
+
+                    <div class="col-md-12" style="margin-top:20px;">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <h5>Points History :</h5>
+                            </div>
+                            <div class="col-md-5">
+                                <select  class="form-control" style="width:100px;">
+                                    <option>ALLL</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-md-12">
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+</div>

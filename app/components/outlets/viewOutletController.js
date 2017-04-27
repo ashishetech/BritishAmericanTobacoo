@@ -1,4 +1,4 @@
-angular.module('batApp').controller('viewOutletController', function (getDataFactory) {
+angular.module('batApp').controller('viewOutletController', function (getDataFactory, shareDataService, $state) {
   var vm = this
   vm.outletList = []
   vm.data = {
@@ -30,4 +30,9 @@ angular.module('batApp').controller('viewOutletController', function (getDataFac
             })
           }
         })
+		vm.edit=function (data) {
+			console.log(data)
+			shareDataService.addId(data);
+			$state.go('menuTemplate.editOutlet')
+		}
 })
