@@ -4,5 +4,8 @@ angular.module('batApp').factory('getDataFactory', (configuration, $resource) =>
   },
   login () {
     return $resource(configuration.apihost + '/admin/login')
+  },
+  addOutlet () {
+    return $resource(configuration.apihost + '/outlet/create')
   }
 }))
