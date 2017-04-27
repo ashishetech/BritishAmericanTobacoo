@@ -1,22 +1,18 @@
 'use strict'
 angular.module('batApp')
-    .controller('addOutletController', function (getDataFactory) {
+    .controller('addOutletController', function (getDataFactory, $state) {
       var vm = this
       vm.radioData = [
-          { label: 'Diamond', value:0 },
-          { label: 'brogo123', value:1 },
-          { label: 'bronze final', value:2 }
-      ];
-      vm.save=function(data){
-        console.log(data);
+          { label: 'gold23', value:1 },
+          { label: 'gold123', value:2 },
+          { label: 'Diamonds', value:3 }
+      ]
+      vm.save = function (data) {
         getDataFactory.addOutlet().save(data).$promise
                 .then((response) => {
-                  console.log(response)
                   if (!response.error) {
-
-                    $state.go('outletViewTable')
+                    $state.go('menuTemplate.outletViewTable')
                   }
                 })
-
       }
     })

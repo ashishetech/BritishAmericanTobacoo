@@ -4,6 +4,7 @@ body {
     margin-right: 0px;
     padding-left: 0px;
     padding-right: 0px;
+      color: #667685;
 }
 .headingcolor {
     color: #667685;
@@ -14,7 +15,7 @@ body {
     color: rgb(94, 94, 94);
     font-size: 20px;
     line-height: 89px;
-    padding-left: 14px;
+    padding-left: 11px;
     position: relative;
 }
 .col-md-3,
@@ -56,9 +57,4 @@ td {
     padding-right: 17px;
     padding-top: 17px;
     padding-bottom: 17px;
-}
-.btnpadding{
-  padding:8px 48px;
-  background-color: rgb(219, 219, 219);
-  border-color:rgb(219, 219, 219);
 }
