@@ -9,5 +9,8 @@ angular.module('batApp').factory('getDataFactory', (configuration, $resource) =>
   },
   addOutlet () {
     return $resource(configuration.apihost + '/outlet/create')
+  },
+  getMembershipType () {
+    return $resource(configuration.apihost + '/membership/get')
   }
 }))
