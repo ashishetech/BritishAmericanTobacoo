@@ -19,6 +19,7 @@ angular.module('batApp').controller('viewOutletController', function (getDataFac
   }
   getDataFactory.getOutletViewData().query().$promise
         .then((response) => {
+			console.log(">>>>>>>>>>>>>>>>>>>>>>>>dhgwfdwed",response)
           if (response.error) {} else {
             angular.forEach(response, (value, key) => {
               if (value.tme == null) {
@@ -27,6 +28,7 @@ angular.module('batApp').controller('viewOutletController', function (getDataFac
                 value.tme = value.tme.first_name
               }
               vm.outletList.push([value.data.id, value.data.bat_id, value.data.outlet_name, value.data.points_value, value.data.updatedAt, value.data.performance, value.tme])
+
             })
           }
         })
