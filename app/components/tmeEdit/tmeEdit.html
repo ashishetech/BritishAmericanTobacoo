@@ -1,0 +1,102 @@
+<div class="col-md-12 editoutlet">
+    <div class="col-md-12 margin">
+        <div class="minus"> </div>
+        <div class="minus"></div>
+        <div class="minus"></div>
+        <div class="textstyle">OUTLET:Details {{editOutletCtrl.outlet.bat_id}}</div>
+    </div>
+    <form name="form" novalidate>
+        <div class="col-md-12 editOutletHeader">
+            <div class="col-md-9 outletPoint">
+                ID: {{editOutletCtrl.outlet.bat_id}}
+            </div>
+
+
+            <div class="col-md-3 saveBtn">
+                <button class="btn btn-default pull-right save"  ng-click="editOutletCtrl.update(editOutletCtrl.outlet)">Save</button>
+            </div>
+        </div>
+
+        <div class="col-md-12 membershipForm">
+
+            <div class="row">
+                <div class="col-md-4 formArea">
+                    <div class="form-group">
+                        <h6>BAT ID :</h6>
+                        <input type="text" class="form-control"  value="" ng-model="editOutletCtrl.outlet.bat_id" disabled>
+                    </div>
+
+                    <div class="form-group">
+                        <h6>Password:</h6>
+                        <div class="form-group">
+                            <div class="col-md-7 passInput">
+                                <input type="password" class="form-control inputForm" value="" ng-model="editOutletCtrl.outlet.password">
+                            </div>
+                            <div class="col-md-5 passBtn">
+                                <input type="button" class="btn btn-default inputBtn" value="change password">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row name">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <h6>First Name</h6>
+                                <input type="text" class="form-control" id="usr" value="" ng-model="editOutletCtrl.outlet.first_name">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <h6>Last Name</h6>
+                                <input type="text" class="form-control" id="us1r" value="" ng-model="editOutletCtrl.outlet.last_name">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <h6>Email</h6>
+                        <input type="text" class="form-control" ng-model="editOutletCtrl.outlet.email" disabled>
+                    </div>
+                    <div class="form-group">
+                        <h6>Mobile Number</h6>
+                        <input type="text" class="form-control"  ng-model="editOutletCtrl.outlet.mobile">
+                    </div>
+
+                </div>
+
+                <div class="col-md-8 tme">
+					<div class="col-sm-12">
+						<h5>Outlets:</h5>
+					</div>
+
+					<div class="col-md-12 ">
+						<table class="table tmeEdit">
+							<thead>
+								<tr>
+									<th>ID</th>
+									<th>BAT ID</th>
+									<th>Outlet Name</th>
+									<th>Points</th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+
+					</div>
+
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<style>
+.tme{
+	padding-right: 0px;
+}
+.tmeEdit{
+
+	min-width:106%;
+}
+</style>

@@ -11,12 +11,15 @@ angular.module('batApp').factory('getDataFactory', (configuration, $resource) =>
     return $resource(configuration.apihost + '/get/outletById/' + id)
   },
   updateOutlet (id) {
-    return $resource(configuration.apihost + '/outlet/update/' + id, {}, { 'editoutLate': { method:'PUT' } })
+    return $resource(configuration.apihost + '/outlet/update/' + id, {}, { 'update': { method:'PUT' } })
   },
   getMembershipType () {
     return $resource(configuration.apihost + '/membership/get')
   },
   tmeAssign () {
     return $resource(configuration.apihost + '/tme/get/-1/13')
+  },
+  updateTme (tmeId,dataId) {
+	  return $resource(configuration.apihost + '/tme/assignoutlet/' + dataId +'/'+ tmeId, {}, { 'update': { method:'PUT' } })
   }
 }))

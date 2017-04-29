@@ -2,7 +2,7 @@
 
 angular.module('batApp', ['ui.router', 'ngResource', 'ngStorage', 'ngMaterial'])
     .config(function ($stateProvider, $urlRouterProvider) {
-      $urlRouterProvider.otherwise('/editOutlet')
+      $urlRouterProvider.otherwise('/login')
       $stateProvider
             .state('menuTemplate', {
               templateUrl: 'components/template/menuTemplate.html',
@@ -21,6 +21,11 @@ angular.module('batApp', ['ui.router', 'ngResource', 'ngStorage', 'ngMaterial'])
 			.state('menuTemplate.editOutlet', {
               url: '/editOutlet',
               templateUrl: 'components/outlets/editOutlet/editOutlet.html',
-              controller: 'editOutletController as editOutletCtrl'
-            })
+              controller: 'EditOutletController as editOutletCtrl'
+		  })
+		  .state('menuTemplate.TmeEdit', {
+			url: '/TmeEdit',
+			templateUrl: 'components/tmeEdit/tmeEdit.html',
+			controller: 'TmeEditController as tmeEditCtrl'
+		})
     })

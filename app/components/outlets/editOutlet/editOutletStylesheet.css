@@ -26,6 +26,9 @@
 .saveBtn{
 	padding-right:0px;
 }
+.save{
+	width:100px; background-color:lightgrey;
+}
 .membershipForm{
 	margin-top:20px; background-color:#FCFCFC;
 }
@@ -33,16 +36,27 @@
 	width:27%;
 }
 .passInput{
-	padding:0px;margin:0px;
-}
-.inputForm{
-	 width:100% ;border-right:none;border-bottom-right-radius:0px;border-top-right-radius:0px;
+	padding:0px;
+	margin:0px;
 }
 .passBtn{
-	padding:0px;margin:0px;
+	padding:0px;
+	margin:0px;
+}
+.inputForm{
+	 /*width:100% ;*/
+	 border-right:none;
+	 border-bottom-right-radius:0px;
+	 border-top-right-radius:0px;
 }
 .inputBtn{
-	font-size:9px; height: 34px; padding:3px;margin-left:-3px; background-color:lightgrey;	border-bottom-left-radius:0px;border-top-left-radius:0px;
+	font-size:9px;
+	height: 34px;
+	/*padding:3px;*/
+	/*margin-left:-3px;*/
+	background-color:lightgrey;
+	border-bottom-left-radius:0px;
+	border-top-left-radius:0px;
 }
 .name{
 	margin-top:60px
@@ -56,4 +70,64 @@
 }
 .option{
 	padding: 5px;
+}
+.monthTarget{
+	margin-left: -15px !important;
+}
+.tableTarget{
+	margin-left: -15px !important;
+	margin-right: -15px !important;
+}
+.historyDetails{
+	margin-top:20px;
+	margin-left: -15px !important;
+}
+.all{
+	width:100px;
+}
+a.targetlinks{
+	font-size: 12px;
+	font-weight: bold;
+	color: #007AFF;
+	cursor: pointer;
+	text-decoration: none;
+}
+a.targetlinks:hover{
+	color: #007AFF;
+	cursor: pointer;
+	text-decoration: none;
+}
+.bold{
+	font-size: 18px;
+	font-weight: bold;
+	color: black;
+}
+md-radio-group:not([disabled]).md-primary .md-on{
+	background-color: #007AFF !important;
+}
+md-radio-group:not([disabled]).md-primary .md-checked .md-off{
+	border-color: #007AFF !important;
+
+}
+
+
+.modalmargin{
+	border:2px solid grey;
+	margin-top: 150px;
+}
+.down{
+	margin-top: 15px;
+}
+.top{
+	margin-top:30px;
+}
+.inputPop{
+	height: 50px;
+}
+.btnPop{
+	height:45px;
+	margin-bottom: 30px;
+}
+.btnPop:hover{
+	background-color: lightgrey;
 }
