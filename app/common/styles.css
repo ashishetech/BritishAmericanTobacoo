@@ -12,11 +12,12 @@ body {
     font-weight: 300;
 }
 .color {
-    color: rgb(94, 94, 94);
+    font-weight: 900;
     font-size: 20px;
     line-height: 89px;
     padding-left: 11px;
     position: relative;
+    border-radius: 5px;
 }
 .col-md-3,
 .col-md-9,

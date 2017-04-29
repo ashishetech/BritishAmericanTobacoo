@@ -7,3 +7,17 @@
 h6 {
     color: #667685;
 }
+.btn:hover
+{
+
+  background-color: rgb(219, 219, 219) !important;
+border-color:rgb(219, 219, 219) !important;
+}
+.btnpadding1 {
+
+   color: #1F8AFD;
+   background-color: white;
+   border:0px;
+    border-color: rgb(219, 219, 219);
+    margin-right: 45px;
+}

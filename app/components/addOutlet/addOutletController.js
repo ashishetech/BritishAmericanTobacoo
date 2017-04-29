@@ -12,8 +12,10 @@ angular.module('batApp')
                 })
               })
       vm.save = function (data) {
+        console.log(data)
         getDataFactory.addOutlet().save(data).$promise
                 .then((response) => {
+                  console.log(response)
                   if (!response.error) {
                     $state.go('menuTemplate.outletViewTable')
                   }

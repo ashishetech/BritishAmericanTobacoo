@@ -18,9 +18,9 @@ h3 {
     line-height: 41px;
     color: #667685;
 }
-form {
+/*form {
     margin-top: 25%;
-}
+}*/
 md-checkbox.md-checked .md-ink-ripple {
     color: blue;
 }

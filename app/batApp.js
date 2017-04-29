@@ -24,4 +24,9 @@ angular.module('batApp', ['ui.router', 'ngResource', 'ngStorage', 'ngMaterial'])
               controller: 'addOutletController as addOutletCtrl'
 
             })
+            .state('menuTemplate.tmeViewTable', {
+              url: '/tmeViewTable',
+              templateUrl: 'components/tme/tmeView.html',
+              controller: 'viewTmeController as viewTmeCtrl'
+            })
     })

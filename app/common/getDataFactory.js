@@ -2,7 +2,7 @@
 
 angular.module('batApp').factory('getDataFactory', (configuration, $resource) => ({
   getOutletViewData () {
-    return $resource(configuration.apihost + '/outlet/get/-1/1')
+    return $resource(configuration.apihost + '/outlet/get/1/13')
   },
   login () {
     return $resource(configuration.apihost + '/admin/login')
@@ -12,5 +12,9 @@ angular.module('batApp').factory('getDataFactory', (configuration, $resource) =>
   },
   getMembershipType () {
     return $resource(configuration.apihost + '/membership/get')
+  },
+  getTmeViewData () {
+    return $resource(configuration.apihost + '/tme/get/-1/1')
   }
+
 }))
