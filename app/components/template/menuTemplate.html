@@ -61,13 +61,13 @@
 
     <md-list-item ng-click="template.Open('setting')">
         <md-icon class="md-default-theme" class="material-icons">face</md-icon>
-        <p ng-class="{ Active: template.isActive('/TME')||template.isActive('/membership')}">Accounts & settings </p>
+        <p ng-class="{ Active: template.isActive('/tme')||template.isActive('/membership')}">Accounts & settings </p>
         <md-icon class="md-secondary arrow" ng-show="template.arrowSet">keyboard_arrow_right</md-icon>
         <md-icon class="md-secondary arrow" ng-hide="template.arrowSet">keyboard_arrow_up</md-icon>
     </md-list-item>
 
-    <md-list-item ng-show="template.OpenSetting" ui-sref="menuTemplate.TME">
-        <span class="child" ng-class="{ Active: template.isActive('/TME')}">TME Setting</span>
+    <md-list-item ng-show="template.OpenSetting" ui-sref="menuTemplate.tme">
+        <span class="child" ng-class="{ Active: template.isActive('/tme')}">TME Setting</span>
     </md-list-item>
 
     <md-list-item ng-show="template.OpenSetting" ui-sref="menuTemplate.membership">

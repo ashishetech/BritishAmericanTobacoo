@@ -1,0 +1,57 @@
+<div class="modal fade" id="assignTme" role="dialog">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content assignTME">
+
+            <div class="modal-body">
+                <center>
+                    <h4 style="color:#007AFF;">ASSIGN OUTLETS</h4>
+                </center>
+                <div class="row top">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="col-md-12">
+                            <input type="text" class="form-control inputPop" placeholder="type name of outlets">
+                        </div>
+                    </div>
+                </div>
+				<div class="row top">
+					<div class="col-md-10 col-md-offset-1">
+						<p style="margin: 0px 15px 17px;">show</p>
+
+						<md-radio-group  class="md-primary" ng-model="tmeEditCtrl.assignId" ng-change="tmeEditCtrl.showTme(tmeEditCtrl.assignId)">
+							<div class="col-md-6">
+								<md-radio-button value="UNASSIGN" class="md-primary">Un-Assigned Only</md-radio-button>
+							</div>
+
+							<div class="col-md-6">
+								<md-radio-button value="ALL" class="md-primary">All</md-radio-button>
+							</div>{{tmeEditCtrl.id}}
+						</md-radio-group>
+					</div>
+				</div>
+
+				<div class="row top assignCheckbox">
+					<div class="col-md-10 col-md-offset-1 " ng-repeat="data in tmeEditCtrl.assignData">
+						<md-checkbox ng-model="data.id" class="blue" class="checkbox ">
+							{{data.outlet_name}}
+	                    </md-checkbox>{{data.id}}
+
+					</div>
+				</div>
+
+
+                <div class="row top">
+                    <div class="col-md-10 col-md-offset-1 ">
+                        <div class="col-md-6">
+                            <input type="button" class="btn btn-default btnPop" data-dismiss="modal" style="width:100%; background-color:grey" value="Cancel">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="button" class="btn btn-primary btnPop" style="width:100%" value="Apply">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

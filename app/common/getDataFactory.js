@@ -16,10 +16,27 @@ angular.module('batApp').factory('getDataFactory', (configuration, $resource) =>
   getMembershipType () {
     return $resource(configuration.apihost + '/membership/get')
   },
-  tmeAssign () {
+  getTmeViewData () {
     return $resource(configuration.apihost + '/tme/get/-1/13')
   },
-  updateTme (tmeId,dataId) {
-	  return $resource(configuration.apihost + '/tme/assignoutlet/' + dataId +'/'+ tmeId, {}, { 'update': { method:'PUT' } })
+  assignTmeOutlet (tmeId,dataId) {
+	  return $resource(configuration.apihost + '/tme/assignoutlet/' + dataId +'/'+ tmeId, {},
+	  { 'update': { method:'PUT' } })
+  },
+  getTmeById (id) {
+    return $resource(configuration.apihost + '/tme/getById/' + id)
+  },
+  getTmeOutletById (id) {
+	  return $resource(configuration.apihost + '/tme/outlet/' + id)
+  },
+  unassignTme (id) {
+	  return $resource(configuration.apihost + '/tme/unassignoutlet/' + id, {}, { 'update': { method:'PUT' } })
+  },
+  assignTme (search) {
+	  return $resource(configuration.apihost + '/tme/searchoutlet/' + search)
+  },
+  updateTme(id){
+	  return $resource(configuration.apihost + '/tme/update/' + id, {}, { 'update': { method:'PUT' } })
   }
+
 }))

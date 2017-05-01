@@ -3,17 +3,17 @@
         <div class="minus"> </div>
         <div class="minus"></div>
         <div class="minus"></div>
-        <div class="textstyle">OUTLET:Details {{editOutletCtrl.outlet.bat_id}}</div>
+        <div class="textstyle">OUTLET:Details {{tmeEditCtrl.tme.id}}</div>
     </div>
     <form name="form" novalidate>
         <div class="col-md-12 editOutletHeader">
             <div class="col-md-9 outletPoint">
-                ID: {{editOutletCtrl.outlet.bat_id}}
+                ID: {{tmeEditCtrl.tme.id}}
             </div>
 
 
             <div class="col-md-3 saveBtn">
-                <button class="btn btn-default pull-right save"  ng-click="editOutletCtrl.update(editOutletCtrl.outlet)">Save</button>
+                <button class="btn btn-default pull-right save"  ng-click="tmeEditCtrl.update(tmeEditCtrl.tme)">Save</button>
             </div>
         </div>
 
@@ -23,42 +23,40 @@
                 <div class="col-md-4 formArea">
                     <div class="form-group">
                         <h6>BAT ID :</h6>
-                        <input type="text" class="form-control"  value="" ng-model="editOutletCtrl.outlet.bat_id" disabled>
+                        <input type="text" class="form-control"  value="" ng-model="tmeEditCtrl.tme.bat_id" disabled>
                     </div>
 
                     <div class="form-group">
                         <h6>Password:</h6>
-                        <div class="form-group">
                             <div class="col-md-7 passInput">
-                                <input type="password" class="form-control inputForm" value="" ng-model="editOutletCtrl.outlet.password">
+                                <input type="password" class="form-control inputForm" value="" ng-model="tmeEditCtrl.tme.password">
                             </div>
                             <div class="col-md-5 passBtn">
                                 <input type="button" class="btn btn-default inputBtn" value="change password">
                             </div>
-                        </div>
                     </div>
 
                     <div class="row name">
                         <div class="col-md-6">
                             <div class="form-group">
                                 <h6>First Name</h6>
-                                <input type="text" class="form-control" id="usr" value="" ng-model="editOutletCtrl.outlet.first_name">
+                                <input type="text" class="form-control" id="usr" value="" ng-model="tmeEditCtrl.tme.first_name">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <h6>Last Name</h6>
-                                <input type="text" class="form-control" id="us1r" value="" ng-model="editOutletCtrl.outlet.last_name">
+                                <input type="text" class="form-control" id="us1r" value="" ng-model="tmeEditCtrl.tme.last_name">
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
                         <h6>Email</h6>
-                        <input type="text" class="form-control" ng-model="editOutletCtrl.outlet.email" disabled>
+                        <input type="text" class="form-control" ng-model="tmeEditCtrl.tme.email" disabled>
                     </div>
                     <div class="form-group">
                         <h6>Mobile Number</h6>
-                        <input type="text" class="form-control"  ng-model="editOutletCtrl.outlet.mobile">
+                        <input type="text" class="form-control"  ng-model="tmeEditCtrl.tme.mobile_no">
                     </div>
 
                 </div>
@@ -69,7 +67,7 @@
 					</div>
 
 					<div class="col-md-12 ">
-						<table class="table tmeEdit">
+						<table class="table tmeEdit" >
 							<thead>
 								<tr>
 									<th>ID</th>
@@ -79,9 +77,17 @@
 									<th></th>
 								</tr>
 							</thead>
-							<tbody>
+							<tbody >
+								<tr ng-repeat="data in tmeEditCtrl.outlets">
+									<td>{{data.id}}</td>
+									<td>{{data.bat_id}}</td>
+									<td>{{data.outlet_name}}</td>
+									<td>{{data.points_value}}</td>
+									<td ><a class="unassign" ng-click="tmeEditCtrl.unassign(data.id)">Unassign</a></td>
+								</tr>
 							</tbody>
 						</table>
+						<button type="button" class="btn btn-primary assignBtn" ng-click="tmeEditCtrl.assign('ALL')" data-toggle="modal" data-target="#assignTme">Assign outlets</button>
 
 					</div>
 
@@ -92,11 +98,12 @@
 </div>
 
 <style>
-.tme{
+/*.tme{
 	padding-right: 0px;
 }
 .tmeEdit{
 
 	min-width:106%;
-}
+}*/
 </style>
+<div ng-include="'components/tmeEdit/assignTme.html'"></div>

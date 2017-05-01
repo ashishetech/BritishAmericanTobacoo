@@ -23,9 +23,14 @@ angular.module('batApp', ['ui.router', 'ngResource', 'ngStorage', 'ngMaterial'])
               templateUrl: 'components/outlets/editOutlet/editOutlet.html',
               controller: 'EditOutletController as editOutletCtrl'
 		  })
-		  .state('menuTemplate.TmeEdit', {
-			url: '/TmeEdit',
-			templateUrl: 'components/tmeEdit/tmeEdit.html',
-			controller: 'TmeEditController as tmeEditCtrl'
-		})
-    })
+		.state('menuTemplate.tme', {
+		  url: '/tme',
+		  templateUrl: 'components/tme/tmeView.html',
+		  controller: 'viewTmeController as viewTmeCtrl'
+	  })
+	  .state('menuTemplate.TmeEdit', {
+		url: '/TmeEdit',
+		templateUrl: 'components/tmeEdit/tmeEdit.html',
+		controller: 'TmeEditController as tmeEditCtrl'
+	})
+})

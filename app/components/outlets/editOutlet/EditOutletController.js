@@ -8,7 +8,7 @@ angular.module('batApp')
         // vm.radioData12 = []
         vm.tme = [];
 
-        getDataFactory.tmeAssign().query().$promise
+        getDataFactory.getTmeViewData().query().$promise
             .then((response) => {
                 vm.tme = response
             });
@@ -26,7 +26,7 @@ angular.module('batApp')
             });
 
         vm.updateTme = function(tmeId) {
-            getDataFactory.updateTme(tmeId, vm.dataId).update().$promise
+            getDataFactory.assignTmeOutlet(tmeId, vm.dataId).update().$promise
                 .then((response) => {
                 })
         };
@@ -41,7 +41,7 @@ angular.module('batApp')
                 })
         }
 
-        vm.get = function() {
+        vm.editOutlet = function() {
             vm.dataId = shareDataService.getId()
             getDataFactory.getDataById(vm.dataId).get().$promise
                 .then((response) => {
@@ -61,5 +61,5 @@ angular.module('batApp')
                     }
                 });
         }
-        vm.get();
+        vm.editOutlet();
     })

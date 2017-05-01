@@ -53,6 +53,7 @@
 	font-size:9px;
 	height: 34px;
 	/*padding:3px;*/
+	min-width: 100%;
 	/*margin-left:-3px;*/
 	background-color:lightgrey;
 	border-bottom-left-radius:0px;
@@ -107,27 +108,8 @@ md-radio-group:not([disabled]).md-primary .md-on{
 }
 md-radio-group:not([disabled]).md-primary .md-checked .md-off{
 	border-color: #007AFF !important;
-
 }
-
-
 .modalmargin{
 	border:2px solid grey;
 	margin-top: 150px;
-}
-.down{
-	margin-top: 15px;
-}
-.top{
-	margin-top:30px;
-}
-.inputPop{
-	height: 50px;
-}
-.btnPop{
-	height:45px;
-	margin-bottom: 30px;
-}
-.btnPop:hover{
-	background-color: lightgrey;
 }
