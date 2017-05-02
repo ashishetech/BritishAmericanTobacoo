@@ -2,8 +2,7 @@ angular.module('batApp').directive('dynamicTable', () => ({
   templateUrl: './common/tables.html',
   scope: {
     tabledata: '=',
-    viewtabledata: '=',
-     callback: '&',
+    viewtabledata: '='
   },
   controller ($scope) {
     $scope.tabledetails = $scope.tabledata

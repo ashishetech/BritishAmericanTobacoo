@@ -17,4 +17,5 @@ angular.module('batApp').factory('getDataFactory', (configuration, $resource) =>
     return $resource(configuration.apihost + '/tme/get/-1/1')
   }
 
+
 }))

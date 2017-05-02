@@ -21,6 +21,7 @@ angular.module('batApp').controller('viewOutletController', function (getDataFac
         .then((response) => {
           if (response.error) {} else {
             angular.forEach(response, (value, key) => {
+              value.data.updatedAt = moment(value.data.updatedAt).format('DD MMMM, YYYY')
               if (value.tme == null) {
                 value.tme = 'none'
               } else if (value.tme.first_name) {

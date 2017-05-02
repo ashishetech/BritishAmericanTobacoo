@@ -1,6 +1,6 @@
 'use strict'
 
-angular.module('batApp', ['ui.router', 'ngResource', 'ngStorage', 'ngMaterial'])
+angular.module('batApp', ['ui.router', 'ngResource', 'ngStorage', 'ngMaterial', 'angularMoment'])
     .config(function ($stateProvider, $urlRouterProvider) {
       $urlRouterProvider.otherwise('/login')
       $stateProvider
@@ -29,4 +29,5 @@ angular.module('batApp', ['ui.router', 'ngResource', 'ngStorage', 'ngMaterial'])
               templateUrl: 'components/tme/tmeView.html',
               controller: 'viewTmeController as viewTmeCtrl'
             })
+
     })

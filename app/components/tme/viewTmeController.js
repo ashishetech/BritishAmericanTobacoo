@@ -21,8 +21,7 @@ angular.module('batApp').controller('viewTmeController', function (getDataFactor
      .then((response) => {
        if (response.error) {} else {
          angular.forEach(response, (value, key) => {
-           value.updatedAt = value.updatedAt.slice(0, 10)
-
+           value.updatedAt = moment(value.updatedAt).format('DD MMMM, YYYY')
            vm.tmeList.push([value.id, value.first_name, value.last_name, value.email, value.outlets, value.updatedAt])
          })
        }
