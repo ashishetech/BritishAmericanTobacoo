@@ -26,7 +26,7 @@ angular.module('batApp')
             });
 
         vm.updateTme = function(tmeId) {
-            getDataFactory.assignTmeOutlet(tmeId, vm.dataId).update().$promise
+            getDataFactory.assignTmeOutlet(vm.dataId,tmeId).update().$promise
                 .then((response) => {
                 })
         };

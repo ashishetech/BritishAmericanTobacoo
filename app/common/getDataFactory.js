@@ -19,7 +19,7 @@ angular.module('batApp').factory('getDataFactory', (configuration, $resource) =>
   getTmeViewData () {
     return $resource(configuration.apihost + '/tme/get/-1/13')
   },
-  assignTmeOutlet (tmeId,dataId) {
+  assignTmeOutlet (dataId,tmeId) {
 	  return $resource(configuration.apihost + '/tme/assignoutlet/' + dataId +'/'+ tmeId, {},
 	  { 'update': { method:'PUT' } })
   },
@@ -37,6 +37,9 @@ angular.module('batApp').factory('getDataFactory', (configuration, $resource) =>
   },
   updateTme(id){
 	  return $resource(configuration.apihost + '/tme/update/' + id, {}, { 'update': { method:'PUT' } })
+  },
+  searchTme (search, text) {
+	 return $resource(configuration.apihost + '/tme/searchoutlet/' + search+'/'+text)
   }
 
 }))
