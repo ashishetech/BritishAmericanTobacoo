@@ -7,7 +7,6 @@ angular.module('batApp')
       vm.save = function (data) {
         getDataFactory.addTme().save(data).$promise
                 .then((response) => {
-                  console.log(response)
                   if (!response.error) {
                     $state.go('menuTemplate.tmeViewTable')
                   } else {

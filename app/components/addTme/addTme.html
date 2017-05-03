@@ -7,9 +7,7 @@
 <div style="margin-top: 100px;" >
    <form name="form" ng-submit="addTmeCtrl.save(tme)"novalidate>
       <div> <button class="btn btn-primary pull-right btnpadding1">Save</button>
-
       </div>
-
       <br><br><br><br>
       <div ng-show="addTmeCtrl.err" class="alert alert-danger">{{addTmeCtrl.errMsg}}</div>
       <div class="col-md-12">
@@ -19,7 +17,6 @@
                <input type="text" class="form-control" name="bat_id" ng-model="tme.bat_id" ng-change="addTmeCtrl.change()" required>
                <span ng-show="form.bat_id.$dirty && form.bat_id.$error.required" class="help-block">Bat Id is required</span>
             </div>
-
             <div class="form-group" ng-class="{ 'has-error' : form.pwd.$invalid && !form.pwd.$pristine }">
                <h6>Password:</h6>
                <input type="password" class="form-control" name="pwd" ng-model="tme.password" ng-change="addTmeCtrl.change()" required>
@@ -51,12 +48,8 @@
                <h6>Mobile Number</h6>
                <input type="text" class="form-control"  name="number" ng-model="tme.mobile_no"  ng-change="addTmeCtrl.change()" required>
                <span ng-show="form.number.$dirty && form.number.$error.required" class="help-block">Number is required</span>
-
             </div>
-
    </form>
    </div>
-
-
    </div>
 </div>

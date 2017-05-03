@@ -1,4 +1,4 @@
-angular.module('batApp').controller('viewSkuController', function (getDataFactory,$state) {
+angular.module('batApp').controller('viewSkuController', function (getDataFactory, $state) {
   var vm = this
   vm.skuList = []
   vm.data = {
@@ -20,17 +20,15 @@ angular.module('batApp').controller('viewSkuController', function (getDataFactor
   }
   getDataFactory.getSkuViewData().query().$promise
      .then((response) => {
-       console.log(">>>>>>>>>>>>>>>>>>..response is",response)
        if (response.error) {} else {
          angular.forEach(response, (value, key) => {
-           value.sku.createdAt=moment(value.sku.createdAt).format('DD MMMM, YYYY')
-          console.log(">>>>>>>>>>>>>>>>>>.",value.id)
-        vm.skuList.push([value.sku.id, value.sku.productname, value.sku.brand_id,value.sku.createdAt, value.sku.bat_id,value.sku.basepoint])
-        })
+           value.sku.createdAt = moment(value.sku.createdAt).format('DD MMMM, YYYY')
+
+           vm.skuList.push([value.sku.id, value.sku.productname, value.sku.brand_id, value.sku.createdAt, value.sku.bat_id, value.sku.basepoint])
+         })
        }
      })
-     vm.add=function(){
-       $state.go('menuTemplate.addSku')
-     }
-
+  vm.add = function () {
+    $state.go('menuTemplate.addSku')
+  }
 })
