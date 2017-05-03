@@ -53,10 +53,14 @@
 	margin-left: 10px
 }
 .inlineblock{
-	/*display: inline;*/
 	min-width: 150px;
-
 }
-.inlineright{
-	/*min-width: 100px;*/
+md-checkbox.checkMEM{
+	margin-left: 16px !important;
+    opacity: 0.9;
+}
+.instr{
+	margin-left:47px;
+	margin-top: -5px;
+	font-size: 12px;
 }

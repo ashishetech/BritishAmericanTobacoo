@@ -33,4 +33,9 @@ angular.module('batApp', ['ui.router', 'ngResource', 'ngStorage', 'ngMaterial'])
 		templateUrl: 'components/tmeEdit/tmeEdit.html',
 		controller: 'TmeEditController as tmeEditCtrl'
 	})
+	.state('menuTemplate.editMembership', {
+	  url: '/editMembership',
+	  templateUrl: 'components/membership/editMembership.html',
+	  controller: 'EditMembershipController as editMemberCtrl'
+  })
 })
