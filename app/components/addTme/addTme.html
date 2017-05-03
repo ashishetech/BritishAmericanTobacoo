@@ -1,0 +1,62 @@
+<div class="margin">
+   <div class="minus"> </div>
+   <div class="minus"></div>
+   <div class="minus"></div>
+   <div class="textstyle">TME:Details</div>
+</div>
+<div style="margin-top: 100px;" >
+   <form name="form" ng-submit="addTmeCtrl.save(tme)"novalidate>
+      <div> <button class="btn btn-primary pull-right btnpadding1">Save</button>
+
+      </div>
+
+      <br><br><br><br>
+      <div ng-show="addTmeCtrl.err" class="alert alert-danger">{{addTmeCtrl.errMsg}}</div>
+      <div class="col-md-12">
+         <div class="col-md-4">
+            <div class="form-group" ng-class="{ 'has-error' : form.bat_id.$invalid && !form.bat_id.$pristine }">
+               <h6>BAT ID :</h6>
+               <input type="text" class="form-control" name="bat_id" ng-model="tme.bat_id" ng-change="addTmeCtrl.change()" required>
+               <span ng-show="form.bat_id.$dirty && form.bat_id.$error.required" class="help-block">Bat Id is required</span>
+            </div>
+
+            <div class="form-group" ng-class="{ 'has-error' : form.pwd.$invalid && !form.pwd.$pristine }">
+               <h6>Password:</h6>
+               <input type="password" class="form-control" name="pwd" ng-model="tme.password" ng-change="addTmeCtrl.change()" required>
+               <span ng-show="form.pwd.$dirty && form.pwd.$error.required" class="help-block">Password is required</span>
+            </div>
+            <div class="row">
+               <div class="col-md-6">
+                  <div class="form-group" ng-class="{ 'has-error' : form.f_name.$invalid && !form.f_name.$pristine }">
+                     <h6>First Name</h6>
+                     <input type="text" class="form-control" name="f_name" ng-model="tme.first_name" ng-change="addTmeCtrl.change()" required>
+                     <span ng-show="form.f_name.$dirty && form.f_name.$error.required" class="help-block">First Name is required</span>
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <div class="form-group" ng-class="{ 'has-error' : form.l_name.$invalid && !form.l_name.$pristine }">
+                     <h6>Last Name</h6>
+                     <input type="text" class="form-control" name="l_name" ng-model="tme.last_name" ng-change="addTmeCtrl.change()" required>
+                     <span ng-show="form.l_name.$dirty && form.l_name.$error.required" class="help-block">Last Name is required</span>
+                  </div>
+               </div>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error' : form.email.$invalid && !form.email.$pristine }">
+               <h6>Email</h6>
+               <input type="text" class="form-control" ng-change="addTmeCtrl.change()" name="email" ng-model="tme.email" ng-pattern="/^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/"  required>
+               <span ng-show="form.email.$dirty && form.email.$error.required" class="help-block">Email is required</span>
+               <span ng-show="form.email.$error.pattern" class="help-block">Enter valid Email</span>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error' : form.number.$invalid && !form.number.$pristine }">
+               <h6>Mobile Number</h6>
+               <input type="text" class="form-control"  name="number" ng-model="tme.mobile_no"  ng-change="addTmeCtrl.change()" required>
+               <span ng-show="form.number.$dirty && form.number.$error.required" class="help-block">Number is required</span>
+
+            </div>
+
+   </form>
+   </div>
+
+
+   </div>
+</div>
