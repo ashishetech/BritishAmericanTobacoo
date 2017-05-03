@@ -1,0 +1,67 @@
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content assignTME">
+
+            <div class="modal-body">
+                <center>
+                    <h4 style="color:#007AFF;">ADD/EDIT MEMBERSHIP</h4>
+                </center>
+                <div class="row top">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="col-md-12">
+							<label for="text">Membership Name</label>
+                            <input type="text" class="form-control inputPop" ng-model="editMemberCtrl.name"  ng-change="editMemberCtrl.search(tmeEditCtrl.text)">
+                        </div>
+                    </div>
+                </div>{{editMemberCtrl}}
+				<div class="row top">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="col-md-12">
+							<label for="text">Points required</label>
+                            <input type="text" class="form-control inputPop" ng-model="editMemberCtrl.points"  ng-change="editMemberCtrl.search(tmeEditCtrl.text)">
+                        </div>
+                    </div>
+                </div>
+				<div class="row top">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="col-md-6">
+							<label for="text">Order</label>
+                            <input type="text" class="form-control inputPop" ng-model="editMemberCtrl.order" ng-change="editMemberCtrl.search(tmeEditCtrl.text)">
+                        </div>
+						<div class="col-md-6">
+							<label for="text">Rebate Rate (1 point)</label>
+                            <input type="text" class="form-control inputPop" ng-model="editMemberCtrl.rebate"  ng-change="editMemberCtrl.search(tmeEditCtrl.text)">
+                        </div>
+                    </div>
+                </div>
+
+				<div class="row top">
+					<div class="col-md-10 col-md-offset-1">
+						<md-checkbox ng-model="data.id" class="blue checkMEM"  value="data.id" ng-change="editMemberCtrl.checkboxValue(data.id, data.outlet_id)">
+							<b>Set As Default</b>
+						</md-checkbox>
+						<p class="instr">if set,all new outlets will be assigned this membership status when added to the system</p>
+					</div>
+				</div>
+
+
+
+
+
+                <div class="row top">
+                    <div class="col-md-10 col-md-offset-1 ">
+                        <div class="col-md-6">
+                            <input type="button" class="btn btn-default btnPop" data-dismiss="modal" ng-click="editMemberCtrl.cancel()" style="width:100%; background-color:grey" value="Cancel">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="button" class="btn btn-primary btnPop"   ng-click="editMemberCtrl.apply()" style="width:100%" value="Apply ({{editMemberCtrl.checkboxId.length}})">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

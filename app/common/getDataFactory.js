@@ -11,7 +11,7 @@ angular.module('batApp').factory('getDataFactory', (configuration, $resource) =>
     return $resource(configuration.apihost + '/get/outletById/' + id)
   },
   updateOutlet (id) {
-    return $resource(configuration.apihost + '/outlet/update/' + id, {}, { 'update': { method:'PUT' } })
+    return $resource(configuration.apihost + '/outlet/update/' + id, {}, { 'update': { method: 'PUT' } })
   },
   getMembershipType () {
     return $resource(configuration.apihost + '/membership/get')
@@ -19,27 +19,26 @@ angular.module('batApp').factory('getDataFactory', (configuration, $resource) =>
   getTmeViewData () {
     return $resource(configuration.apihost + '/tme/get/-1/13')
   },
-  assignTmeOutlet (dataId,tmeId) {
-	  return $resource(configuration.apihost + '/tme/assignoutlet/' + dataId +'/'+ tmeId, {},
-	  { 'update': { method:'PUT' } })
+  assignTmeOutlet (dataId, tmeId) {
+    return $resource(configuration.apihost + '/tme/assignoutlet/' + dataId + '/' + tmeId, {}, { 'update': { method: 'PUT' } })
   },
   getTmeById (id) {
     return $resource(configuration.apihost + '/tme/getById/' + id)
   },
   getTmeOutletById (id) {
-	  return $resource(configuration.apihost + '/tme/outlet/' + id)
+    return $resource(configuration.apihost + '/tme/outlet/' + id)
   },
   unassignTme (id) {
-	  return $resource(configuration.apihost + '/tme/unassignoutlet/' + id, {}, { 'update': { method:'PUT' } })
+    return $resource(configuration.apihost + '/tme/unassignoutlet/' + id, {}, { 'update': { method: 'PUT' } })
   },
   assignTme (search) {
-	  return $resource(configuration.apihost + '/tme/searchoutlet/' + search)
+    return $resource(configuration.apihost + '/tme/searchoutlet/' + search)
   },
-  updateTme(id){
-	  return $resource(configuration.apihost + '/tme/update/' + id, {}, { 'update': { method:'PUT' } })
+  updateTme (id) {
+    return $resource(configuration.apihost + '/tme/update/' + id, {}, { 'update': { method: 'PUT' } })
   },
   searchTme (search, text) {
-	 return $resource(configuration.apihost + '/tme/searchoutlet/' + search+'/'+text)
+    return $resource(configuration.apihost + '/tme/searchoutlet/' + search + '/' + text)
   }
 
 }))
