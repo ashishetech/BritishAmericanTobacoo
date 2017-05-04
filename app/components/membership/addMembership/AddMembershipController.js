@@ -2,6 +2,7 @@ angular.module('batApp')
 .controller('AddMembershipController', function ($localStorage, $state, getDataFactory, $timeout) {
   var vm = this
   vm.submitted = false
+
   vm.submit = function (data) {
     getDataFactory.addMembership().save(data).$promise
 .then((response) => {

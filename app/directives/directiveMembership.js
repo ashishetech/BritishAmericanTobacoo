@@ -5,16 +5,15 @@ angular.module('batApp')
     replace: true,
     scope: {
       formdata:'=',
-	  submitted:'=',
-	  error:'=',
+      submitted:'=',
+      error:'=',
       send: '&'
     },
     controller: function ($scope) {
       $scope.apply = function (data) {
-		  console.log(data);
+        console.log(data)
         $scope.send({ data:data })
-		$scope.myForm.$setPristine();
-
+        $scope.myForm.$setPristine()
       }
     },
     templateUrl:'common/membership.template.html'

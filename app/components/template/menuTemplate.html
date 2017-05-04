@@ -26,12 +26,12 @@
 
     <md-list-item ui-sref="menuTemplate.addMembership">
         <md-icon class="md-default-theme" class="material-icons">supervisor_account</md-icon>
-		<p>Rebate Requests</p>
+		<p ng-class="{ Active: template.isActive('/addMembership')}">Rebate Requests</p>
     </md-list-item>
 
     <md-list-item ui-sref="menuTemplate.editMembership">
         <md-icon class="md-default-theme" class="material-icons">account_balance_wallet</md-icon>
-		<p ng-class="{ Active: template.isActive('/campaigns')}">Campaigns</p>
+		<p ng-class="{ Active: template.isActive('/editMembership')}">Campaigns</p>
 	</md-list-item>
 
 

@@ -29,8 +29,8 @@ angular.module('batApp').factory('getDataFactory', (configuration, $resource) =>
     return $resource(configuration.apihost + '/tme/getById/' + id)
   },
   getTmeOutletById (id) {
-	return $resource(configuration.apihost + '/tme/outlet/' + id)
-	},
+    return $resource(configuration.apihost + '/tme/outlet/' + id)
+  },
   unassignTme (id) {
     return $resource(configuration.apihost + '/tme/unassignoutlet/' + id, {}, { 'update': { method: 'PUT' } })
   },
