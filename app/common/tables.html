@@ -21,9 +21,7 @@
             </tr>
          </thead>
          <tbody>
-
             <tr ng-repeat="viewdata in tablebody">
-
                <td ng-repeat="value in viewdata track by $index">{{value}}</td>
                <td></td>
                <td><a ng-class="tabledetails.alink.Text=='Edit' ?'linkWithPadding' :xyz">{{tabledetails.alink.Text}}</a>
