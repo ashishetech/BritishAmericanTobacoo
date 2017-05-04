@@ -15,7 +15,7 @@ angular.module('batApp').controller('viewTmeController', function (getDataFactor
       Text1: 'ADD TME',
       Text:'Edit'
     }
-}
+  }
   getDataFactory.getTmeViewData().query().$promise
      .then((response) => {
        if (response.error) {} else {
