@@ -12,10 +12,10 @@ angular.module('batApp')
       vm.getTmeOutlet = function () {
         vm.dataId = shareDataService.getId()
         getDataFactory.getTmeOutletById(vm.dataId).get().$promise
-                .then((response) => {
-                  vm.outlets = response.data
-                  console.log(vm.outlets)
-                })
+		.then((response) => {
+                  vm.outlets = response.data;
+				  console.log(response.data);
+			  })
       }
 
       vm.unassign = function (id) {
