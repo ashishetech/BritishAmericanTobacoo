@@ -6,122 +6,68 @@
                 <center>
                     <h4 style="color:#007AFF;">ADD/EDIT MEMBERSHIP</h4>
                 </center>
-				<form name="myForm" class="form" ng-submit="apply(formdata)" novalidate>
-					{{formdata}}{{returndata}}
-                <div class="row top">
-                    <div class="col-md-10 col-md-offset-1">
-                        <div class="col-md-12" ng-class="{true: 'has-error'} [submitted && myForm.type_name.$invalid]">
-							<label for="text">Membership Name</label>
-                            <input type="text" class="form-control inputPop" name="type_name" ng-model="formdata.type_name" required/>
-								 <span ng-show="submitted && myForm.type_name.$error.required" class="help-block">Membership required</span>
+                <form name="myForm" class="form" ng-submit="apply(formdata)" novalidate>
+                    <div class="row top">
+                        <div class="col-md-10 col-md-offset-1">
+                            <div class="col-md-12" ng-class="{true: 'has-error'} [submitted && myForm.type_name.$invalid]">
+                                <label for="text">Membership Name</label>
+                                <input type="text" class="form-control inputPop" name="type_name" ng-model="formdata.type_name" required/>
+                                <span ng-show="submitted && myForm.type_name.$error.required" class="help-block">Membership required</span>
 
+                            </div>
                         </div>
                     </div>
-                </div>
 
-				<div class="row top">
-                    <div class="col-md-10 col-md-offset-1">
-                        <div class="col-md-12" ng-class="{true: 'has-error'} [submitted && myForm.min_required_points.$invalid]">
-							<label for="text">Points required</label>
-                            <input type="number" class="form-control inputPop" name="min_required_points" ng-model="formdata.min_required_points"required/>
-							<span ng-show="submitted && myForm.min_required_points.$error.required" class="help-block">Points required</span>
+                    <div class="row top">
+                        <div class="col-md-10 col-md-offset-1">
+                            <div class="col-md-12" ng-class="{true: 'has-error'} [submitted && myForm.min_required_points.$invalid]">
+                                <label for="text">Points required</label>
+                                <input type="number" class="form-control inputPop" name="min_required_points" ng-model="formdata.min_required_points" required/>
+                                <span ng-show="submitted && myForm.min_required_points.$error.required" class="help-block">Points required</span>
 
+                            </div>
                         </div>
                     </div>
-                </div>
-				<div class="row top">
-                    <div class="col-md-10 col-md-offset-1">
-                        <div class="col-md-6" ng-class="{true: 'has-error'} [submitted && myForm.order.$invalid]">
-							<label for="text">Order</label>
-                            <input type="text" class="form-control inputPop" name="order" ng-model="formdata.order" required/>
-							<span ng-show="submitted && myForm.order.$error.required" class="help-block">Order required</span>
+                    <div class="row top">
+                        <div class="col-md-10 col-md-offset-1">
+                            <div class="col-md-6" ng-class="{true: 'has-error'} [submitted && myForm.order.$invalid]">
+                                <label for="text">Order</label>
+                                <input type="text" class="form-control inputPop" name="order" ng-model="formdata.order" required/>
+                                <span ng-show="submitted && myForm.order.$error.required" class="help-block">Order required</span>
 
-                        </div>
-						<div class="col-md-6" ng-class="{true: 'has-error'} [submitted && myForm.rebate_rate.$invalid]">
-							<label for="text">Rebate Rate (1 point)</label>
-                            <input type="text" class="form-control inputPop" name="rebate_rate" ng-model="formdata.rebate_rate" required/>
-							<span ng-show="submitted && myForm.rebate_rate.$error.required" class="help-block">Rebate Rate required</span>
+                            </div>
+                            <div class="col-md-6" ng-class="{true: 'has-error'} [submitted && myForm.rebate_rate.$invalid]">
+                                <label for="text">Rebate Rate (1 point)</label>
+                                <input type="text" class="form-control inputPop" name="rebate_rate" ng-model="formdata.rebate_rate" required/>
+                                <span ng-show="submitted && myForm.rebate_rate.$error.required" class="help-block">Rebate Rate required</span>
 
-                        </div>
-                    </div>
-                </div>
-
-				<div class="row top">
-					<div class="col-md-10 col-md-offset-1">
-						<md-checkbox ng-model="data.id" class="blue checkMEM"  ng-model="formdata.default" value="setDefault" ng-change="setDefault(setDefault)">
-							<b>Set As Default</b>
-						</md-checkbox>{{default}}
-						<p class="instr">if set,all new outlets will be assigned this membership status when added to the system</p>
-					</div>
-				</div>
-
-                <div class="row top">
-                    <div class="col-md-10 col-md-offset-1 ">
-                        <div class="col-md-6">
-                            <input type="button" class="btn btn-default btnPop" data-dismiss="modal" style="width:100%; background-color:grey" value="Cancel">
-                        </div>
-                        <div class="col-md-6">
-                            <input type="submit" class="btn btn-primary btnPop" ng-click="submitted=true" style="width:100%" value="Apply">
+                            </div>
                         </div>
                     </div>
-                </div>
-			</form>
+
+                    <div class="row top">
+                        <div class="col-md-10 col-md-offset-1">
+                            <md-checkbox ng-model="data.id" class="blue checkMEM" ng-model="formdata.default" value="setDefault" ng-change="setDefault(setDefault)">
+                                <b>Set As Default</b>
+                            </md-checkbox>{{default}}
+                            <p class="instr">if set,all new outlets will be assigned this membership status when added to the system</p>
+                        </div>
+                    </div>
+
+                    <div class="row top">
+                        <div class="col-md-10 col-md-offset-1 ">
+                            <div class="col-md-6">
+                                <input type="button" class="btn btn-default btnPop" data-dismiss="modal" style="width:100%; background-color:grey" value="Cancel">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="submit" class="btn btn-primary btnPop" ng-click="submitted=true" style="width:100%" value="Apply">
+                            </div>
+                        </div>
+                    </div>
+                </form>
 
             </div>
 
         </div>
     </div>
 </div>
-
-
-<!--
-
-
-
-
-   <form name="form" ng-submit="addTmeCtrl.save(tme)"novalidate>
-      <div> <button class="btn btn-primary pull-right btnpadding1" type="submit"  ng-click="submitted=true">Save</button>
-      </div>
-      <div class="col-md-12">
-         <div class="col-md-4">
-            <div class="form-group" ng-class="{true: 'has-error'} [submitted && form.bat_id.$invalid]">
-               <h6>BAT ID :</h6>
-               <input type="text" class="form-control" name="bat_id" ng-model="tme.bat_id" ng-change="addTmeCtrl.change()" required/>
-               <span ng-show="submitted && form.bat_id.$error.required" class="help-block">Bat Id is required</span>
-            </div>
-            <div class="form-group" ng-class="{true:'has-error'}  [submitted && form.pwd.$invalid]">
-               <h6>Password:</h6>
-               <input type="password" class="form-control" name="pwd" ng-model="tme.password" ng-change="addTmeCtrl.change()" required>
-               <span ng-show="submitted && form.pwd.$error.required" class="help-block">Password is required</span>
-            </div>
-            <div class="row">
-               <div class="col-md-6">
-                  <div class="form-group" ng-class="{true:'has-error'}[submitted && form.f_name.$invalid]">
-                     <h6>First Name</h6>
-                     <input type="text" class="form-control" name="f_name" ng-model="tme.first_name" ng-change="addTmeCtrl.change()" required>
-                     <span ng-show="submitted && form.f_name.$error.required" class="help-block">First Name is required</span>
-                  </div>
-               </div>
-               <div class="col-md-6">
-                  <div class="form-group" ng-class="{true:'has-error'} [submitted &&form.l_name.$invalid]">
-                     <h6>Last Name</h6>
-                     <input type="text" class="form-control" name="l_name" ng-model="tme.last_name" ng-change="addTmeCtrl.change()" required>
-                     <span ng-show="submitted && form.l_name.$error.required" class="help-block">Last Name is required</span>
-                  </div>
-               </div>
-            </div>
-            <div class="form-group" ng-class="{true:'has-error'}[submitted && form.email.$invalid]">
-               <h6>Email</h6>
-               <input type="text" class="form-control" ng-change="addTmeCtrl.change()" name="email" ng-model="tme.email" ng-pattern="/^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/"  required>
-               <span ng-show="submitted && form.email.$error.required" class="help-block">Email is required</span>
-               <span ng-show="form.email.$error.pattern" class="help-block">Enter valid Email</span>
-            </div>
-            <div class="form-group" ng-class="{true: 'has-error'} [submitted && form.number.$invalid]">
-               <h6>Mobile Number</h6>
-               <input type="text" class="form-control"  name="number" ng-model="tme.mobile_no"  ng-change="addTmeCtrl.change()" required>
-               <span ng-show="submitted && form.number.$error.required" class="help-block">Number is required</span>
-            </div>
-   </form>
-   </div>
-   </div>
-</div> -->
