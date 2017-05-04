@@ -6,6 +6,6 @@ angular.module('batApp')
          config.url = config.url + '?accessToken=' + $localStorage.token
        }
        return config
-     }
-   }
+     },
+  }
  })

@@ -9,9 +9,6 @@ angular.module('batApp')
                 .then((response) => {
                   if (!response.error) {
                     $state.go('menuTemplate.tmeViewTable')
-                  } else {
-                    vm.err = true
-                    vm.errMsg = response.error.message
                   }
                 })
       }

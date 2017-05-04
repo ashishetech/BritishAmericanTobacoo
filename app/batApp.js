@@ -39,5 +39,5 @@ angular.module('batApp', ['ui.router', 'ngResource', 'ngStorage', 'ngMaterial', 
               templateUrl: 'components/sku/skuView.html',
               controller: 'viewSkuController as viewSkuCtrl'
             })
-            
+          
     })
