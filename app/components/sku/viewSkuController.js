@@ -10,7 +10,6 @@ angular.module('batApp').controller('viewSkuController', function (getDataFactor
       'Start Date',
       'BAT ID',
       'Base Points'
-
     ],
     alink: {
       Text1: 'ADD SKU',

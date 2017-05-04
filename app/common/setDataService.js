@@ -1,5 +1,4 @@
 'use strict'
-
 angular.module('batApp').factory('setDataService', (getDataFactory, $q) => ({
 
   setSkuControllerData () {
@@ -19,7 +18,7 @@ angular.module('batApp').factory('setDataService', (getDataFactory, $q) => ({
          }
        })
     return deferred.promise
-},
+  },
   setOutletControllerData () {
     var deferred = $q.defer()
     var outletList = []
@@ -38,6 +37,20 @@ angular.module('batApp').factory('setDataService', (getDataFactory, $q) => ({
                deferred.resolve(outletList)
              }
            })
+    return deferred.promise
+  },
+  setMembershipControllerData () {
+    var deferred = $q.defer()
+    var membershipList = []
+    getDataFactory.getMembershipViewData().query().$promise
+       .then((response) => {
+         if (response.error) {} else {
+           angular.forEach(response, (value, key) => {
+             membershipList.push([value.id, value.type_name, value.rebate_rate, value.min_required_points, value.order])
+           })
+           deferred.resolve(membershipList)
+         }
+       })
     return deferred.promise
   }
 
