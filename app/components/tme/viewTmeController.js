@@ -1,4 +1,4 @@
-angular.module('batApp').controller('viewTmeController', function (getDataFactory, $state) {
+angular.module('batApp').controller('viewTmeController', function (getDataFactory, $state, setDataService) {
   var vm = this
   vm.tmeList = []
   vm.data = {
@@ -15,16 +15,10 @@ angular.module('batApp').controller('viewTmeController', function (getDataFactor
       Text1: 'ADD TME',
       Text:'Edit'
     }
-}
-  getDataFactory.getTmeViewData().query().$promise
-     .then((response) => {
-       if (response.error) {} else {
-         angular.forEach(response, (value, key) => {
-           value.updatedAt = moment(value.updatedAt).format('DD MMMM, YYYY')
-           vm.tmeList.push([value.id, value.first_name, value.last_name, value.email, value.outlets, value.updatedAt])
-         })
-       }
-     })
+  }
+  setDataService.setTmeControllerData().then((response) => {
+    vm.tmeList = response
+  })
   vm.add = function () {
     $state.go('menuTemplate.addTme')
   }

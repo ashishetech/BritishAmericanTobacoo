@@ -19,7 +19,7 @@ angular.module('batApp').factory('setDataService', (getDataFactory, $q) => ({
          }
        })
     return deferred.promise
-},
+  },
   setOutletControllerData () {
     var deferred = $q.defer()
     var outletList = []
@@ -38,6 +38,21 @@ angular.module('batApp').factory('setDataService', (getDataFactory, $q) => ({
                deferred.resolve(outletList)
              }
            })
+    return deferred.promise
+  },
+  setTmeControllerData () {
+    var deferred = $q.defer()
+    var tmeList = []
+    getDataFactory.getTmeViewData().query().$promise
+       .then((response) => {
+         if (response.error) {} else {
+           angular.forEach(response, (value, key) => {
+             value.updatedAt = moment(value.updatedAt).format('DD MMMM, YYYY')
+             tmeList.push([value.id, value.first_name, value.last_name, value.email, value.outlets, value.updatedAt])
+           })
+           deferred.resolve(tmeList)
+         }
+       })
     return deferred.promise
   }
 
