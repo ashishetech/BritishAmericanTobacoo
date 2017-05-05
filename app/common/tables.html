@@ -1,30 +1,33 @@
-<div class="col-md-12 margin paddingLeft">
+<div class="col-md-12 margin leftmargin">
    <div class="minus"> </div>
    <div class="minus"></div>
    <div class="minus"></div>
-   <div class="textstyle">All Outlets</div>
+   <div class="textstyle">{{tabledetails.tabletitle}}</div>
 </div>
-   <div class="col-md-12 paddingLeft" >
-      <div style="margin-top: 40px;">
-         <div class="color">{{tabledetails.tabletitle}}</div>
-         <table class="table">
-            <thead>
-               <tr>
-                  <th class="headingcolor" ng-repeat="data in tabledetails.values">{{data}}</th>
-                  <th></th>
-                  <th  ng-if="data.Type=='SUBMIT'" ng-repeat="data in tabledetails.button" >
-                     <button type="submit" class="btn btn-primary" > {{data.Type}}
-                  </th>
-               </tr>
-            </thead>
-            <tbody>
-               <tr ng-repeat="viewdata in tablebody">
-                  <td ng-repeat="value in viewdata track by $index">{{value}}</td>
-                  <td><a class="btnLink" ng-click="callback({data:viewdata[0]})">{{tabledetails.alink.Text}}
-                     </a>
-                  </td>
-               </tr>
-            </tbody>
-         </table>
+
+<div class="col-md-12 leftmargin">
+   <div style="margin-top: 60px;">
+      <div class="color">
+         {{tabledetails.tableSubTitle}}
+         <a class="pull-right marginRight" ng-click="onadd()"=>{{tabledetails.alink.Text1}}  </a>
       </div>
+      <table class="table">
+         <thead>
+            <tr>
+               <th class="headingcolor" ng-repeat="data in tabledetails.values">{{data}}</th>
+               <th></th>
+               <th  ng-if="data.Type=='SUBMIT'" ng-repeat="data in tabledetails.button">
+                  <button type="submit" class="btn btn-primary"> {{data.Type}}
+               </th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr ng-repeat="viewdata in tablebody">
+               <td ng-repeat="value in viewdata track by $index">{{value}}</td>
+               <td><a ng-class="tabledetails.alink.Text=='Edit' ?'linkWithPadding' :''"  ng-click="onedit({data:viewdata[0]})">{{tabledetails.alink.Text}}</a>
+               </td>
+            </tr>
+         </tbody>
+      </table>
    </div>
+</div>

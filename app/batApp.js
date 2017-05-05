@@ -1,6 +1,6 @@
 'use strict'
 
-angular.module('batApp', ['ui.router', 'ngResource', 'ngStorage', 'ngMaterial','angularMoment'])
+angular.module('batApp', ['ui.router', 'ngResource', 'ngStorage', 'ngMaterial', 'angularMoment'])
 .config(function ($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise('/login')
   $stateProvider
@@ -9,7 +9,7 @@ angular.module('batApp', ['ui.router', 'ngResource', 'ngStorage', 'ngMaterial','
   controller: 'TemplateController as template'
 })
 .state('login', {
-	url: '/login',
+  url: '/login',
   templateUrl: 'components/login/login.html',
   controller: 'LoginController as login'
 })
@@ -28,15 +28,25 @@ angular.module('batApp', ['ui.router', 'ngResource', 'ngStorage', 'ngMaterial','
   templateUrl: 'components/editOutlet/editOutlet.html',
   controller: 'EditOutletController as editOutletCtrl'
 })
-.state('menuTemplate.tme', {
-  url: '/tme',
+.state('menuTemplate.tmeViewTable', {
+  url: '/tmeViewTable',
   templateUrl: 'components/tme/tmeView.html',
   controller: 'viewTmeController as viewTmeCtrl'
+})
+.state('menuTemplate.addTme', {
+  url: '/addTme',
+  templateUrl: 'components/addTme/addTme.html',
+  controller: 'addTmeController as addTmeCtrl'
 })
 .state('menuTemplate.TmeEdit', {
   url: '/TmeEdit',
   templateUrl: 'components/tmeEdit/tmeEdit.html',
   controller: 'TmeEditController as tmeEditCtrl'
+})
+.state('menuTemplate.skuViewTable', {
+  url: '/skuViewTable',
+  templateUrl: 'components/sku/skuView.html',
+  controller: 'viewSkuController as viewSkuCtrl'
 })
 .state('menuTemplate.addMembership', {
   url: '/addMembership',
@@ -47,10 +57,5 @@ angular.module('batApp', ['ui.router', 'ngResource', 'ngStorage', 'ngMaterial','
   url: '/editMembership',
   templateUrl: 'components/membership/editMembership/editMembership.html',
   controller: 'EditMembershipController as editMemberCtrl'
-})
-.state('menuTemplate.skuViewTable', {
-  url: '/skuViewTable',
-  templateUrl: 'components/sku/skuView.html',
-  controller: 'viewSkuController as viewSkuCtrl'
 })
 })

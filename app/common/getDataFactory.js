@@ -52,7 +52,10 @@ angular.module('batApp').factory('getDataFactory', (configuration, $resource) =>
   updateMembership (id) {
     return $resource(configuration.apihost + '/membership/update/' + id, {}, { 'update': { method: 'PUT' } })
   },
-  getSkuViewData (id) {
+  addTme () {
+    return $resource(configuration.apihost + '/tme/register')
+  },
+  getSkuViewData () {
     return $resource(configuration.apihost + '/get/sku/1/100')
   }
 }))

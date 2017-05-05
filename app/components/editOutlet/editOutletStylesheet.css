@@ -1,15 +1,17 @@
 .editoutlet{
 	background-color:rgba(221, 221, 221, 0.31);
-	padding-left: 0px !important;
-	padding-right: -5px !important;
+	margin-left:-13px;    width: 102%;
+	padding-bottom: 17px;
+
 }
 .editOutletHeader{
 	margin-top:45px;
 	font-weight:bold;
-	margin-left:-25px;
+	/*margin-left:-25px;*/
 }
 .outletPoint{
 	font-size:18px; margin-top:5px;
+	margin-left: -15px
 }
 .points{
 	font-size: 11px;
@@ -18,7 +20,11 @@
 	opacity: 0.7;
 }
 .assign{
-	font-weight:none; margin-top:8px;float:left;padding-left: 0px;
+	font-weight:none;
+	margin-top:8px;
+	float:left;
+	padding-left: 0px;
+	margin-left: -10px
 }
 .assignDropdown{
 	margin-left: -44px;
@@ -67,7 +73,7 @@
 }
 .radioBtn{
 	padding: 0px;
-	margin-left: -15px;
+	/*margin-left: -15px;*/
 }
 .option{
 	padding: 5px;
@@ -81,7 +87,7 @@
 }
 .historyDetails{
 	margin-top:20px;
-	margin-left: -15px !important;
+	/*margin-left: -15px !important;*/
 }
 .all{
 	width:100px;

@@ -66,11 +66,12 @@
         <md-icon class="md-secondary arrow" ng-hide="template.arrowSet">keyboard_arrow_up</md-icon>
     </md-list-item>
 
-    <md-list-item ng-show="template.OpenSetting" ui-sref="menuTemplate.tme">
-        <span class="child" ng-class="{ Active: template.isActive('/tme')}">TME Setting</span>
+
+    <md-list-item ng-show="template.OpenSetting" ui-sref="menuTemplate.tmeViewTable">
+        <span class="child" ng-class="{ Active: template.isActive('/tmeViewTable')}">TME Setting</span>
     </md-list-item>
 
-    <md-list-item ng-show="template.OpenSetting" ui-sref="menuTemplate.membership">
+    <md-list-item ng-show="template.OpenSetting" ui-sref="'menuTemplate.membership">
         <span class="child" ng-class="{ Active: template.isActive('/membership')}">Membership Setting</span>
     </md-list-item>
 

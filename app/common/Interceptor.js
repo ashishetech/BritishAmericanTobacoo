@@ -1,5 +1,5 @@
 angular.module('batApp')
-.factory('Interceptor', function ($localStorage, $q) {
+.factory('Interceptor', function ($localStorage, $q, $window) {
   return {
     request: function (config) {
       if ($localStorage.token) {
@@ -11,7 +11,7 @@ angular.module('batApp')
       console.log(response)
       var status = response.status
       if (status === 403) {
-        window.location = 'index.html'
+        $window.location = 'index.html'
         return
       }
 // otherwise

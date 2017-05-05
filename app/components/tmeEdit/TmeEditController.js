@@ -14,7 +14,6 @@ angular.module('batApp')
     getDataFactory.getTmeOutletById(vm.dataId).get().$promise
 .then((response) => {
   vm.outlets = response.data
-  console.log(response.data)
 })
   }
 
@@ -29,7 +28,7 @@ angular.module('batApp')
     getDataFactory.updateTme(vm.dataId).update(data).$promise
 .then((response) => {
   if (!response.error) {
-    $state.go('menuTemplate.tme')
+    $state.go('menuTemplate.tmeViewTable')
   }
 })
   }

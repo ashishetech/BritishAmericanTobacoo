@@ -1,177 +1,160 @@
 <div class="col-md-12 editoutlet">
-    <div class="col-md-12 margin">
-        <div class="minus"> </div>
-        <div class="minus"></div>
-        <div class="minus"></div>
-        <div class="textstyle">OUTLET:Details {{editOutletCtrl.outlet.bat_id}}</div>
-    </div>
-    <form name="form" novalidate>
-        <div class="col-md-12 editOutletHeader">
-            <div class="col-md-4 outletPoint">
-                OUTLET {{editOutletCtrl.outlet.bat_id}}
-                <p class="points"> Life time earning (Points) :</p>
+   <div class="col-md-12 margin">
+      <div class="minus"> </div>
+      <div class="minus"></div>
+      <div class="minus"></div>
+      <div class="textstyle">OUTLET:Details {{editOutletCtrl.outlet.bat_id}}</div>
+   </div>
+   <form name="form" novalidate>
+      <div class="col-md-12 editOutletHeader">
+         <div class="col-md-4 outletPoint">
+            OUTLET {{editOutletCtrl.outlet.bat_id}}
+            <p class="points"> Life time earning (Points) :</p>
+         </div>
+         <div class="col-md-6">
+            <div class="col-md-5 assign">Assigned TME</div>
+            <div class="col-md-7 assignDropdown">
+               <select ng-model="editOutletCtrl.outlet.id" class="form-control" ng-change="editOutletCtrl.updateTme(editOutletCtrl.outlet.id)">
+                  <option ng-repeat="x in editOutletCtrl.tme" ng-value="x.id" class="option">
+                     {{x.first_name}} {{x.last_name}} ({{x.id}})
+                  </option>
+               </select>
             </div>
-
-            <div class="col-md-6">
-                <div class="col-md-5 assign">Assigned TME</div>
-                <div class="col-md-7 assignDropdown">
-                    <select ng-model="editOutletCtrl.outlet.id" class="form-control" ng-change="editOutletCtrl.updateTme(editOutletCtrl.outlet.id)">
-                        <option ng-repeat="x in editOutletCtrl.tme" ng-value="x.id" class="option">
-                            {{x.first_name}} {{x.last_name}} ({{x.id}})</option>
-                    </select>
-
-                </div>
+         </div>
+         <div class="col-md-2 saveBtn">
+            <button class="btn btn-default pull-right save"  ng-click="editOutletCtrl.update(editOutletCtrl.outlet)">Save</button>
+         </div>
+      </div>
+      <div class="col-md-12 membershipForm">
+         <div class="row">
+            <div class="col-md-4 formArea">
+               <div class="form-group">
+                  <h6>BAT ID :</h6>
+                  <input type="text" class="form-control"  value="" ng-model="editOutletCtrl.outlet.bat_id" disabled>
+               </div>
+               <div class="form-group">
+                  <h6>Membership Number:</h6>
+                  <input type="number" class="form-control" value="" ng-model="editOutletCtrl.outlet.membership_number">
+               </div>
+               <div class="form-group">
+                  <h6>Password:</h6>
+                  <!-- <div class="form-group"> -->
+                  <div class="col-md-7 passInput">
+                     <input type="password" class="form-control inputForm" value="" ng-model="editOutletCtrl.outlet.password">
+                  </div>
+                  <div class="col-md-5 passBtn">
+                     <input type="button" class="btn btn-default inputBtn" value="change password">
+                     <!-- </div> -->
+                  </div>
+               </div>
+               <div class="row name">
+                  <div class="col-md-6">
+                     <div class="form-group">
+                        <h6>First Name</h6>
+                        <input type="text" class="form-control" id="usr" value="" ng-model="editOutletCtrl.outlet.first_name">
+                     </div>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="form-group">
+                        <h6>Last Name</h6>
+                        <input type="text" class="form-control" id="us1r" value="" ng-model="editOutletCtrl.outlet.last_name">
+                     </div>
+                  </div>
+               </div>
+               <div class="form-group">
+                  <h6>Email</h6>
+                  <input type="text" class="form-control" ng-model="editOutletCtrl.outlet.email" disabled>
+               </div>
+               <div class="form-group">
+                  <h6>Outlet Name</h6>
+                  <input type="text" class="form-control"  ng-model="editOutletCtrl.outlet.outlet_name">
+               </div>
+               <div class="form-group">
+                  <h6>Birthday</h6>
+                  <input type="date" class="form-control"  ng-model="editOutletCtrl.outlet.birthday">
+               </div>
             </div>
-
-            <div class="col-md-2 saveBtn">
-                <button class="btn btn-default pull-right save"  ng-click="editOutletCtrl.update(editOutletCtrl.outlet)">Save</button>
-            </div>
-        </div>
-
-        <div class="col-md-12 membershipForm">
-
-            <div class="row">
-                <div class="col-md-4 formArea">
-                    <div class="form-group">
-                        <h6>BAT ID :</h6>
-                        <input type="text" class="form-control"  value="" ng-model="editOutletCtrl.outlet.bat_id" disabled>
-                    </div>
-                    <div class="form-group">
-                        <h6>Membership Number:</h6>
-                        <input type="number" class="form-control" value="" ng-model="editOutletCtrl.outlet.membership_number">
-                    </div>
-                    <div class="form-group">
-                        <h6>Password:</h6>
-                        <!-- <div class="form-group"> -->
-                            <div class="col-md-7 passInput">
-                                <input type="password" class="form-control inputForm" value="" ng-model="editOutletCtrl.outlet.password">
-                            </div>
-                            <div class="col-md-5 passBtn">
-                                <input type="button" class="btn btn-default inputBtn" value="change password">
-                            <!-- </div> -->
+            <div class="col-md-8 membership">
+               <div class="row">
+                  <div class="col-md-8 ">
+                     <h5>  Membership Type</h5>
+                     <md-radio-group ng-model="editOutletCtrl.outlet.membership_id" class="md-primary">
+                        <div class="col-md-12 radioBtn">
+                           <div class="col-md-3" ng-repeat="radiolabel in editOutletCtrl.radioData">
+                              <md-radio-button ng-value="radiolabel.value">
+                                 {{ radiolabel.label }}
+                              </md-radio-button>
+                           </div>
                         </div>
-                    </div>
-
-                    <div class="row name">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <h6>First Name</h6>
-                                <input type="text" class="form-control" id="usr" value="" ng-model="editOutletCtrl.outlet.first_name">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <h6>Last Name</h6>
-                                <input type="text" class="form-control" id="us1r" value="" ng-model="editOutletCtrl.outlet.last_name">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <h6>Email</h6>
-                        <input type="text" class="form-control" ng-model="editOutletCtrl.outlet.email" disabled>
-                    </div>
-                    <div class="form-group">
-                        <h6>Outlet Name</h6>
-                        <input type="text" class="form-control"  ng-model="editOutletCtrl.outlet.outlet_name">
-                    </div>
-                    <div class="form-group">
-                        <h6>Birthday</h6>
-                        <input type="date" class="form-control"  ng-model="editOutletCtrl.outlet.birthday">
-                    </div>
-
-
-                </div>
-
-                <div class="col-md-8 membership">
-                    <div class="row">
-                        <div class="col-md-8 ">
-                            <h5>  Membership Type</h5>
-                            <md-radio-group ng-model="editOutletCtrl.outlet.membership_id" class="md-primary">
-                                <div class="col-md-12 radioBtn">
-                                    <div class="col-md-3" ng-repeat="radiolabel in editOutletCtrl.radioData">
-                                        <md-radio-button ng-value="radiolabel.value">
-                                            {{ radiolabel.label }}
-                                        </md-radio-button>
-                                    </div>
-                                </div>
-                            </md-radio-group>
-                        </div>
-
-                        <div class="col-md-4">
-                            <h5>Rebate Rate (1 point)</h5>
-                            <input type="text" class="form-control">
-                        </div>
-                    </div>
-                    <hr>
-
-                    <div class="row">
-                        <div class="col-md-8 ">
-                            <h5>Monthly Targets (Cartons) :</h5>
-                            <div class="col-md-4 monthTarget">
-                                <p>This month</p>
-                                <p  class="bold">{{outlet.this}}8000
-                                </p>
-                                <a class="targetlinks" data-toggle="modal" data-target="#target" >Edit</a>
-                            </div>
-                            <div class="col-md-4 ">
-                                <p>Next month</p>
-                                <p  class="bold">{{outlet.next}}10000
-                                </p>
-                                <a class="targetlinks" data-toggle="modal" data-target="#target" > Edit</a>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4">
-                            <h5></h5>
-                            <a class="targetlinks" ><b>Performance History</b></a>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="col-md-12 monthTarget">
-                        <h5>Point Balance :</h5>
-                        <p class="bold">3000 {{outlet.pointbalance}}
+                     </md-radio-group>
+                  </div>
+                  <div class="col-md-4">
+                     <h5>Rebate Rate (1 point)</h5>
+                     <input type="text" class="form-control">
+                  </div>
+               </div>
+               <hr>
+               <div class="row">
+                  <div class="col-md-8 ">
+                     <h5>Monthly Targets (Cartons) :</h5>
+                     <div class="col-md-4 monthTarget">
+                        <p>This month</p>
+                        <p  class="bold">{{outlet.this}}8000
                         </p>
-                        <a class="targetlinks" data-toggle="modal" data-target="#points" >Amend Points</a>
-                    </div>
-
-                    <div class="col-md-12 historyDetails">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <h5>Points History :</h5>
-                            </div>
-                            <div class="col-md-5">
-                                <select class="form-control all">
-                                    <option>ALLL</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="col-md-12">
-
-                        </div>
-
-                    </div>
-					<div class="col-md-12 tableTarget">
-						<table class="table">
-							<thead>
-								<tr>
-									<th>ID</th>
-									<th>Type</th>
-									<th>Points</th>
-									<th>Details</th>
-									<th>Date</th>
-								</tr>
-							</thead>
-							<tbody>
-							</tbody>
-						</table>
-
-					</div>
-
-                </div>
+                        <a class="targetlinks" data-toggle="modal" data-target="#target" >Edit</a>
+                     </div>
+                     <div class="col-md-4 ">
+                        <p>Next month</p>
+                        <p  class="bold">{{outlet.next}}10000
+                        </p>
+                        <a class="targetlinks" data-toggle="modal" data-target="#target" > Edit</a>
+                     </div>
+                  </div>
+                  <div class="col-md-4">
+                     <h5></h5>
+                     <a class="targetlinks" ><b>Performance History</b></a>
+                  </div>
+               </div>
+               <hr>
+               <div class="col-md-12 monthTarget">
+                  <h5>Point Balance :</h5>
+                  <p class="bold">3000 {{outlet.pointbalance}}
+                  </p>
+                  <a class="targetlinks" data-toggle="modal" data-target="#points" >Amend Points</a>
+               </div>
+               <div class="col-md-12 historyDetails">
+                  <div class="row">
+                     <div class="col-md-3">
+                        <h5>Points History :</h5>
+                     </div>
+                     <div class="col-md-5">
+                        <select class="form-control all">
+                           <option>ALLL</option>
+                        </select>
+                     </div>
+                  </div>
+                  <div class="col-md-12">
+                  </div>
+               </div>
+               <div class="col-md-12 tableTarget">
+                  <table class="table">
+                     <thead>
+                        <tr>
+                           <th>ID</th>
+                           <th>Type</th>
+                           <th>Points</th>
+                           <th>Details</th>
+                           <th>Date</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                     </tbody>
+                  </table>
+               </div>
             </div>
-        </div>
-    </form>
+         </div>
+      </div>
+   </form>
 </div>
 <div ng-include="'components/popup/popupPoints.html'"></div>
 <div ng-include="'components/popup/popupTarget.html'"></div>
