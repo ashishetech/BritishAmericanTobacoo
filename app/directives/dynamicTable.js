@@ -3,6 +3,7 @@ angular.module('batApp').directive('dynamicTable', () => ({
   scope: {
     tabledata: '=',
     viewtabledata: '=',
+    onedit:'&',
     onadd:'&'
   },
   controller ($scope) {

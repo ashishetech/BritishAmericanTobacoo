@@ -1,10 +1,10 @@
 body {
     font-family: 'Roboto', sans-serif;
-    margin-left: 0px;
-    margin-right: 0px;
-    padding-left: 0px;
-    padding-right: 0px;
-    color: #667685;
+	margin-left: 0px;
+	margin-right: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+
 }
 .headingcolor {
     color: #667685;
@@ -20,10 +20,14 @@ body {
     border-radius: 5px;
 }
 .col-md-3,
-.col-md-9,
-.col-md-12 {
+.col-md-9
+ {
     padding-left: 3px !important;
-    padding-right: 0px !important;
+    /*padding-right: 0px !important;*/
+}
+.leftmargin{
+	margin-left: -13px !important;
+	padding-right: 0px !important;
 }
 .margin {
     margin-top: 20px;
@@ -41,8 +45,11 @@ body {
     margin: 3px 0;
 }
 td {
-    color: #667685;
-    font-size: 13px;
+    color: #707070;
+    font-size: 12px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-left: 25px;
 }
 .table>thead>tr>th {
     border-bottom: 1px solid #007AFF;
@@ -54,8 +61,10 @@ td {
 .table>tfoot>tr>th,
 .table>thead>tr>td,
 .table>thead>tr>th {
-    padding-left: 15px;
-    padding-right: 17px;
-    padding-top: 17px;
-    padding-bottom: 17px;
+	padding: 18px;
+}
+td a:hover{
+	cursor: pointer;
+	text-decoration: none;
+
 }

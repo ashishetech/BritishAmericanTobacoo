@@ -1,0 +1,53 @@
+<div class="modal fade" id="assignTme" role="dialog">
+   <div class="modal-dialog modal-md">
+      <div class="modal-content assignTME">
+         <div class="modal-body">
+            <center>
+               <h4 style="color:#007AFF;">ASSIGN OUTLETS</h4>
+            </center>
+            <div class="row top">
+               <div class="col-md-10 col-md-offset-1">
+                  <div class="col-md-12">
+                     <input type="text" class="form-control inputPop" ng-model="tmeEditCtrl.text" placeholder="type name of outlets" ng-change="tmeEditCtrl.search(tmeEditCtrl.text)">
+                  </div>
+               </div>
+            </div>
+            <div class="row top">
+               <div class="col-md-10 col-md-offset-1">
+                  <p style="margin: 0px 15px 17px;">show</p>
+                  <md-radio-group  class="md-primary" ng-model="tmeEditCtrl.assignId" ng-change="tmeEditCtrl.showTme(tmeEditCtrl.assignId)">
+                     <div class="col-md-6">
+                        <md-radio-button value="UNASSIGN" class="md-primary">Un-Assigned Only</md-radio-button>
+                     </div>
+                     <div class="col-md-6">
+                        <md-radio-button value="ALL" class="md-primary">All</md-radio-button>
+                     </div>
+                  </md-radio-group>
+               </div>
+            </div>
+            <div class="row top assignCheckbox">
+               <div class="col-md-10 col-md-offset-1 "  ng-repeat="data in tmeEditCtrl.assignData">
+                  <div class="col-md-7 inlineblock" >
+                     <md-checkbox ng-model="data.id" class="blue "  class="checkbox" value="data.id" ng-change="tmeEditCtrl.checkboxValue(data.id, data.outlet_id)">
+                        {{data.outlet_name}}
+                     </md-checkbox>
+                  </div>
+                  <div class="col-md-5 inlineright">
+                     Status: &nbsp;&nbsp;{{data.status}}
+                  </div>
+               </div>
+            </div>
+            <div class="row top">
+               <div class="col-md-10 col-md-offset-1 ">
+                  <div class="col-md-6">
+                     <input type="button" class="btn btn-default btnPop" ng-click="tmeEditCtrl.cancel()" style="width:100%; background-color:grey" value="Cancel">
+                  </div>
+                  <div class="col-md-6">
+                     <input type="button" class="btn btn-primary btnPop"   ng-click="tmeEditCtrl.apply()" style="width:100%" value="Assign ({{tmeEditCtrl.checkboxId.length}})">
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

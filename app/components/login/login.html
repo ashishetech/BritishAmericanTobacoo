@@ -5,12 +5,12 @@
         <h4 class="signin">Sign In</h4>
 
         <div class="col-md-offset-1 col-md-10">
-            <form name="form" ng-submit="login.submit(user)" novalidate>
+            <form name="form" id="formID" ng-submit="login.submit(user)" novalidate>
                 <md-content>
 
                     <md-input-container class="md-block">
                         <md-icon class="form-icon">email</md-icon>
-                        <input class="form_input" ng-model="user.email" ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" autocomplete="off" type="email" placeholder="Email" required/>
+                        <input class="form_input" ng-model="user.email" ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" autocomplete="off" type="email" placeholder="Email Address" required/>
                     </md-input-container>
 
                     <md-input-container class="md-block">

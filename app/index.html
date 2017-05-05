@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="batApp">
    <head>
+
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <title>My AngularJS App</title>
@@ -20,7 +21,9 @@
 
    </head>
    <body>
-      <div ui-view></div>
+
+	   <div ui-view></div>
+
       <script src="bower_components/angular/angular.js"></script>
       <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
       <script src="bower_components/angular-resource/angular-resource.js"></script>
@@ -29,31 +32,38 @@
       <script src="bower_components/angular-animate/angular-animate.js"></script>
       <script src="bower_components/angular-material/angular-material.js"></script>
       <script src="bower_components/moment/moment.js"></script>
-       <script src="bower_components/angular-moment/angular-moment.js"></script>
+      <script src="bower_components/angular-moment/angular-moment.js"></script>
 
-      <script src="batApp.js"></script>
-        <script type="text/javascript" src="common/setDataService.js"></script>
-      <script src="components/login/LoginController.js"></script>
-      <link rel="stylesheet" type="text/css" href="components/login/loginStylesheet.css">
+	  <script src="batApp.js"></script>
+      <script src="index.config.js"></script>
+      <script src="index.constant.js"></script>
+      <script src="common/Interceptor.js"></script>
+      <script src="common/setDataService.js"></script>
+      <script src="common/getDataFactory.js"></script>
+      <script src="common/shareDataService.js"></script>
+      <script src="directives/dynamicTable.js"></script>
+      <script src="directives/directiveMembership.js"></script>
+
+	  <script src="components/login/LoginController.js"></script>
+      <script src="components/tme/viewTmeController.js"></script>
+	  <script src="components/sku/viewSkuController.js"></script>
+      <script src="components/addTme/addTmeController.js"></script>
+      <script src="components/tmeEdit/TmeEditController.js"></script>
       <script src="components/template/TemplateController.js"></script>
-      <link rel="stylesheet" type="text/css" href="components/template/menuStylesheet.css">
-      <script type="text/javascript" src="components/outlets/viewOutletController.js"></script>
+      <script src="components/outlets/viewOutletController.js"></script>
+      <script src="components/addOutlet/addOutletController.js"></script>
+      <script src="components/editOutlet/EditOutletController.js"></script>
+      <script src="components/membership/addMembership/AddMembershipController.js"></script>
+      <script src="components/membership/editMembership/EditMembershipController.js"></script>
+
       <link rel="stylesheet" type="text/css" href="common/styles.css">
-      <script type="text/javascript" src="components/addOutlet/addOutletController.js"></script>
-      <link rel="stylesheet" type="text/css" href="components/addOutlet/addOutlet.css">
-      <script type="text/javascript" src="components/tme/viewTmeController.js"></script>
-      <link rel="stylesheet" type="text/css" href="components/tme/tmestylesheet.css">
-       <script type="text/javascript" src="components/addTme/addTmeController.js"></script>
-        <script type="text/javascript" src="components/sku/viewSkuController.js"></script>
-        
-
-
-
-      <script type="text/javascript" src="index.config.js"></script>
-      <script type="text/javascript" src="index.constant.js"></script>
-      <script type="text/javascript" src="common/Interceptor.js"></script>
-      <script type="text/javascript" src="directives/dynamicTable.js"></script>
-      <script type="text/javascript" src="common/getDataFactory.js"></script>
+	  <link rel="stylesheet" type="text/css" href="components/tme/tmestylesheet.css">
+	  <link rel="stylesheet" type="text/css" href="components/addOutlet/addOutlet.css">
+      <link rel="stylesheet" type="text/css" href="components/login/loginStylesheet.css">
+      <link rel="stylesheet" type="text/css" href="components/template/menuStylesheet.css">
+	  <link rel="stylesheet" type="text/css" href="components/tmeEdit/tmeEditStylesheet.css">
+      <link rel="stylesheet" type="text/css" href="components/editOutlet/editOutletStylesheet.css">
 
    </body>
+   
 </html>

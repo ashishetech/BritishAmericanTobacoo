@@ -1,0 +1,121 @@
+.editoutlet{
+	background-color:rgba(221, 221, 221, 0.31);
+	margin-left:-13px;    width: 102%;
+	padding-bottom: 17px;
+
+}
+.editOutletHeader{
+	margin-top:45px;
+	font-weight:bold;
+	/*margin-left:-25px;*/
+}
+.outletPoint{
+	font-size:18px; margin-top:5px;
+	margin-left: -15px
+}
+.points{
+	font-size: 11px;
+	font-weight: normal;
+	color: black;
+	opacity: 0.7;
+}
+.assign{
+	font-weight:none;
+	margin-top:8px;
+	float:left;
+	padding-left: 0px;
+	margin-left: -10px
+}
+.assignDropdown{
+	margin-left: -44px;
+}
+.saveBtn{
+	padding-right:0px;
+}
+.save{
+	width:100px; background-color:lightgrey;
+}
+.membershipForm{
+	margin-top:20px; background-color:#FCFCFC;
+}
+.formArea{
+	width:27%;
+}
+.passInput{
+	padding:0px;
+	margin:0px;
+}
+.passBtn{
+	padding:0px;
+	margin:0px;
+}
+.inputForm{
+	 /*width:100% ;*/
+	 border-right:none;
+	 border-bottom-right-radius:0px;
+	 border-top-right-radius:0px;
+}
+.inputBtn{
+	font-size:9px;
+	height: 34px;
+	/*padding:3px;*/
+	min-width: 100%;
+	/*margin-left:-3px;*/
+	background-color:lightgrey;
+	border-bottom-left-radius:0px;
+	border-top-left-radius:0px;
+}
+.name{
+	margin-top:60px
+}
+.membership{
+	margin-left:40px;
+}
+.radioBtn{
+	padding: 0px;
+	/*margin-left: -15px;*/
+}
+.option{
+	padding: 5px;
+}
+.monthTarget{
+	margin-left: -15px !important;
+}
+.tableTarget{
+	margin-left: -15px !important;
+	margin-right: -15px !important;
+}
+.historyDetails{
+	margin-top:20px;
+	/*margin-left: -15px !important;*/
+}
+.all{
+	width:100px;
+}
+a.targetlinks{
+	font-size: 12px;
+	font-weight: bold;
+	color: #007AFF;
+	cursor: pointer;
+	text-decoration: none;
+}
+a.targetlinks:hover{
+	color: #007AFF;
+	cursor: pointer;
+	text-decoration: none;
+}
+.bold{
+	font-size: 18px;
+	font-weight: bold;
+	color: black;
+}
+md-radio-group:not([disabled]).md-primary .md-on{
+	background-color: #007AFF !important;
+}
+md-radio-group:not([disabled]).md-primary .md-checked .md-off{
+	border-color: #007AFF !important;
+}
+.modalmargin{
+	border:2px solid grey;
+	margin-top: 150px;
+}

@@ -1,10 +1,11 @@
-<div class="col-md-12 margin">
+<div class="col-md-12 margin leftmargin">
    <div class="minus"> </div>
    <div class="minus"></div>
    <div class="minus"></div>
    <div class="textstyle">{{tabledetails.tabletitle}}</div>
 </div>
-<div class="col-md-12">
+
+<div class="col-md-12 leftmargin">
    <div style="margin-top: 60px;">
       <div class="color">
          {{tabledetails.tableSubTitle}}
@@ -23,8 +24,7 @@
          <tbody>
             <tr ng-repeat="viewdata in tablebody">
                <td ng-repeat="value in viewdata track by $index">{{value}}</td>
-               <td></td>
-               <td><a ng-class="tabledetails.alink.Text=='Edit' ?'linkWithPadding' :''">{{tabledetails.alink.Text}}</a>
+               <td><a ng-class="tabledetails.alink.Text=='Edit' ?'linkWithPadding' :''"  ng-click="onedit({data:viewdata[0]})">{{tabledetails.alink.Text}}</a>
                </td>
             </tr>
          </tbody>

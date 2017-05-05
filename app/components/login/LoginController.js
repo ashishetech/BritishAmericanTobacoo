@@ -11,7 +11,7 @@ angular.module('batApp')
                 .then((response) => {
                   if (!response.error) {
                     $localStorage.token = response.token
-                    $state.go('menuTemplate')
+                    $state.go('menuTemplate.outletViewTable')
                   } else {
                     vm.isLoading = false
                     vm.buttonLogin = true

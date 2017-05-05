@@ -1,4 +1,4 @@
-angular.module('batApp').controller('viewTmeController', function (getDataFactory, $state, setDataService) {
+angular.module('batApp').controller('viewTmeController', function (getDataFactory, $state, setDataService, shareDataService) {
   var vm = this
   vm.tmeList = []
   vm.data = {
@@ -21,5 +21,9 @@ angular.module('batApp').controller('viewTmeController', function (getDataFactor
   })
   vm.add = function () {
     $state.go('menuTemplate.addTme')
+  }
+  vm.edit = function (data) {
+    shareDataService.addId(data)
+    $state.go('menuTemplate.TmeEdit')
   }
 })

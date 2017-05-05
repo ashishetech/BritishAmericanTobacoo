@@ -11,6 +11,9 @@ md-list-item p.Active {
 md-list-item .child.Active {
     color: #1F8AFD;
 }
+md-list-item{
+	font-size: 16px !important;
+}
 md-list-item:hover {
     cursor: pointer;
     background-color: #e6e6e6;
