@@ -39,5 +39,10 @@ angular.module('batApp', ['ui.router', 'ngResource', 'ngStorage', 'ngMaterial', 
               templateUrl: 'components/sku/skuView.html',
               controller: 'viewSkuController as viewSkuCtrl'
             })
+            .state('menuTemplate.addSku', {
+              url: '/addSku',
+              templateUrl: 'components/addSku/addSku.html',
+              controller: 'addSkuController as addSkuCtrl'
 
+            })
     })

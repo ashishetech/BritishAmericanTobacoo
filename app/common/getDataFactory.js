@@ -22,5 +22,11 @@ angular.module('batApp').factory('getDataFactory', (configuration, $resource) =>
   getSkuViewData () {
     return $resource(configuration.apihost + '/get/sku/1/100')
   },
+  addSku () {
+    return $resource(configuration.apihost + '/sku')
+  },
+  getBrandData () {
+    return $resource(configuration.apihost + '/get/brand/1/5')
+  }
 
 }))
