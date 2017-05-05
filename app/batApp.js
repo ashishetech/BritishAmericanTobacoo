@@ -1,6 +1,6 @@
 'use strict'
 
-angular.module('batApp', ['ui.router', 'ngResource', 'ngStorage', 'ngMaterial'])
+angular.module('batApp', ['ui.router', 'ngResource', 'ngStorage', 'ngMaterial', 'angularMoment'])
     .config(function ($stateProvider, $urlRouterProvider) {
       $urlRouterProvider.otherwise('/login')
       $stateProvider
@@ -24,4 +24,20 @@ angular.module('batApp', ['ui.router', 'ngResource', 'ngStorage', 'ngMaterial'])
               controller: 'addOutletController as addOutletCtrl'
 
             })
+            .state('menuTemplate.tmeViewTable', {
+              url: '/tmeViewTable',
+              templateUrl: 'components/tme/tmeView.html',
+              controller: 'viewTmeController as viewTmeCtrl'
+            })
+            .state('menuTemplate.addTme', {
+              url: '/addTme',
+              templateUrl: 'components/addTme/addTme.html',
+              controller: 'addTmeController as addTmeCtrl'
+            })
+            .state('menuTemplate.skuViewTable', {
+              url: '/skuViewTable',
+              templateUrl: 'components/sku/skuView.html',
+              controller: 'viewSkuController as viewSkuCtrl'
+            })
+
     })

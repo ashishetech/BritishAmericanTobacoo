@@ -12,5 +12,15 @@ angular.module('batApp').factory('getDataFactory', (configuration, $resource) =>
   },
   getMembershipType () {
     return $resource(configuration.apihost + '/membership/get')
-  }
+  },
+  getTmeViewData () {
+    return $resource(configuration.apihost + '/tme/get/-1/1')
+  },
+  addTme () {
+    return $resource(configuration.apihost + '/tme/register')
+  },
+  getSkuViewData () {
+    return $resource(configuration.apihost + '/get/sku/1/100')
+  },
+
 }))

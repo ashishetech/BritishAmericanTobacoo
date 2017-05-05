@@ -47,7 +47,7 @@
 		<md-icon class="md-secondary arrow" ng-hide="template.arrowBrand">keyboard_arrow_up</md-icon>
 	</md-list-item>
 
-	<md-list-item ng-show="template.OpenBrand" ui-sref="menuTemplate.SKU">
+	<md-list-item ng-show="template.OpenBrand" ui-sref="menuTemplate.skuViewTable">
 		<span class="child" ng-class="{ Active: template.isActive('/SKU')}">All SKU</span>
     </md-list-item>
 
@@ -66,11 +66,11 @@
         <md-icon class="md-secondary arrow" ng-hide="template.arrowSet">keyboard_arrow_up</md-icon>
     </md-list-item>
 
-    <md-list-item ng-show="template.OpenSetting" ui-sref="menuTemplate.TME">
+    <md-list-item ng-show="template.OpenSetting" ui-sref="menuTemplate.tmeViewTable">
         <span class="child" ng-class="{ Active: template.isActive('/TME')}">TME Setting</span>
     </md-list-item>
 
-    <md-list-item ng-show="template.OpenSetting" ui-sref="menuTemplate.membership">
+    <md-list-item ng-show="template.OpenSetting" ui-sref="'menuTemplate.membership">
         <span class="child" ng-class="{ Active: template.isActive('/membership')}">Membership Setting</span>
     </md-list-item>
 
