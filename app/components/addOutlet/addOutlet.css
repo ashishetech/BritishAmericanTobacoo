@@ -5,7 +5,7 @@
     margin-right: 25px;
 }
 h6 {
-    color: #667685;
+    color: grey !important;
 }
 .btn:hover {
     background-color: rgb(219, 219, 219) !important;

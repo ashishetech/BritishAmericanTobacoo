@@ -11,13 +11,13 @@
 
     <md-list-item ng-click="template.Open('outlet')">
         <md-icon class="md-default-theme" class="material-icons">insert_drive_file</md-icon>
-        <p ng-class="{ Active: template.isActive('/outletViewTable')||template.isActive('/addOutlet')}">Outlets</p>
+        <p ng-class="{ Active: template.isActive('/outletViewTable')||template.isActive('/addOutlet')||template.isActive('/editOutlet')}">Outlets</p>
         <md-icon class="arrow" ng-show="template.arrowOutlet">keyboard_arrow_right</md-icon>
         <md-icon class="arrow" ng-hide="template.arrowOutlet">keyboard_arrow_up</md-icon>
     </md-list-item>
 
     <md-list-item ui-sref="menuTemplate.outletViewTable" ng-show="template.OpenOutlet">
-        <span class="child" ng-class="{ Active: template.isActive('/outletViewTable')}">View Outlet</span>
+        <span class="child" ng-class="{ Active: template.isActive('/outletViewTable')||template.isActive('/editOutlet')}">View Outlet</span>
     </md-list-item>
 
     <md-list-item ui-sref="menuTemplate.addOutlet" ng-show="template.OpenOutlet">
@@ -61,7 +61,7 @@
 
     <md-list-item ng-click="template.Open('setting')">
         <md-icon class="md-default-theme" class="material-icons">face</md-icon>
-        <p ng-class="{ Active: template.isActive('/tme')||template.isActive('/membership')}">Accounts & settings </p>
+        <p ng-class="{ Active: template.isActive('/tmeViewTable')||template.isActive('/viewMembership')}">Accounts & settings </p>
         <md-icon class="md-secondary arrow" ng-show="template.arrowSet">keyboard_arrow_right</md-icon>
         <md-icon class="md-secondary arrow" ng-hide="template.arrowSet">keyboard_arrow_up</md-icon>
     </md-list-item>
@@ -71,8 +71,8 @@
         <span class="child" ng-class="{ Active: template.isActive('/tmeViewTable')}">TME Setting</span>
     </md-list-item>
 
-    <md-list-item ng-show="template.OpenSetting" ui-sref="'menuTemplate.membership">
-        <span class="child" ng-class="{ Active: template.isActive('/membership')}">Membership Setting</span>
+    <md-list-item ng-show="template.OpenSetting" ui-sref="menuTemplate.viewMembership">
+        <span class="child" ng-class="{ Active: template.isActive('/viewMembership')}">Membership Setting</span>
     </md-list-item>
 
 </md-list>

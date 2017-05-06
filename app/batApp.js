@@ -1,6 +1,6 @@
 'use strict'
 
-angular.module('batApp', ['ui.router', 'ngResource', 'ngStorage', 'ngMaterial', 'angularMoment'])
+angular.module('batApp', ['ui.router', 'ngResource', 'ngStorage', 'ngMaterial', 'angularMoment', 'ui.bootstrap'])
 .config(function ($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise('/login')
   $stateProvider
@@ -57,5 +57,10 @@ angular.module('batApp', ['ui.router', 'ngResource', 'ngStorage', 'ngMaterial', 
   url: '/editMembership',
   templateUrl: 'components/membership/editMembership/editMembership.html',
   controller: 'EditMembershipController as editMemberCtrl'
+})
+.state('menuTemplate.viewMembership', {
+  url: '/viewMembership',
+  templateUrl: 'components/membership/viewMembership/membershipView.html',
+  controller: 'viewMembershipController as viewMembershipCtrl'
 })
 })

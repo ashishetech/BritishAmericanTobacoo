@@ -1,17 +1,24 @@
 .editoutlet{
-	background-color:rgba(221, 221, 221, 0.31);
-	margin-left:-13px;    width: 102%;
+	background-color: rgba(221, 221, 221, 0.16);
+	margin-left:-18px;    width: 102%;
 	padding-bottom: 17px;
-
+	color: grey !important;
+	margin-top: 20px;
 }
 .editOutletHeader{
-	margin-top:45px;
+	margin-top:60px !important;
 	font-weight:bold;
 	/*margin-left:-25px;*/
 }
 .outletPoint{
-	font-size:18px; margin-top:5px;
+	font-size:18px;
+	margin-top:5px;
 	margin-left: -15px
+}
+.outletPoint2{
+	font-size:18px;
+	margin-top:5px;
+	margin-left: -2px
 }
 .points{
 	font-size: 11px;
@@ -36,7 +43,11 @@
 	width:100px; background-color:lightgrey;
 }
 .membershipForm{
-	margin-top:20px; background-color:#FCFCFC;
+	margin-top:0px;
+	background-color:#FCFCFC;
+	color: grey;
+	padding-left: 24px;
+    margin-left: -9px;
 }
 .formArea{
 	width:27%;
@@ -56,9 +67,10 @@
 	 border-top-right-radius:0px;
 }
 .inputBtn{
-	font-size:9px;
+	font-size:8.5px;
 	height: 34px;
-	/*padding:3px;*/
+	/*font-weight: bold;*/
+	/*padding:3px;*/ opacity: 0.8;
 	min-width: 100%;
 	/*margin-left:-3px;*/
 	background-color:lightgrey;
@@ -108,6 +120,8 @@ a.targetlinks:hover{
 	font-size: 18px;
 	font-weight: bold;
 	color: black;
+	margin-top: -8px;
+    margin-bottom: 0px;
 }
 md-radio-group:not([disabled]).md-primary .md-on{
 	background-color: #007AFF !important;
@@ -118,4 +132,20 @@ md-radio-group:not([disabled]).md-primary .md-checked .md-off{
 .modalmargin{
 	border:2px solid grey;
 	margin-top: 150px;
+}
+h5{
+	font-weight: bold !important;
+	font-size: 13px !important;
+	color: grey !important;
+}
+h6.head6{
+	margin-bottom: 2px !important;
+	color: grey !important;
+}
+.form-control.rebatetext{
+	width: 100px !important;
+	float: right;
+}
+.rebate{
+	float: right;
 }

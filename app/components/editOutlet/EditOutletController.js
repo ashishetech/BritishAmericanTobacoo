@@ -20,8 +20,11 @@ angular.module('batApp')
           label: value.type_name,
           value: value.id
         })
+        console.log(vm.radioData)
       }
     })
+    vm.radioData.reverse()
+	 console.log(vm.radioData)
   })
 
   vm.updateTme = function (tmeId) {
