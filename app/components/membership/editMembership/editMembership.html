@@ -1,4 +1,4 @@
-<div class="modal fade" id="myModal" role="dialog">
+<div class="modal fade" id="editModal" role="dialog" data-backdrop="static">
    <div class="modal-dialog modal-md">
       <div class="modal-content assignTME">
          <div class="modal-body">
@@ -9,36 +9,36 @@
                <div class="row top">
                   <div class="col-md-10 col-md-offset-1">
                      <div class="col-md-12" ng-class="{true: 'has-error'} [submitted && myForm.type_name.$invalid]">
-                        <label for="text">Membership Name</label>
+                        <label class="mylabel"  for="text">Membership Name</label>
                         <input type="text" class="form-control inputPop" name="type_name" ng-model="viewMembershipCtrl.formdata.type_name" required/>
                         <span ng-show="submitted && myForm.type_name.$error.required" class="help-block">Membership required</span>
                      </div>
                   </div>
                </div>
-               <div class="row top">
+               <div class="row nonTop">
                   <div class="col-md-10 col-md-offset-1">
                      <div class="col-md-12" ng-class="{true: 'has-error'} [submitted && myForm.min_required_points.$invalid]">
-                        <label for="text">Points required</label>
+                        <label class="mylabel"  for="text">Points required</label>
                         <input type="number" class="form-control inputPop" name="min_required_points" ng-model="viewMembershipCtrl.formdata.min_required_points" required/>
-                        <span ng-show="submitted && myForm.min_required_points.$error.required" class="help-block">Points required</span>
+                        <span ng-show="submitted && myForm.min_required_points.$dirty && myForm.min_required_points.$error.required" class="help-block">Points required</span>
                      </div>
                   </div>
                </div>
-               <div class="row top">
+               <div class="row nonTop">
                   <div class="col-md-10 col-md-offset-1">
                      <div class="col-md-6" ng-class="{true: 'has-error'} [submitted && myForm.order.$invalid]">
-                        <label for="text">Order</label>
+                        <label class="mylabel"  for="text">Order</label>
                         <input type="text" class="form-control inputPop" name="order" ng-model="viewMembershipCtrl.formdata.order" required/>
                         <span ng-show="submitted && myForm.order.$error.required" class="help-block">Order required</span>
                      </div>
                      <div class="col-md-6" ng-class="{true: 'has-error'} [submitted && myForm.rebate_rate.$invalid]">
-                        <label for="text">Rebate Rate (1 point)</label>
+                        <label class="mylabel"  for="text">Rebate Rate (1 point)</label>
                         <input type="text" class="form-control inputPop" name="rebate_rate" ng-model="viewMembershipCtrl.formdata.rebate_rate" required/>
                         <span ng-show="submitted && myForm.rebate_rate.$error.required" class="help-block">Rebate Rate required</span>
                      </div>
                   </div>
                </div>
-               <div class="row top">
+               <div class="row nonTop">
                   <div class="col-md-10 col-md-offset-1">
                      <md-checkbox ng-model="data.id" class="blue checkMEM" ng-model="viewMembershipCtrl.formdata.default" value="setDefault" ng-change="setDefault(setDefault)">
                         <b>Set As Default</b>
@@ -47,13 +47,13 @@
                      <p class="instr">if set,all new outlets will be assigned this membership status when added to the system</p>
                   </div>
                </div>
-               <div class="row top">
+               <div class="row nonTop">
                   <div class="col-md-10 col-md-offset-1 ">
                      <div class="col-md-6">
-                        <input type="button" class="btn btn-default btnPop" ng-click="viewMembershipCtrl.cancel()" style="width:100%; background-color:grey" value="Cancel">
+                        <input type="button" class="btn btn-default btnPop1" ng-click="viewMembershipCtrl.cancel(myForm)" style="width:100%; background-color:grey" value="CANCEL">
                      </div>
                      <div class="col-md-6">
-                        <input type="submit" class="btn btn-primary btnPop" ng-click="submitted=true" style="width:100%" value="Apply">
+                        <input type="submit" class="btn btn-primary btnPop2"  ng-disabled="myForm.$invalid" ng-click="submitted=true" style="width:100%" value="APPLY">
                      </div>
                   </div>
                </div>

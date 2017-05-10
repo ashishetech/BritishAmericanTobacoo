@@ -1,7 +1,67 @@
-<div>
-	<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
-	<dynamic-form send="addMemberCtrl.submit(data)" formdata="addMemberCtrl.data" submitted="addMemberCtrl.submitted" error="addMemberCtrl.error"></dynamic-form>
-
+<div class="modal fade" id="addModal" role="dialog" data-backdrop="static">
+   <div class="modal-dialog modal-md">
+      <div class="modal-content assignTME">
+         <div class="modal-body">
+            <center>
+               <h4 style="color:#007AFF;">ADD/EDIT MEMBERSHIP</h4>
+            </center>
+            <form name="myForm" class="form" ng-submit="viewMembershipCtrl.addMember(viewMembershipCtrl.addformdata,myForm)" novalidate>
+				<center>
+					<div class="alert alert-danger" ng-show="viewMembershipCtrl.alert">{{viewMembershipCtrl.error}}</div>
+				</center>
+               <div class="row top">
+                  <div class="col-md-10 col-md-offset-1">
+                     <div class="col-md-12" ng-class="{true: 'has-error'} [(myForm.$submitted||myForm.type_name.$dirty) && myForm.type_name.$invalid]">
+                        <label class="mylabel" l class="label" for="text">Membership Name</label>
+                        <input type="text" class="form-control inputPop" name="type_name" ng-model="viewMembershipCtrl.addformdata.type_name" ng-change="viewMembershipCtrl.alertFn()" required/>
+                        <span ng-show="(myForm.$submitted||myForm.type_name.$dirty)  && myForm.type_name.$error.required" class="help-block">Membership required</span>
+                     </div>
+                  </div>
+               </div>
+               <div class="row nonTop">
+                  <div class="col-md-10 col-md-offset-1">
+                     <div class="col-md-12" ng-class="{true: 'has-error'} [(myForm.$submitted||myForm.min_required_points.$dirty)  && myForm.min_required_points.$invalid]">
+                        <label class="mylabel" l for="text">Points required</label>
+                        <input type="number" class="form-control inputPop" name="min_required_points" ng-model="viewMembershipCtrl.addformdata.min_required_points"  ng-change="viewMembershipCtrl.alertFn()" required/>
+                        <span ng-show="(myForm.$submitted||myForm.min_required_points.$dirty) && myForm.min_required_points.$error.required" class="help-block">Points required</span>
+                     </div>
+                  </div>
+               </div>
+               <div class="row nonTop">
+                  <div class="col-md-10 col-md-offset-1">
+                     <div class="col-md-6" ng-class="{true: 'has-error'} [(myForm.$submitted||myForm.order.$dirty)  && myForm.order.$invalid]">
+                        <label class="mylabel" l for="text">Order</label>
+                        <input type="text" class="form-control inputPop" name="order" ng-model="viewMembershipCtrl.addformdata.order"  ng-change="viewMembershipCtrl.alertFn()" required/>
+                        <span ng-show="(myForm.$submitted||myForm.order.$dirty)  && myForm.order.$error.required" class="help-block">Order required</span>
+                     </div>
+                     <div class="col-md-6" ng-class="{true: 'has-error'} [(myForm.$submitted||myForm.rebate_rate.$dirty)  && myForm.rebate_rate.$invalid]">
+                        <label class="mylabel" l for="text">Rebate Rate (1 point)</label>
+                        <input type="text" class="form-control inputPop" name="rebate_rate" ng-model="viewMembershipCtrl.addformdata.rebate_rate"  ng-change="viewMembershipCtrl.alertFn()" required/>
+                        <span ng-show="(myForm.$submitted||myForm.rebate_rate.$dirty)  && myForm.rebate_rate.$error.required" class="help-block">Rebate Rate required</span>
+                     </div>
+                  </div>
+               </div>
+               <div class="row nonTop">
+                  <div class="col-md-10 col-md-offset-1">
+                     <md-checkbox ng-model="data.id" class="blue checkMEM" ng-model="viewMembershipCtrl.addformdata.default" value="setDefault" ng-change="setDefault(setDefault)">
+                        <b>Set As Default</b>
+                     </md-checkbox>
+                     {{default}}
+                     <p class="instr">if set,all new outlets will be assigned this membership status when added to the system</p>
+                  </div>
+               </div>
+               <div class="row nonTop">
+                  <div class="col-md-10 col-md-offset-1 ">
+                     <div class="col-md-6">
+                        <input type="button" class="btn btn-default btnPop1" ng-click="viewMembershipCtrl.cancel(myForm)"  style="width:100%; background-color:grey" value="CANCEL">
+                     </div>
+                     <div class="col-md-6">
+                        <input type="submit" class="btn btn-primary btnPop2" style="width:100%" value="APPLY">
+                     </div>
+                  </div>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
 </div>
-
-<div ng-include="'commmon/membership.template.html'"></div>

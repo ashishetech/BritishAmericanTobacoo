@@ -1,83 +1,64 @@
 <md-list class="col-md-3 paddingLeft" >
-    <md-subheader class="header">Max Admin
-        <br>
-        <br> <a class="logout" ui-sref="login">Logout</a>
-    </md-subheader>
-
-    <md-list-item >
-        <md-icon class="md-default-theme material-icons">home</md-icon>
-        <p ng-class="{ Active: template.isActive('/')}">Home</p>
-    </md-list-item>
-
-    <md-list-item ng-click="template.Open('outlet')" style="border-bottom:1px solid #F1F1F1;">
-        <md-icon class="md-default-theme" class="material-icons">insert_drive_file</md-icon>
-        <p ng-class="{ Active: template.isActive('/outletViewTable')||template.isActive('/addOutlet')||template.isActive('/editOutlet')}">Outlets</p>
-        <md-icon class="arrow" ng-show="template.arrowOutlet">keyboard_arrow_right</md-icon>
-        <md-icon class="arrow" ng-hide="template.arrowOutlet">keyboard_arrow_up</md-icon>
-    </md-list-item>
-
-    <md-list-item ui-sref="menuTemplate.outletViewTable" ng-show="template.OpenOutlet" style="background-color:rgba(128, 128, 128, 0.11);">
-        <span class="child" ng-class="{ Active: template.isActive('/outletViewTable')||template.isActive('/editOutlet')}">View Outlet</span>
-    </md-list-item>
-
-    <md-list-item ui-sref="menuTemplate.addOutlet" ng-show="template.OpenOutlet" style="background-color:rgba(128, 128, 128, 0.11);">
-        <span class="child" ng-class="{ Active: template.isActive('/addOutlet')}">Add Outlet</spam>
-  	</md-list-item>
-
-    <md-list-item>
-        <md-icon class="md-default-theme" class="material-icons">supervisor_account</md-icon>
-		<p ng-class="{ Active: template.isActive('/addMembership')}">Rebate Requests</p>
-    </md-list-item>
-
-    <md-list-item>
-        <md-icon class="md-default-theme" class="material-icons">account_balance_wallet</md-icon>
-		<p ng-class="{ Active: template.isActive('/editMembership')}">Campaigns</p>
-	</md-list-item>
-
-
-    <md-list-item ui-sref="menuTemplate.uploadData">
-        <md-icon class="md-default-theme" class="material-icons">face</md-icon>
-		<p ng-class="{ Active: template.isActive('/uploadData')}">Upload Data </p>
-    </md-list-item>
-
-    <md-list-item ng-click="template.Open('brand')" style="border-bottom:1px solid #F1F1F1;">
-        <md-icon class="md-default-theme" class="material-icons">face</md-icon>
-		<p  ng-class="{ Active: template.isActive('/skuViewTable')||template.isActive('/brands')||template.isActive('/promotion')}">Brands</p>
-		<md-icon class="md-secondary arrow" ng-show="template.arrowBrand" style="color:blue">keyboard_arrow_right</md-icon>
-		<md-icon class="md-secondary arrow" ng-hide="template.arrowBrand">keyboard_arrow_up</md-icon>
-	</md-list-item>
-
-	<md-list-item ng-show="template.OpenBrand" ui-sref="menuTemplate.skuViewTable" style="background-color:rgba(128, 128, 128, 0.11);">
-		<span class="child" ng-class="{ Active: template.isActive('/skuViewTable')}">All SKU</span>
-    </md-list-item>
-
-    <md-list-item ng-show="template.OpenBrand" ui-sref="menuTemplate.brands" style="background-color:rgba(128, 128, 128, 0.11);" >
-        <span class="child" ng-class="{ Active: template.isActive('/brands')}">All Brands</span>
-    </md-list-item>
-
-    <md-list-item ng-show="template.OpenBrand" ui-sref="menuTemplate.promotion" style="background-color:rgba(128, 128, 128, 0.11);">
-        <span class="child" ng-class="{ Active: template.isActive('/promotion')}">All Promotions</span>
-    </md-list-item>
-
-    <md-list-item ng-click="template.Open('setting')" style="border-bottom:1px solid #F1F1F1;">
-        <md-icon class="md-default-theme" class="material-icons">face</md-icon>
-        <p ng-class="{ Active: template.isActive('/tmeViewTable')||template.isActive('/viewMembership')}">Accounts & settings </p>
-        <md-icon class="md-secondary arrow" ng-show="template.arrowSet">keyboard_arrow_right</md-icon>
-        <md-icon class="md-secondary arrow" ng-hide="template.arrowSet">keyboard_arrow_up</md-icon>
-    </md-list-item>
-
-
-    <md-list-item ng-show="template.OpenSetting" ui-sref="menuTemplate.tmeViewTable" style="background-color:rgba(128, 128, 128, 0.11);">
-        <span class="child" ng-class="{ Active: template.isActive('/tmeViewTable')}">TME Setting</span>
-    </md-list-item>
-
-    <md-list-item ng-show="template.OpenSetting" ui-sref="menuTemplate.viewMembership" style="background-color:rgba(128, 128, 128, 0.11);">
-        <span class="child" ng-class="{ Active: template.isActive('/viewMembership')}">Membership Setting</span>
-    </md-list-item>
-
+   <md-subheader class="header">Max Admin
+      <br>
+      <br> <a class="logout" ui-sref="login">Logout</a>
+   </md-subheader>
+   <md-list-item >
+      <md-icon class="md-default-theme material-icons">home</md-icon>
+      <p ng-class="{ Active: template.isActive('/')}">Home</p>
+   </md-list-item>
+   <md-list-item ng-click="template.Open('outlet')" style="border-bottom:1px solid #F1F1F1;">
+      <md-icon class="md-default-theme" class="material-icons">insert_drive_file</md-icon>
+      <p ng-class="{ Active: template.isActive('/outletViewTable')||template.isActive('/addOutlet')||template.isActive('/editOutlet')}">Outlets</p>
+      <md-icon class="arrow" ng-show="template.arrowOutlet">keyboard_arrow_right</md-icon>
+      <md-icon class="arrow" ng-hide="template.arrowOutlet">keyboard_arrow_up</md-icon>
+   </md-list-item>
+   <md-list-item ui-sref="menuTemplate.outletViewTable" ng-show="template.OpenOutlet" style="background-color:rgba(128, 128, 128, 0.11);">
+      <span class="child" ng-class="{ Active: template.isActive('/outletViewTable')||template.isActive('/editOutlet')}">View Outlet</span>
+   </md-list-item>
+   <md-list-item ui-sref="menuTemplate.addOutlet" ng-show="template.OpenOutlet" style="background-color:rgba(128, 128, 128, 0.11);">
+      <span class="child" ng-class="{ Active: template.isActive('/addOutlet')}">Add Outlet</spam>
+   </md-list-item>
+   <md-list-item>
+      <md-icon class="md-default-theme" class="material-icons">supervisor_account</md-icon>
+      <p ng-class="{ Active: template.isActive('/addMembership')}">Rebate Requests</p>
+   </md-list-item>
+   <md-list-item>
+      <md-icon class="md-default-theme" class="material-icons">account_balance_wallet</md-icon>
+      <p ng-class="{ Active: template.isActive('/editMembership')}">Campaigns</p>
+   </md-list-item>
+   <md-list-item ui-sref="menuTemplate.uploadData">
+      <md-icon class="md-default-theme" class="material-icons">face</md-icon>
+      <p ng-class="{ Active: template.isActive('/uploadData')}">Upload Data </p>
+   </md-list-item>
+   <md-list-item ng-click="template.Open('brand')" style="border-bottom:1px solid #F1F1F1;">
+      <md-icon class="md-default-theme" class="material-icons">face</md-icon>
+      <p  ng-class="{ Active: template.isActive('/skuViewTable')||template.isActive('/brands')||template.isActive('/promotion')}">Brands</p>
+      <md-icon class="md-secondary arrow" ng-show="template.arrowBrand" style="color:blue">keyboard_arrow_right</md-icon>
+      <md-icon class="md-secondary arrow" ng-hide="template.arrowBrand">keyboard_arrow_up</md-icon>
+   </md-list-item>
+   <md-list-item ng-show="template.OpenBrand" ui-sref="menuTemplate.skuViewTable" style="background-color:rgba(128, 128, 128, 0.11);">
+      <span class="child" ng-class="{ Active: template.isActive('/skuViewTable')}">All SKU</span>
+   </md-list-item>
+   <md-list-item ng-show="template.OpenBrand" ui-sref="menuTemplate.brands" style="background-color:rgba(128, 128, 128, 0.11);" >
+      <span class="child" ng-class="{ Active: template.isActive('/brands')}">All Brands</span>
+   </md-list-item>
+   <md-list-item ng-show="template.OpenBrand" ui-sref="menuTemplate.promotion" style="background-color:rgba(128, 128, 128, 0.11);">
+      <span class="child" ng-class="{ Active: template.isActive('/promotion')}">All Promotions</span>
+   </md-list-item>
+   <md-list-item ng-click="template.Open('setting')" style="border-bottom:1px solid #F1F1F1;">
+      <md-icon class="md-default-theme" class="material-icons">face</md-icon>
+      <p ng-class="{ Active: template.isActive('/tmeViewTable')||template.isActive('/viewMembership')}">Accounts & settings </p>
+      <md-icon class="md-secondary arrow" ng-show="template.arrowSet">keyboard_arrow_right</md-icon>
+      <md-icon class="md-secondary arrow" ng-hide="template.arrowSet">keyboard_arrow_up</md-icon>
+   </md-list-item>
+   <md-list-item ng-show="template.OpenSetting" ui-sref="menuTemplate.tmeViewTable" style="background-color:rgba(128, 128, 128, 0.11);">
+      <span class="child" ng-class="{ Active: template.isActive('/tmeViewTable')}">TME Setting</span>
+   </md-list-item>
+   <md-list-item ng-show="template.OpenSetting" ui-sref="menuTemplate.viewMembership" style="background-color:rgba(128, 128, 128, 0.11);">
+      <span class="child" ng-class="{ Active: template.isActive('/viewMembership')}">Membership Setting</span>
+   </md-list-item>
 </md-list>
 
-<!-- <div class="col-md-9"> -->
 <div class="col-md-9 paddingLeft" ui-view>
-
 </div>
