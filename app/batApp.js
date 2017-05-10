@@ -48,14 +48,19 @@ angular.module('batApp', ['ui.router', 'ngResource', 'ngStorage', 'ngMaterial', 
   templateUrl: 'components/sku/skuView.html',
   controller: 'viewSkuController as viewSkuCtrl'
 })
+.state('menuTemplate.viewMembership', {
+  url: '/viewMembership',
+  templateUrl: 'components/membership/viewMembership/membershipView.html',
+  controller: 'viewMembershipController as viewMembershipCtrl'
+})
 .state('menuTemplate.brandViewTable', {
   url: '/brandViewTable',
   templateUrl: 'components/brands/brandView.html',
   controller: 'viewBrandController as viewBrandCtrl'
 })
-.state('menuTemplate.viewMembership', {
-  url: '/viewMembership',
-  templateUrl: 'components/membership/viewMembership/membershipView.html',
-  controller: 'viewMembershipController as viewMembershipCtrl'
+.state('menuTemplate.addBrand', {
+  url: '/addBrand',
+  templateUrl: 'components/addBrand/addBrand.html',
+  controller: 'addBrandController as addBrandCtrl'
 })
 })
