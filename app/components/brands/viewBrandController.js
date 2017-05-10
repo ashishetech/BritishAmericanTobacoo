@@ -1,4 +1,4 @@
-angular.module('batApp').controller('viewBrandController', function (getDataFactory, setDataService) {
+angular.module('batApp').controller('viewBrandController', function (getDataFactory, setDataService, $state) {
   var vm = this
   vm.membershipList = []
   vm.data = {
@@ -7,8 +7,7 @@ angular.module('batApp').controller('viewBrandController', function (getDataFact
     values: ['ID',
       'Name',
       'BAT ID',
-      'Number of SKU',
-
+      'Number of SKU'
 
     ],
     alink: {
@@ -20,4 +19,7 @@ angular.module('batApp').controller('viewBrandController', function (getDataFact
   setDataService.setBrandControllerData().then((response) => {
     vm.brandList = response
   })
+  vm.add = function () {
+    $state.go('menuTemplate.addBrand')
+  }
 })
