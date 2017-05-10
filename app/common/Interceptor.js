@@ -8,7 +8,6 @@ angular.module('batApp')
       return config
     },
     responseError: function (response) {
-      console.log(response)
       var status = response.status
       if (status === 403) {
         $window.location = 'index.html'

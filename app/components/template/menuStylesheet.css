@@ -1,9 +1,14 @@
+.md-subheader .md-subheader-inner {
+    display: block;
+    padding: 0px;
+}
 .md-subheader .md-subheader-content {
     display: block;
     color: #667685;
     font-size: 26px !important;
-    padding: 40px;
-    padding-top: 30px;
+    padding: 55px;
+	margin-top: -7px;
+	background-color: rgba(123, 120, 120, 0.07);
 }
 md-list-item p.Active {
     color: #1F8AFD;
@@ -13,6 +18,7 @@ md-list-item .child.Active {
 }
 md-list-item{
 	font-size: 16px !important;
+	background-color: #F7F7F7;
 }
 md-list-item:hover {
     cursor: pointer;

@@ -43,6 +43,9 @@ angular.module('batApp').factory('getDataFactory', (configuration, $resource) =>
   searchTme (search, text) {
     return $resource(configuration.apihost + '/tme/searchoutlet/' + search + '/' + text)
   },
+  getMembershipViewData () {
+    return $resource(configuration.apihost + '/membership/get')
+  },
   addMembership () {
     return $resource(configuration.apihost + '/membership/create')
   },

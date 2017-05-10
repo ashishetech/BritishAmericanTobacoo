@@ -1,11 +1,22 @@
 .btnpadding {
+  margin-top:20px;
     padding: 8px 55px;
     background-color: rgb(219, 219, 219);
     border-color: rgb(219, 219, 219);
     margin-right: 25px;
+    color:grey;
 }
 h6 {
     color: #667685;
+}
+.headingColor{
+  color: #4A4A4A!important;
+    font-weight: normal!important;
+    font-size: 14px!important;
+
+}
+.margin {
+    margin-top: 20px;
 }
 .btn:hover {
     background-color: rgb(219, 219, 219) !important;
@@ -17,4 +28,19 @@ h6 {
     border: 0px;
     border-color: rgb(219, 219, 219);
     margin-right: 45px;
+}
+.bckground {
+  background-color:#F7F7F8;
+  padding-right:0px!important;
+  margin-left:-18px!important;
+
+
+}
+.leftmgn{
+
+   padding-bottom:4%;
+	padding-right: 0px !important;
+  background-color:#FCFCFC !important;
+  padding-top: 2%;
+margin-top:0px!important;
 }

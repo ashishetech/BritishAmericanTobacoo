@@ -1,0 +1,38 @@
+.tmeleftmgn {
+    padding-bottom: 4%;
+    padding-right: 0px !important;
+    background-color: #FCFCFC !important;
+    padding-top: 2%;
+    margin-top: 0px!important;
+}
+.linkpadding {
+  color: #1F8AFD;
+      background-color: white;
+      border: 0px;
+      border-color: rgb(219, 219, 219);
+      margin-right: 45px;
+      margin-top: 20px;
+      font-size: 13px;
+      padding-left: 30px;
+      background-color: #FFFFFF;
+      padding-right: 30px;
+      padding-bottom: 9px;
+      padding-top: 9px;
+
+
+}
+.linkpadding:hover {
+    background-color: #FCFCFC !important;
+    color: grey;
+    text-decoration: none;
+    cursor: pointer;
+}
+.tmebckground {
+    background-color: #F7F7F8;
+    padding-right: 0px!important;
+    margin-left: -18px!important;
+}
+.tmeleftmgn1{
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+}
