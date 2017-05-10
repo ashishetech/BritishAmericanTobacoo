@@ -1,17 +1,28 @@
-<div class="col-md-12 margin leftmargin">
+<div class="col-md-12  tablebackground">
+     <div class="col-md-12 leftmargin">
+       <div class="padding">
    <div class="minus"> </div>
    <div class="minus"></div>
    <div class="minus"></div>
    <div class="textstyle">{{tabledetails.tabletitle}}</div>
-</div>
+ </div>
+ </div>
 
-<div class="col-md-12 leftmargin">
-   <div style="margin-top: 60px;">
-      <div class="color">
+
+<div class="col-md-12 leftmargin1">
+   <div style="margin-top: 18px;background-color:#FCFCFC;">
+     <div class="col-md-12" style="background-color: #F7F8F7;">
+      <div class="col-md-10 color">
          {{tabledetails.tableSubTitle}}
-         <a class="pull-right marginRight" ng-click="onadd()"=>{{tabledetails.alink.Text1}}  </a>
+
       </div>
-      <table class="table">
+
+      <div class="col-md-2">
+         <div  ng-click="onadd()" ng-class="tabledetails.alink.Text1?'marginRight' :''"><center>{{tabledetails.alink.Text1}}  <center></div>
+      </div>
+    </div>
+
+      <table class="table tble">
          <thead>
             <tr>
                <th class="headingcolor" ng-repeat="data in tabledetails.values">{{data}}</th>
@@ -24,10 +35,11 @@
          <tbody>
             <tr ng-repeat="viewdata in tablebody">
                <td ng-repeat="value in viewdata track by $index">{{value}}</td>
-               <td><a ng-class="tabledetails.alink.Text=='Edit' ?'linkWithPadding' :''"  ng-click="onedit({data:viewdata[0]})">{{tabledetails.alink.Text}}</a>
+               <td><a  style="color:#007AFF;" ng-class="tabledetails.alink.Text=='Edit' ?'linkWithPadding' :''"  ng-click="onedit({data:viewdata[0]})">{{tabledetails.alink.Text}}</a>
                </td>
             </tr>
          </tbody>
       </table>
    </div>
+</div>
 </div>

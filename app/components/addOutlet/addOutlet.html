@@ -1,16 +1,20 @@
-<div class="margin">
+<div class="col-md-12 bckground">
+
+ <div class="col-md-12  margin leftmgn">
    <div class="minus"> </div>
    <div class="minus"></div>
    <div class="minus"></div>
    <div class="textstyle">OUTLET:Details</div>
-</div>
-<div style="margin-top: 100px;" >
+ </div>
+
+<div class="col-md-12 leftmargin1">
+<div style="margin-top: 20px; background-color:#FCFCFC;" >
    <form name="form" ng-submit="addOutletCtrl.save(outlet)"novalidate>
-      <div> <button class="btn btn-primary pull-right btnpadding" ng-disabled="form.$invalid">Save</button>
+      <div> <button class="btn btn-primary pull-right btnpadding" ng-disabled="form.$invalid">SAVE</button>
       </div>
       <br><br><br><br>
-      <div class="col-md-12">
-         <div class="col-md-3">
+      <div class="col-md-12 leftmgn">
+         <div class="col-md-4">
             <div class="form-group" ng-class="{ 'has-error' : form.bat_id.$invalid && !form.bat_id.$pristine }">
                <h6>BAT ID :</h6>
                <input type="text" class="form-control" name="bat_id" ng-model="outlet.bat_id" required>
@@ -60,20 +64,23 @@
             </div>
    </form>
    </div>
-   <div class="col-md-7" style="padding-left: 40px;">
-   <h5>  Membership Type</h5>
+   <div class="col-md-6" style="padding-left: 30px;">
+   <h5  class="headingColor">  Membership Type</h5>
    <md-radio-group ng-model="outlet.membership_id" class="md-primary">
-   <div class="col-md-12">
+
    <div class="col-md-3" ng-repeat="radiolabel in addOutletCtrl.radioData">
    <md-radio-button ng-value="radiolabel.value">
    {{ radiolabel.label }}
    </md-radio-button>
    </div>
-   </div>
+
    </md-radio-group>
+
    </div>
-   <div class="col-md-2">
-   <h5>Rebate Rate (1 point)</h5><input type="text" class="form-control">
+   <div class="col-md-2" style="padding-left:0px;">
+   <h5 class="headingColor">Rebate Rate (1 point)</h5><input type="text" class="form-control">
    </div>
    </div>
+</div>
+</div>
 </div>

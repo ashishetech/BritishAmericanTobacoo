@@ -6,8 +6,10 @@ angular.module('batApp').directive('dynamicTable', () => ({
     onedit:'&',
     onadd:'&'
   },
+  replace: true,
   controller ($scope) {
     $scope.tabledetails = $scope.tabledata
     $scope.tablebody = $scope.viewtabledata
+    console.log($scope.tablebody)
   }
 }))

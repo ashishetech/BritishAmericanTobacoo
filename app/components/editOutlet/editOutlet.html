@@ -1,9 +1,9 @@
 <div class="col-md-12 editoutlet">
-   <div class="col-md-12">
+   <div class="col-md-12 headertop">
       <div class="minus"> </div>
       <div class="minus"></div>
       <div class="minus"></div>
-      <div class="textstyle">OUTLET:Details {{editOutletCtrl.outlet.bat_id}}</div>
+      <div class="headStyle">OUTLET : Details {{editOutletCtrl.outlet.bat_id}}</div>
    </div>
    <form name="form" novalidate>
       <div class="col-md-12 editOutletHeader">
@@ -22,7 +22,7 @@
             </div>
          </div>
          <div class="col-md-2 saveBtn">
-            <button class="btn btn-default pull-right save"  ng-click="editOutletCtrl.update(editOutletCtrl.outlet)">Save</button>
+            <button class="btn btn-default pull-right save"  ng-click="editOutletCtrl.update(editOutletCtrl.outlet)">SAVE</button>
          </div>
       </div>
       <div class="col-md-12 membershipForm">
@@ -39,10 +39,10 @@
                <div class="form-group">
                   <h6 class="head6">Password:</h6>
                   <!-- <div class="form-group"> -->
-                  <div class="col-md-7 passInput">
+                  <div class="col-md-8 passInput">
                      <input type="password" class="form-control inputForm" value="" ng-model="editOutletCtrl.outlet.password">
                   </div>
-                  <div class="col-md-5 passBtn">
+                  <div class="col-md-4 passBtn">
                      <input type="button" class="btn btn-default inputBtn" value="Change Password">
                      <!-- </div> -->
                   </div>
@@ -71,7 +71,7 @@
                </div>
                <div class="form-group">
                   <h6 class="head6">Birthday</h6>
-                  <input type="date" class="form-control"  ng-model="editOutletCtrl.outlet.birthday">
+                  <input type="date" class="form-control" date-format="mm/dd/yyyy" ng-model="editOutletCtrl.outlet.birthday">
                </div>
             </div>
             <div class="col-md-8 membership">

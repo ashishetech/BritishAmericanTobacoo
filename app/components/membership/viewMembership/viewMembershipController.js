@@ -1,6 +1,8 @@
 angular.module('batApp').controller('viewMembershipController', function (getDataFactory, $state, shareDataService) {
   var vm = this
   vm.membershipList = []
+  vm.id = ''
+  // vm.submitted = false
   vm.data = {
     tabletitle: 'Memberships',
     tableSubTitle: 'Memberships',
@@ -17,27 +19,46 @@ angular.module('batApp').controller('viewMembershipController', function (getDat
     }
 
   }
-  getDataFactory.getMembershipViewData().query().$promise
+  vm.getMemberData = function () {
+    getDataFactory.getMembershipViewData().query().$promise
      .then((response) => {
-       console.log('>>>>>>>>>>>>>>>>>>..response is', response)
        if (response.error) {} else {
          angular.forEach(response, (value, key) => {
-           console.log('>>>>>>>>>>>>>>>>>>.', value.id)
            vm.membershipList.push([value.id, value.type_name, value.rebate_rate, value.min_required_points, value.order])
          })
        }
      })
+  }
 
   vm.edit = function (data) {
-    console.log(data)
-    shareDataService.addId(data)
-    $state.go('menuTemplate.editMembership')
+    vm.id = data
+    getDataFactory.editMembership(vm.id).get().$promise
+.then((response) => {
+  console.log(response)
+  vm.formdata = response
+  angular.element('#myModal').modal('show')
+})
+  }
+
+  vm.updateMember = function (updatedata) {
+    getDataFactory.updateMembership(vm.id).update(updatedata).$promise
+.then((response) => {
+  if (!response.error) {
+    vm.getMemberData()
+    angular.element('#myModal').modal('hide')
+  }
+})
   }
 
   vm.add = function (data) {
-    console.log(data)
+    vm.submitted = false
     angular.element('#myModal').modal('show')
-    // shareDataService.addId(data)
-    // $state.go('menuTemplate.editMembership')
   }
+
+  vm.cancel = function () {
+    angular.element('#myModal').modal('hide')
+    vm.formdata = {}
+  }
+
+  vm.getMemberData()
 })

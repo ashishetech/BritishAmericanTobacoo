@@ -20,11 +20,9 @@ angular.module('batApp')
           label: value.type_name,
           value: value.id
         })
-        console.log(vm.radioData)
       }
     })
     vm.radioData.reverse()
-	 console.log(vm.radioData)
   })
 
   vm.updateTme = function (tmeId) {
@@ -42,7 +40,8 @@ angular.module('batApp')
       }
     })
   }
-
+  vm.date = ''
+  vm.datearray = []
   vm.editOutlet = function () {
     vm.dataId = shareDataService.getId()
     getDataFactory.getDataById(vm.dataId).get().$promise

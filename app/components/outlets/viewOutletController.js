@@ -2,7 +2,8 @@ angular.module('batApp').controller('viewOutletController', function (getDataFac
   var vm = this
   vm.outletList = []
   vm.data = {
-    tabletitle: 'OUTLETS',
+    tabletitle: 'All Outlets',
+    tableSubTitle: 'OUTLETS',
     values: ['ID',
       'BAT ID',
       'Store Name',

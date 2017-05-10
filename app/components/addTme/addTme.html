@@ -1,15 +1,20 @@
-<div class="margin">
+<div class="col-md-12 tmebckground">
+ <div class="col-md-12  margin tmeleftmgn">
    <div class="minus"> </div>
    <div class="minus"></div>
    <div class="minus"></div>
    <div class="textstyle">TME:Details</div>
 </div>
-<div style="margin-top: 100px;" >
-   <form name="form" ng-submit="addTmeCtrl.save(tme)"novalidate>
-      <div> <button class="btn btn-primary pull-right btnpadding1" type="submit"  ng-click="submitted=true">Save</button>
+<div class="col-md-12 leftmargin1">
+  <div style="margin-top: 20px;background-color:#F7F8F7;">
+
+   <form name="form" novalidate>
+      <div> 
+        <a class="pull-right linkpadding" type="submit"  ng-click="submitted=true" ng-submit="addTmeCtrl.save(tme)"><center>SAVE</center></a>
       </div>
       <br><br><br><br>
-      <div class="col-md-12">
+    </div>
+      <div class="col-md-12" style="background-color:#FCFCFC;">
          <div class="col-md-4">
             <div class="form-group" ng-class="{true: 'has-error'} [submitted && form.bat_id.$invalid]">
                <h6>BAT ID :</h6>
@@ -51,4 +56,6 @@
    </form>
    </div>
    </div>
+</div>
+
 </div>

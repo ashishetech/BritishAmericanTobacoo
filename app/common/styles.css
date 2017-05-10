@@ -1,10 +1,14 @@
 body {
     font-family: 'Roboto', sans-serif;
-	margin-left: 0px;
-	margin-right: 0px;
-	padding-left: 0px;
-	padding-right: 0px;
-
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.tablebackground {
+    background-color: #F7F7F8;
+    padding-right: 0px!important;
+    margin-left: -18px!important;
 }
 .headingcolor {
     color: #667685;
@@ -12,22 +16,33 @@ body {
     font-weight: 300;
 }
 .color {
+    color: rgba(93, 93, 93, 0.79);
     font-weight: 900;
     font-size: 20px;
     line-height: 89px;
-    padding-left: 11px;
+    padding-left: 7px;
     position: relative;
     border-radius: 5px;
+    margin-bottom: -10px;
 }
-.col-md-3,
-.col-md-9
- {
+.col-md-3 {
     padding-left: 3px !important;
-    /*padding-right: 0px !important;*/
+
 }
-.leftmargin{
-	margin-left: -13px !important;
-	padding-right: 0px !important;
+.col-md-9 {
+    padding-left: 3px !important;
+    padding-right: 0px !important;
+    background-color: #F7F7F8;
+}
+.leftmargin {
+    padding-right: 0px !important;
+    background-color: #FCFCFC !important;
+    padding-top: 2%;
+    margin-top: 0px!important;
+}
+.leftmargin1 {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
 }
 .margin {
     margin-top: 20px;
@@ -37,11 +52,13 @@ body {
     color: rgb(74, 74, 74);
     font-size: 14px;
     margin-left: 24px;
+    padding-bottom: 5%;
+    padding-left: 5px;
 }
 .minus {
     width: 18px;
     height: 2px;
-    background-color: #007cea;
+    background-color: #007AFF;
     margin: 3px 0;
 }
 td {
@@ -51,20 +68,25 @@ td {
     padding-bottom: 18px;
     padding-left: 25px;
 }
-.table>thead>tr>th {
+.tble>thead>tr>th {
     border-bottom: 1px solid #007AFF;
-    padding: 15px !important
+    padding-right: 0px !important;
+    padding-left: 25px !important;
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
 }
-.table>tbody>tr>td,
-.table>tbody>tr>th,
-.table>tfoot>tr>td,
-.table>tfoot>tr>th,
-.table>thead>tr>td,
-.table>thead>tr>th {
-	padding: 18px;
+.tble>tbody>tr>td,
+.tble>tbody>tr>th,
+.tble>tfoot>tr>td,
+.tble>tfoot>tr>th,
+.tble>thead>tr>td,
+.tble>thead>tr>th {
+    padding-left: 24px;
+    padding-right: 18px;
+    padding-top: 18px;
+    padding-bottom: 18px;
 }
-td a:hover{
-	cursor: pointer;
-	text-decoration: none;
-
+td a:hover {
+    cursor: pointer;
+    text-decoration: none;
 }

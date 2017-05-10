@@ -32,6 +32,8 @@ angular.module('batApp').factory('setDataService', (getDataFactory, $q) => ({
                    value.tme = 'none'
                  } else if (value.tme.first_name) {
                    value.tme = value.tme.first_name
+                 } else {
+                   value.tme = 'none'
                  }
                  outletList.push([value.data.id, value.data.bat_id, value.data.outlet_name, value.data.points_value, value.data.updatedAt, value.data.performance, value.tme])
                })
