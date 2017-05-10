@@ -56,6 +56,20 @@ angular.module('batApp').factory('setDataService', (getDataFactory, $q) => ({
          }
        })
     return deferred.promise
+  },
+  setBrandControllerData () {
+    var deferred = $q.defer()
+    var brandList = []
+    getDataFactory.getBrandViewData().query().$promise
+       .then((response) => {
+         if (!response.error) {
+           angular.forEach(response, (value, key) => {
+             brandList.push([value.brand.id, value.brand.brandname, value.brand.bat_id, value.skuNumber])
+           })
+           deferred.resolve(brandList)
+         }
+       })
+    return deferred.promise
   }
 
 }))

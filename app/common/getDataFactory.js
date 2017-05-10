@@ -60,5 +60,12 @@ angular.module('batApp').factory('getDataFactory', (configuration, $resource) =>
   },
   getSkuViewData () {
     return $resource(configuration.apihost + '/get/sku/1/100')
+  },
+  getBrandViewData () {
+    return $resource(configuration.apihost + '/get/brand/1/40')
+  },
+  addBrand () {
+    return $resource(configuration.apihost + '/brand')
   }
+
 }))
