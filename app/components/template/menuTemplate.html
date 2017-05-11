@@ -1,4 +1,5 @@
 <md-list class="col-md-3 paddingLeft" >
+
     <md-subheader class="header">Max Admin
         <br>
         <br> <a class="logout" ui-sref="login">Logout</a>
@@ -42,7 +43,7 @@
 
     <md-list-item ng-click="template.Open('brand')" style="border-bottom:1px solid #F1F1F1;">
         <md-icon class="md-default-theme" class="material-icons">face</md-icon>
-		<p  ng-class="{ Active: template.isActive('/skuViewTable')||template.isActive('/brands')||template.isActive('/promotion')}">Brands</p>
+		<p  ng-class="{ Active: template.isActive('/skuViewTable')||template.isActive('/brandViewTable')||template.isActive('/promotion')}">Brands</p>
 		<md-icon class="md-secondary arrow" ng-show="template.arrowBrand" style="color:blue">keyboard_arrow_right</md-icon>
 		<md-icon class="md-secondary arrow" ng-hide="template.arrowBrand">keyboard_arrow_up</md-icon>
 	</md-list-item>
@@ -52,7 +53,7 @@
     </md-list-item>
 
     <md-list-item ng-show="template.OpenBrand" ui-sref="menuTemplate.brandViewTable" style="background-color:rgba(128, 128, 128, 0.11);" >
-        <span class="child" ng-class="{ Active: template.isActive('/brands')}">All Brands</span>
+        <span class="child" ng-class="{ Active: template.isActive('/brandViewTable')}">All Brands</span>
     </md-list-item>
 
     <md-list-item ng-show="template.OpenBrand" ui-sref="menuTemplate.promotion" style="background-color:rgba(128, 128, 128, 0.11);">
@@ -77,7 +78,5 @@
 
 </md-list>
 
-<!-- <div class="col-md-9"> -->
 <div class="col-md-9 paddingLeft" ui-view>
-
 </div>

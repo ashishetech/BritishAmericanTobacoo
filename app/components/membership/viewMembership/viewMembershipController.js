@@ -2,7 +2,8 @@ angular.module('batApp').controller('viewMembershipController', function (getDat
   var vm = this
   vm.membershipList = []
   vm.id = ''
-  // vm.submitted = false
+  vm.alert = false
+  vm.newValue = []
   vm.data = {
     tabletitle: 'Memberships',
     tableSubTitle: 'Memberships',
@@ -20,45 +21,66 @@ angular.module('batApp').controller('viewMembershipController', function (getDat
 
   }
   vm.getMemberData = function () {
+    vm.membershipList = []
     getDataFactory.getMembershipViewData().query().$promise
-     .then((response) => {
-       if (response.error) {} else {
-         angular.forEach(response, (value, key) => {
-           vm.membershipList.push([value.id, value.type_name, value.rebate_rate, value.min_required_points, value.order])
-         })
-       }
-     })
+    .then((response) => {
+      if (response.error) {} else {
+        angular.forEach(response, (value, key) => {
+          vm.membershipList.push([value.id, value.type_name, value.rebate_rate, value.min_required_points, value.order])
+        })
+      }
+    })
   }
 
   vm.edit = function (data) {
     vm.id = data
     getDataFactory.editMembership(vm.id).get().$promise
-.then((response) => {
-  console.log(response)
-  vm.formdata = response
-  angular.element('#myModal').modal('show')
-})
+    .then((response) => {
+      vm.formdata = response
+      angular.element('#editModal').modal('show')
+    })
   }
 
   vm.updateMember = function (updatedata) {
     getDataFactory.updateMembership(vm.id).update(updatedata).$promise
-.then((response) => {
-  if (!response.error) {
-    vm.getMemberData()
-    angular.element('#myModal').modal('hide')
-  }
-})
-  }
-
-  vm.add = function (data) {
-    vm.submitted = false
-    angular.element('#myModal').modal('show')
+    .then((response) => {
+      if (!response.error) {
+        angular.element('#editModal').modal('hide')
+        vm.getMemberData()
+      }
+    })
   }
 
-  vm.cancel = function () {
-    angular.element('#myModal').modal('hide')
+  vm.add = function () {
+    angular.element('#addModal').modal('show')
+  }
+
+  vm.addMember = function (data, myForm) {
+    getDataFactory.addMembership().save(data).$promise
+    .then((response) => {
+      if (!response.error) {
+        vm.getMemberData()
+        angular.element('#addModal').modal('hide')
+        vm.addformdata = {}
+        myForm.$setPristine()
+      } else {
+        vm.alert = true
+        vm.error = response.error.message
+      }
+    })
+  }
+
+  vm.cancel = function (myForm) {
+    angular.element('#addModal').modal('hide')
+    angular.element('#editModal').modal('hide')
+    vm.addformdata = {}
     vm.formdata = {}
+    myForm.$setPristine()
+    vm.alert = false
   }
 
+  vm.alertFn = function () {
+    vm.alert = false
+  }
   vm.getMemberData()
 })

@@ -1,0 +1,14 @@
+.instr{
+	margin-left:47px;
+	margin-top: -5px;
+	font-size: 12px;
+	color: dimgrey;
+}
+label.mylabel{
+	font-size: 13px;
+	color: dimgrey;
+	letter-spacing: 1px;
+}
+.nonTop{
+	margin-top: 17px;
+}

@@ -48,16 +48,6 @@ angular.module('batApp', ['ui.router', 'ngResource', 'ngStorage', 'ngMaterial', 
   templateUrl: 'components/sku/skuView.html',
   controller: 'viewSkuController as viewSkuCtrl'
 })
-.state('menuTemplate.addMembership', {
-  url: '/addMembership',
-  templateUrl: 'components/membership/addMembership/addMembership.html',
-  controller: 'AddMembershipController as addMemberCtrl'
-})
-.state('menuTemplate.editMembership', {
-  url: '/editMembership',
-  templateUrl: 'components/membership/editMembership/editMembership.html',
-  controller: 'EditMembershipController as editMemberCtrl'
-})
 .state('menuTemplate.viewMembership', {
   url: '/viewMembership',
   templateUrl: 'components/membership/viewMembership/membershipView.html',

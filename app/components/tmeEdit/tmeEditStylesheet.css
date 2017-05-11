@@ -26,17 +26,20 @@
 .btnPop1{
 	height:45px;
 	margin-bottom: 30px;
+	color: white !important;
+	background-color: #4e4e4e !important;
 }
 .btnPop2{
 	height:45px;
 	margin-bottom: 30px;
+	border-color: white !important;
 }
 .btnPop1:hover{
-	background-color: grey !important;
+	background-color: #4e4e4e !important;
 }
 .btnPop2:hover{
 	background-color: #337ab7!important;
-	border-color: #337ab7 !important;
+	border-color: white !important;
 }
 .unassign {
     color: red;
@@ -78,11 +81,7 @@ md-checkbox.checkMEM{
 	margin-left: 16px !important;
     opacity: 0.9;
 }
-.instr{
-	margin-left:47px;
-	margin-top: -5px;
-	font-size: 12px;
-}
+
 .btnChange{
 	padding: 0px;
 }
