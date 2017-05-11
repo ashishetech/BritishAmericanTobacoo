@@ -63,10 +63,14 @@ angular.module('batApp', ['ui.router', 'ngResource', 'ngStorage', 'ngMaterial', 
   templateUrl: 'components/addBrand/addBrand.html',
   controller: 'addBrandController as addBrandCtrl'
 })
+.state('menuTemplate.editBrand', {
+  url: '/editBrand',
+  templateUrl: 'components/editBrand/editBrand.html',
+  controller: 'EditBrandController as editBrandCtrl'
+})
 .state('menuTemplate.addSku', {
   url: '/addSku',
   templateUrl: 'components/addSku/addSku.html',
   controller: 'addSkuController as addSkuCtrl'
-
 })
 })

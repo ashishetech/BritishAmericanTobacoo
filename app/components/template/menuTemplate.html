@@ -49,11 +49,11 @@
 	</md-list-item>
 
 	<md-list-item ng-show="template.OpenBrand" ui-sref="menuTemplate.skuViewTable" style="background-color:rgba(128, 128, 128, 0.11);">
-		<span class="child" ng-class="{ Active: template.isActive('/skuViewTable')}">All SKU</span>
+		<span class="child" ng-class="{ Active: template.isActive('/skuViewTable')||template.isActive('/addSku')}">All SKU</span>
     </md-list-item>
 
     <md-list-item ng-show="template.OpenBrand" ui-sref="menuTemplate.brandViewTable" style="background-color:rgba(128, 128, 128, 0.11);" >
-        <span class="child" ng-class="{ Active: template.isActive('/brandViewTable')}">All Brands</span>
+        <span class="child" ng-class="{ Active: template.isActive('/brandViewTable')||template.isActive('/addBrand')||template.isActive('/editBrand')}">All Brands</span>
     </md-list-item>
 
     <md-list-item ng-show="template.OpenBrand" ui-sref="menuTemplate.promotion" style="background-color:rgba(128, 128, 128, 0.11);">
@@ -69,7 +69,7 @@
 
 
     <md-list-item ng-show="template.OpenSetting" ui-sref="menuTemplate.tmeViewTable" style="background-color:rgba(128, 128, 128, 0.11);">
-        <span class="child" ng-class="{ Active: template.isActive('/tmeViewTable')}">TME Setting</span>
+        <span class="child" ng-class="{ Active: template.isActive('/tmeViewTable')||template.isActive('/addTme')||template.isActive('/TmeEdit')}">TME Setting</span>
     </md-list-item>
 
     <md-list-item ng-show="template.OpenSetting" ui-sref="menuTemplate.viewMembership" style="background-color:rgba(128, 128, 128, 0.11);">
