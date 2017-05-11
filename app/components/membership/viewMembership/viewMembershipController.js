@@ -3,6 +3,7 @@ angular.module('batApp').controller('viewMembershipController', function (getDat
   vm.membershipList = []
   vm.id = ''
   vm.alert = false
+  vm.newValue = []
   vm.data = {
     tabletitle: 'Memberships',
     tableSubTitle: 'Memberships',
@@ -20,6 +21,7 @@ angular.module('batApp').controller('viewMembershipController', function (getDat
 
   }
   vm.getMemberData = function () {
+    vm.membershipList = []
     getDataFactory.getMembershipViewData().query().$promise
     .then((response) => {
       if (response.error) {} else {
@@ -43,8 +45,8 @@ angular.module('batApp').controller('viewMembershipController', function (getDat
     getDataFactory.updateMembership(vm.id).update(updatedata).$promise
     .then((response) => {
       if (!response.error) {
-        vm.getMemberData()
         angular.element('#editModal').modal('hide')
+        vm.getMemberData()
       }
     })
   }
