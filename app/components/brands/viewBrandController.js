@@ -1,4 +1,4 @@
-angular.module('batApp').controller('viewBrandController', function (getDataFactory, setDataService, $state) {
+angular.module('batApp').controller('viewBrandController', function (getDataFactory, setDataService, shareDataService, $state) {
   var vm = this
   vm.membershipList = []
   vm.data = {
@@ -21,5 +21,10 @@ angular.module('batApp').controller('viewBrandController', function (getDataFact
   })
   vm.add = function () {
     $state.go('menuTemplate.addBrand')
+  }
+  vm.edit = function (data) {
+    console.log(data)
+    shareDataService.addId(data)
+    $state.go('menuTemplate.editBrand')
   }
 })

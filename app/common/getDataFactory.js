@@ -66,6 +66,12 @@ angular.module('batApp').factory('getDataFactory', (configuration, $resource) =>
   },
   addBrand () {
     return $resource(configuration.apihost + '/brand')
+  },
+  editBrand (id) {
+    return $resource(configuration.apihost + '/get/brandById/' + id)
+  },
+  updateBrand (id) {
+    return $resource(configuration.apihost + '/brand/update/' + id, {}, { 'update': { method: 'PUT' } })
   }
 
 }))

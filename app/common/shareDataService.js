@@ -12,4 +12,5 @@ angular.module('batApp').service('shareDataService', function () {
     addId: addId,
     getId: getId
   }
+
 })
