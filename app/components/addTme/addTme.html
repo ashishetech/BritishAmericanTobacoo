@@ -6,16 +6,21 @@
    <div class="textstyle">TME:Details</div>
 </div>
 <div class="col-md-12 leftmargin1">
-  <div style="margin-top: 20px;background-color:#F7F8F7;">
+   <form name="form" ng-submit="addTmeCtrl.save(tme)" novalidate>
+  <div style="margin-top: 20px; background-color:#FCFCFC;">
 
-   <form name="form" novalidate>
-      <div>
-        <a class="pull-right linkpadding" type="submit"  ng-click="submitted=true" ng-submit="addTmeCtrl.save(tme)"><center>SAVE</center></a>
+
+      <div class="col-md-12" style="background-color:#F7F8F7; padding-bottom:15px;">
+        <button class="pull-right linkpadding" type="submit" ng-click="submitted=true"><center>SAVE</center></button>
       </div>
       <br><br><br><br>
-    </div>
+
       <div class="col-md-12" style="background-color:#FCFCFC;">
          <div class="col-md-4">
+           <div  ng-show="addTmeCtrl.errmsg" class="alert alert-danger">
+               <span>{{addTmeCtrl.errmsg}}</span>
+          </div>
+
             <div class="form-group" ng-class="{true: 'has-error'} [submitted && form.bat_id.$invalid]">
                <h6>BAT ID :</h6>
                <input type="text" class="form-control" name="bat_id" ng-model="tme.bat_id" ng-change="addTmeCtrl.change()" required/>
@@ -47,15 +52,17 @@
                <input type="text" class="form-control" ng-change="addTmeCtrl.change()" name="email" ng-model="tme.email" ng-pattern="/^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/"  required>
                <span ng-show="submitted && form.email.$error.required" class="help-block">Email is required</span>
                <span ng-show="form.email.$error.pattern" class="help-block">Enter valid Email</span>
+
             </div>
             <div class="form-group" ng-class="{true: 'has-error'} [submitted && form.number.$invalid]">
                <h6>Mobile Number</h6>
                <input type="text" class="form-control"  name="number" ng-model="tme.mobile_no"  ng-change="addTmeCtrl.change()" required>
                <span ng-show="submitted && form.number.$error.required" class="help-block">Number is required</span>
             </div>
-   </form>
+
    </div>
    </div>
+</div> </form>
 </div>
 
 </div>
