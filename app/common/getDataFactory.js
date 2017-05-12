@@ -78,6 +78,12 @@ angular.module('batApp').factory('getDataFactory', (configuration, $resource) =>
   },
   addSku () {
     return $resource(configuration.apihost + '/sku')
+  },
+  getSkuById (id) {
+    return $resource(configuration.apihost + '/get/skuById/' + id)
+  },
+  updateSku (id) {
+    return $resource(configuration.apihost + '/sku/update/' + id, {}, { 'update': { method: 'PUT' } })
   }
 
 }))
