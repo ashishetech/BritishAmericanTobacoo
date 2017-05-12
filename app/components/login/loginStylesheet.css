@@ -109,6 +109,12 @@ md-checkbox .md-label {
 }
 md-checkbox.md-checked.blue .md-icon {
     background-color: #007AFF;
+	width: 18px;
+    height: 18px;
+}
+md-checkbox:not(.md-checked) .md-icon{
+	width: 18px;
+	height: 18px;
 }
 md-checkbox .checkbox{
     margin-left: 5px !important;

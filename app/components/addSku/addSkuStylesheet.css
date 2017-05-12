@@ -17,10 +17,10 @@
 }
 .skutextstyle {
 	margin-top: -18px;
-	color: rgb(74, 74, 74);
-	font-size: 14px;
+	color: grey;
+	font-size: 13px;
 	margin-left: 24px;
-	padding-bottom: 1%;
+	padding-bottom: 0%;
 	padding-left: 5px;
 }
 .labelstyle1 {
@@ -30,16 +30,15 @@
 	color: rgb(102, 118, 133);
 	font-weight: 500;
 }
-.subHdng {
+.subHdngbrand {
 	font-weight: 900;
 	font-size: 17px;
 	letter-spacing: 1px;
-	line-height: 89px;
+	line-height: 80px;
 	padding-bottom: 0px;
 	padding-top: 0px;
 	padding-left: 23px;
 	color: dimgrey;
-	margin-bottom: -40px;
 	position: relative;
 	background-color: rgba(247, 247, 248, 0.54);
 }
