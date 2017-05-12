@@ -1,5 +1,5 @@
 .marginRight {
-	margin-right: -9%;
+    margin-right: -9%;
     margin-top: 13%;
     font-size: 13px;
     cursor: pointer;
@@ -9,25 +9,22 @@
     font-weight: 300;
     background-color: #FFFFFF;
     backgroynd-color: grey;
-    /* padding-left: 1%; */
     padding-top: 5%;
     margin-left: 69px;
     padding-bottom: 5%;
-    /* padding-right: 2%; */
     border-radius: 5px;
 }
-.color{
-	    margin-bottom: 0px !important;
+.color {
+    margin-bottom: 0px !important;
 }
 .linkWithPadding {
     width: 113px;
     height: 35px;
-
-    padding-right:38px;
-    padding-left:38px;
-    padding-top:9px;
-    padding-bottom:9px;
-        border: 1px solid #1F8AFD;
+    padding-right: 38px;
+    padding-left: 38px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    border: 1px solid #1F8AFD;
     border-radius: 5px;
     background-color: #fff;
     font-size: 12px;

@@ -93,7 +93,6 @@ md-input-container:not(.md-input-focused).md-input-invalid label{
     height: 60px;
     border-radius: -20px;
     border: 0;
-    /*font-weight: bold;*/
 }
 .md-button.md-default-theme[disabled],
 .md-button[disabled] {
