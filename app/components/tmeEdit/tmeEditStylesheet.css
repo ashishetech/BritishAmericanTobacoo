@@ -32,13 +32,14 @@
 .btnPop2{
 	height:45px;
 	margin-bottom: 30px;
+	background-color: #007AFF !important;
 	border-color: white !important;
 }
 .btnPop1:hover{
 	background-color: #4e4e4e !important;
 }
 .btnPop2:hover{
-	background-color: #337ab7!important;
+	background-color: #007AFF !important;
 	border-color: white !important;
 }
 .unassign {

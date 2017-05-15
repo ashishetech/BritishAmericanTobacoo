@@ -7,7 +7,7 @@
    </div>
    <div class="col-md-12 leftmargin1">
       <div style="margin-top: 20px;  background-color:#FCFCFC;">
-         <div class="subHdng">
+         <div class="subHdngbrand">
             ADD BRAND
          </div>
          <form name="form" ng-submit="addBrandCtrl.save(addBrandCtrl.brand)" novalidate>
@@ -16,21 +16,21 @@
                <div  ng-show="addBrandCtrl.errmsg" class="alert alert-danger">
                   <span>{{addBrandCtrl.errmsg}}</span>
                </div>
-               <div class="col-md-5">
+               <div class="col-md-5" style="margin-top: -29px;">
                   <div class="form-group" ng-class="{ 'has-error' : form.p_name.$invalid && !form.p_name.$pristine }">
                      <label  class="brandlabelstyle">Brand Name (Name)</label>
-                     <input type="text" class="form-control brandinputstyle"  ng-model="addBrandCtrl.brand.brandname" name="p_name" required>
+                     <input type="text" class="form-control brandinputstyle"  ng-model="addBrandCtrl.brand.brandname" name="p_name" ng-change="addBrandCtrl.change()" required>
                      <span ng-show="form.p_name.$dirty && form.p_name.$error.required" class="help-block">Product Name is required</span>
                   </div>
                   <div class="form-group" ng-class="{ 'has-error' : form.bat_id.$invalid && !form.bat_id.$pristine }">
                      <label  class="brandlabelstyle" style="margin-top:6%;"> BAT ID(as per your sales data)</label>
-                     <input type="text" class="form-control brandinputstyle" ng-model="addBrandCtrl.brand.bat_id" name="bat_id"  required>
+                     <input type="text" class="form-control brandinputstyle" ng-model="addBrandCtrl.brand.bat_id" name="bat_id" ng-change="addBrandCtrl.change()"  required>
                      <span ng-show="form.bat_id.$dirty && form.bat_id.$error.required" class="help-block">Bat ID  is required</span>
                   </div>
                </div>
                <br>
                <div class="col-md-12">
-                  <div class="col-md-6 pull-right" style="margin-top:17%; padding-left:11%;">
+                  <div class="col-md-6 pull-right" style="margin-top:24%; padding-left:11%;">
                      <div class="col-md-5" style="margin-left: 30px;"> <input type="button" class="btn btn-default btna" value="CANCEL" ng-click="addBrandCtrl.back()" ></div>
                      <div class="col-md-5" style="margin-left: -12px;"><input type="submit" class="btn btn-primary btns" value="ADD/SAVE" ></div>
                   </div>

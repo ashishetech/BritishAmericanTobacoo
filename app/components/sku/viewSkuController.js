@@ -1,4 +1,4 @@
-angular.module('batApp').controller('viewSkuController', function (getDataFactory, $state, setDataService) {
+angular.module('batApp').controller('viewSkuController', function (getDataFactory, $state, setDataService, shareDataService) {
   var vm = this
 
   vm.data = {
@@ -23,5 +23,9 @@ angular.module('batApp').controller('viewSkuController', function (getDataFactor
   })
   vm.add = function () {
     $state.go('menuTemplate.addSku')
+  }
+  vm.edit = function (data) {
+    shareDataService.addId(data)
+    $state.go('menuTemplate.editSku')
   }
 })

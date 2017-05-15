@@ -73,4 +73,9 @@ angular.module('batApp', ['ui.router', 'ngResource', 'ngStorage', 'ngMaterial', 
   templateUrl: 'components/addSku/addSku.html',
   controller: 'addSkuController as addSkuCtrl'
 })
+.state('menuTemplate.editSku', {
+  url: '/editSku',
+  templateUrl: 'components/editSku/editSku.html',
+  controller: 'EditSkuController as editSkuCtrl'
+})
 })

@@ -93,7 +93,6 @@ md-input-container:not(.md-input-focused).md-input-invalid label{
     height: 60px;
     border-radius: -20px;
     border: 0;
-    /*font-weight: bold;*/
 }
 .md-button.md-default-theme[disabled],
 .md-button[disabled] {
@@ -109,6 +108,12 @@ md-checkbox .md-label {
 }
 md-checkbox.md-checked.blue .md-icon {
     background-color: #007AFF;
+	width: 18px;
+    height: 18px;
+}
+md-checkbox:not(.md-checked) .md-icon{
+	width: 18px;
+	height: 18px;
 }
 md-checkbox .checkbox{
     margin-left: 5px !important;
